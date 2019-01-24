@@ -98,7 +98,7 @@ html, body {
     <header class="header item">
       <i id="toc" class="sitemap icon"></i>
       
-        <a href="../../index.html"> CSS Selectors  </a>
+        <a href="../../index.html"> CSS Fundamentals  </a>
       
     </header>
     <div class="right tab-menu menu">
@@ -137,6 +137,10 @@ html, body {
       
         <a class="item" data-tab="08">
           08
+        </a>
+      
+        <a class="item" data-tab="09">
+          09
         </a>
       
         <a class="item" data-tab="Exercises">
@@ -556,7 +560,54 @@ p {
           </div>
         
           <div class="ui tab segment lab" data-tab="08">
-            <h1>Coding Best Practices</h1>
+            <h1>Classes</h1>
+<p>Open the deals page:</p>
+<h2>deals.html</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Weekly Deals&lt;/h1&gt;
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/business.png&quot; alt=&quot;Business Bundle&quot;&gt; Here comes the
+      next bundle for march. This time it&#39;s macware who publish a bundle. The so
+      called macware Business Bundle contains 6 apps at a price of only $29.99
+      instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+    &lt;h2&gt;Insanity Deal&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/insanity.jpg&quot; alt=&quot;Insanity Deal&quot;&gt; With the new $5
+      Insanity Deals from Bundlehunt you receive every day a highly reduced app
+      for $5 only with savings up to 75%. Not a real bundle but, as there are
+      multiple apps for only $5 each, one new per day, for the days to come.
+    &lt;/p&gt;
+    &lt;a href=&quot;../index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Modify the two <code>&lt;h2&gt;</code> elements as follows:</p>
+<pre><code>  ...
+    &lt;h2 class=&quot;special&quot;&gt;Business Bundle&lt;/h2&gt;
+  ...
+    &lt;h2 class=&quot;special&quot;&gt;Insanity Deal&lt;/h2&gt;
+  ...</code></pre>
+<p>We are &#39;marking&#39; these elements - this will have no difference on the current display:</p>
+<p><img src="img/30x.png" alt=""></p>
+<p>Back in our style sheet, include this extra rule:</p>
+<pre><code>.special {
+  color: red;
+}</code></pre>
+<p>Save, and reload the page:</p>
+<p><img src="img/31x.png" alt=""></p>
+<p>The targeted headings should be red.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="09">
+            <h1>Indentation</h1>
 <p>We should carefully inspect our html and verify that we are laying it out correctly, and in particular that we are obeying consistent indentation rules in the structure of the html itself.</p>
 <p>Indentation is simply a consistent placement of spaces before each element, such that it flows in an ordered manner reflecting the opening/closing of tags. We prefer to use 2 spaces for each &#39;level&#39;.</p>
 <h3>Example Inconsistent indentation:</h3>
@@ -611,11 +662,13 @@ p {
 <li><a href="https://github.com/wit-hdip-comp-sci-2019/bundle-store/releases/tag/lab.02.end">https://github.com/wit-hdip-comp-sci-2019/bundle-store/releases/tag/lab.02.end</a></li>
 </ul>
 <h2>Exercise 1</h2>
-<p>Using the guidance from step one of this lab, download and expand the project archive above.</p>
+<p>Using the guidance from step one of this lab, download, extract and explore the project archive above.</p>
 <h2>Exercise 2</h2>
 <p>Currently there is no link from the index page to the deals page. Introduce a new paragraph now that introduces the new deals feature and provides a link to the deal page.</p>
-<h2>Exercise 3</h2>
-<p>Investigate on the thee MDN documentation:</p>
+<h2>Exercise 3:</h2>
+<p>Using the <code>class</code> concept - develop a rule to change the colour of the list of favourites on the home page to blue.</p>
+<h2>Exercise 4</h2>
+<p>Investigate on the the MDN documentation:</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></li>
 </ul>
