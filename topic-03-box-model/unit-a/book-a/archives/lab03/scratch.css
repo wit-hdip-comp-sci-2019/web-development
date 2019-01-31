@@ -1,0 +1,8 @@
+p {
+  background: fuchsia;
+  border: 1px solid;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-indent: 2em;
+}
