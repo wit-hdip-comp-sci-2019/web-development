@@ -1,0 +1,45 @@
+body {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.header-crest-img {
+  float: right;
+  margin: 1em;
+}
+
+.footer-social-links {
+  text-align: center
+}
+
+.footer-img {
+  height: 90px;
+}
+
+.strand-right-img {
+  float: right;
+  margin: 1em;
+  height: 350px;
+}
+
+.strand-left-img {
+  float: left;
+  margin: 1em;
+  height: 350px;
+}
+
+.strand-timeline-img {
+  height: 80px;
+}
+
+.strand-modules-img {
+  height: 75px;
+}
+
+.strand-modules-double-img {
+  height: 150px;
+}
+
+.strand-modules-treble-img {
+  height: 310px;
+}

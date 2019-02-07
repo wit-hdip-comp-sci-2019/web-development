@@ -1,0 +1,96 @@
+
+
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: 'Open Sans';
+}
+
+.header-crest-img {
+  float: right;
+  margin: 1em;
+}
+
+.footer-social-links {
+  text-align: center
+}
+
+.footer-img {
+  height: 90px;
+}
+
+.strand-right-img {
+  float: right;
+  margin: 1em;
+  height: 350px;
+}
+
+.strand-left-img {
+  float: left;
+  margin: 1em;
+  height: 350px;
+}
+
+.strand-timeline-img {
+  height: 80px;
+}
+
+.strand-modules-img {
+  height: 75px;
+}
+
+.strand-modules-double-img {
+  height: 150px;
+}
+
+.strand-modules-treble-img {
+  height: 310px;
+}
+
+.banner {
+  background: url("assets/images/banner.jpg") top center;
+  background-position: top center;
+  height:350px;
+}
+
+#summary
+{
+  width: 40%;
+  float: left;
+  color: white;
+  background : rgba(58,84,90, 0.5);
+  margin : 1em;
+  padding : 1em;
+  clear:both;
+}
+
+#curriculum
+{
+  width: 100%;
+  margin: .5em;
+  padding: .5em;
+  clear: both;
+}
+
+#col1 {
+  float: left;
+  width: 48%
+}
+
+#col2 {
+  float: right;
+  width: 48%
+}
+
+#sponsors
+{
+  width: 100%;
+  clear: both;
+}
+
+#footer
+{
+  width: 100%;
+  clear: both;
+}
+

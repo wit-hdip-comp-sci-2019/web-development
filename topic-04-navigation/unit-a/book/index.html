@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Navigation  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-04 Navigation">
+          Lab-04 Navigation
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00: Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01: HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-2 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-3a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-3b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-04 Navigation">
+            <h1>Objectives</h1>
+<p>Devise a simple navigation metaphor for a web site.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Setup</h1>
+<p>This is a completed version of last weeks lab, including exercises, which extended the project to include several interlinked pages:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.3b.exercises">https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.3b.exercises</a></li>
+</ul>
+<p>Download, unzip this project and expand it into your web-development folder. Make sure the project folder is called <code>lab04</code>. Your Sublime workspace should look like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Review the site by opening the home page - it should be the same as this:</p>
+<ul>
+<li><a href="https://wit-hdip-comp-sci-2019.github.io/grid-layout/home.html">Layout Site</a></li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Refactor the CSS</h1>
+<p>This is the style sheet:</p>
+<h2>home.css</h2>
+<pre><code>.container {
+  display: grid;
+  grid-template-columns: 5% 10% 61% 5%;
+  grid-gap: 3%;
+}
+
+#header {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+#navigation {
+  grid-column-start: 2;
+}
+
+#maincontent {
+  grid-column-start: 3;
+  display: grid;
+  grid-template-columns: 70% 27%;
+  grid-gap: 3%;
+}
+
+#primary {
+  grid-column-start: 1;
+}
+
+#secondary {
+  grid-column-start: 2;
+}
+
+#footer {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.small-right-img {
+  width: 50px;
+  float: right;
+  margin: 10px;
+}
+
+.medium-right-img {
+  width: 150px;
+  float: right;
+  margin: 10px;
+}
+
+.large-right-img {
+  width: 250px;
+  float: right;
+  margin: 10px;
+}
+
+.small-left-img {
+  width: 50px;
+  float: left;
+  margin: 10px;
+}
+
+.medium-left-img {
+  width: 150px;
+  float: left;
+  margin: 10px;
+}
+
+.large-left-img {
+  width: 250px;
+  float: left;
+  margin: 10px;
+}
+
+.small-centre-img {
+  display: block;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.medium-centre-img {
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.large-centre-img {
+  display: block;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto
+}</code></pre>
+<p>This is a long file, requiring scrolling to see it in full. We might find it easier to manage it we have 2 smaller sheets:</p>
+<ul>
+<li>grid.css: contains just the grid rules</li>
+<li>image.css: the image related rules</li>
+</ul>
+<h2>grid.css</h2>
+<pre><code>.container {
+  display: grid;
+  grid-template-columns: 5% 10% 61% 5%;
+  grid-gap: 3%;
+}
+
+#header {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+#navigation {
+  grid-column-start: 2;
+}
+
+#maincontent {
+  grid-column-start: 3;
+  display: grid;
+  grid-template-columns: 70% 27%;
+  grid-gap: 3%;
+}
+
+#primary {
+  grid-column-start: 1;
+}
+
+#secondary {
+  grid-column-start: 2;
+}
+
+#footer {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}</code></pre>
+<h2>image.css</h2>
+<pre><code>.small-right-img {
+  width: 50px;
+  float: right;
+  margin: 10px;
+}
+
+.medium-right-img {
+  width: 150px;
+  float: right;
+  margin: 10px;
+}
+
+.large-right-img {
+  width: 250px;
+  float: right;
+  margin: 10px;
+}
+
+.small-left-img {
+  width: 50px;
+  float: left;
+  margin: 10px;
+}
+
+.medium-left-img {
+  width: 150px;
+  float: left;
+  margin: 10px;
+}
+
+.large-left-img {
+  width: 250px;
+  float: left;
+  margin: 10px;
+}
+
+.small-centre-img {
+  display: block;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.medium-centre-img {
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.large-centre-img {
+  display: block;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto
+}</code></pre>
+<p>We can now replace the contents of home.css with include statements:</p>
+<h2>home.css</h2>
+<pre><code>@import url(&quot;grid.css&quot;);
+@import url(&quot;image.css&quot;);</code></pre>
+<p>These changes will simplify working with the style sheets - as we have each focussed on a specific trait of the site.</p>
+<p>Make sure the site works exactly the same as before.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Restructure Grid</h1>
+<p>We will restructure the page layout to a 3 column structure, with a reduced grid gap:</p>
+<h2>home.css</h2>
+<pre><code>.container {
+  display: grid;
+  grid-template-columns: 5% 88% 5%;
+  grid-gap: 1%;
+}</code></pre>
+<p>This will completely disrupt the layout (try it), until we revise the column start positions:</p>
+<p>Change the navigation to span 2 columns:</p>
+<pre><code>#navigation {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}</code></pre>
+<p>Also adjust <code>maincontent</code> start column:</p>
+<pre><code>#maincontent {
+  grid-column-start: 2;
+  ...
+}</code></pre>
+<p>Finally, we can simplify the <code>footer</code> rule:</p>
+<pre><code>#footer {
+  grid-column-start: 2;
+}</code></pre>
+<p>You should be able to view the page with the aid of the developer tools:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>This is revealing the grid structure.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Navigation Menu</h1>
+<p>All our pages have the following <code>navigation</code> section:</p>
+<pre><code>      &lt;div id=&quot;navigation&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-01.html&quot;&gt;Cras&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-02.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-03.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;</code></pre>
+<p>In all of the pages, change this specific element:</p>
+<pre><code>        &lt;ul&gt;</code></pre>
+<p>to </p>
+<pre><code>        &lt;ul id=&quot;menu&quot;&gt;</code></pre>
+<p>So that each navigation section looks like this:</p>
+<pre><code>      &lt;div id=&quot;navigation&quot;&gt;
+        &lt;ul id=&quot;menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-01.html&quot;&gt;Cras&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-02.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-03.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;</code></pre>
+<p>Create a new style sheet called <code>nav.css</code>, and include this rule:</p>
+<pre><code>ul#menu li {
+  display: inline;
+}</code></pre>
+<p>Because of the changes we have just made, we can target the <code>&lt;li&gt;</code>, making it <code>inline</code> instead of the the default <code>&lt;block&gt;</code> style.</p>
+<p>Include nav.css in home.css:</p>
+<h2>home.css</h2>
+<pre><code>@import url(&quot;grid.css&quot;);
+@import url(&quot;image.css&quot;);
+@import url(&quot;nav.css&quot;);</code></pre>
+<p>Examine the header now in a browser - it should look like this:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>The header items are displayed on a single line.</p>
+<p>We can further adjust the spacing between each of the <code>&lt;li&gt;</code> elements:</p>
+<pre><code>ul#menu li {
+  display: inline;
+  padding-right: 1em;
+  padding-left: 1em;
+}</code></pre>
+<p><img src="img/04.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Navigation Item</h1>
+<p>Introduce this rule into nav.css:</p>
+<pre><code>ul#menu a {
+  text-decoration: none;
+}</code></pre>
+<p>This will remove the &#39;underline&#39; associated with links on a page:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Now we need to introduce a mechanism to reflect the current navigation context (the current page) in the navigation bar itself. </p>
+<p>To do this, we will need additional information in the menu in each page:</p>
+<h2>home.html</h2>
+<pre><code>        &lt;ul id=&quot;menu&quot;&gt;
+          &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-01.html&quot;&gt;Cras&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-02.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-03.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+<h2>page-01.html</h2>
+<pre><code>        &lt;ul id=&quot;menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;page-01.html&quot;&gt;Cras&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-02.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-03.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+<h2>page-02.html</h2>
+<pre><code>        &lt;ul id=&quot;menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-01.html&quot;&gt;Cras&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;page-02.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-03.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+<h2>page-03.html</h2>
+<pre><code>        &lt;ul id=&quot;menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-01.html&quot;&gt;Cras&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;page-02.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;page-03.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+<p>In the above adjustments, an individual <code>&lt;li&gt;</code> is marked as <code>active</code> - depending on which page is displayed.</p>
+<p>Now we can define a rule to only effect the &#39;active&#39; page:</p>
+<pre><code>#menu li.active a {
+  background: black;
+  padding: .5em 2em .5em 2em;
+  color: white;
+}</code></pre>
+<p><img src="img/06.png" alt=""></p>
+<p><img src="img/07.png" alt=""></p>
+<p>This is the complete nav.css at this stage:</p>
+<h2>nav.css</h2>
+<pre><code>ul#menu li {
+  display: inline;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+ul#menu a {
+  text-decoration: none;
+}
+
+#menu li.active a {
+  background: black;
+  padding: .5em 2em .5em 2em;
+  color: white;
+}</code></pre>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Style folder</h1>
+<p>Finally, we can reorganise the project structure to keep all style sheets together in one folder for convenience and coherence. In the project, create a directory to hold all the stylesheets called &#39;css&#39;. The move all the style sheets into this folder:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>You will also need to change the <code>&lt;link&gt;</code> header element in each page to import the stylesheet from the css folder:</p>
+<pre><code>    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/home.css&quot;&gt;</code></pre>
+<p>Verify now that the site continues to work as expected.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Solution</h1>
+<p>This is the project as completed in this lab:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.04.end">https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.04.end</a></li>
+</ul>
+<h1>Exercises</h1>
+<h2>Exercise 1: Centre Header and Navigation</h2>
+<p>Making changes just to nav.css, center align the header and navigation sections:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>This is the property that can achieve this effect:</p>
+<pre><code>  text-align: center;</code></pre>
+<h2>Exercises 2: Additional page</h2>
+<p>Create one additional page in the site, and tie it into the style and navigation structure already defined.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
