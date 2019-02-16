@@ -548,10 +548,13 @@ harp -V</code></pre>
 <pre><code>harp server</code></pre>
 <h1>5: Verify Site</h1>
 <p>Verify that your side it available on:</p>
-<pre><code>- &lt;http://localhost:9000/home&gt;</code></pre>
+<pre><code>- &lt;http://localhost:9000&gt;</code></pre>
+<p>If your site has &#39;index.html&#39; as its main page, then the above link will work. If the main page is named something else, then you will need to append the correct file name. E.g.:</p>
+<pre><code>- &lt;http://localhost:9000.home&gt;</code></pre>
 <h1>6: Publish Site</h1>
 <p>Terminate the server with ^C, and then enter:</p>
-<pre><code>surge</code></pre>
+<pre><code>harp compile
+surge</code></pre>
 <p>This will deploy the web site:</p>
 <pre><code>  project path: G:\dev\iot-web\
                size: 34 files, 2.3 MB
