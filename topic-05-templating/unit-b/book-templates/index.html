@@ -773,7 +773,13 @@ Press Ctl+C to stop the server
 <p>In particular, notice how the &#39;Weekly Deals&#39; is present in all three pages.</p>
 <p>If we were not using partials, then we would have had to copy/paste this section into each page. With the template infrastructure in place, this becomes a trivial change:</p>
 <h2>apps.html</h2>
-<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;, {id : &quot;apps&quot;}); %&gt;
+<pre><code>&lt;div id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&quot;maincontent&quot;&gt;
   &lt;div id=&quot;primary&quot;&gt;
     &lt;h1&gt;App Bundles&lt;/h1&gt;
@@ -798,7 +804,13 @@ Press Ctl+C to stop the server
   &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
 &lt;/div&gt;</code></pre>
 <h2>directions.html</h2>
-<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;, {id : &quot;directions&quot;}); %&gt;
+<pre><code>&lt;div id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&quot;maincontent&quot;&gt;
   &lt;div id=&quot;primary&quot;&gt;
     &lt;h1&gt;Directions&lt;/h1&gt;
