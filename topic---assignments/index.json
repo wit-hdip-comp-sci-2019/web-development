@@ -1,0 +1,117 @@
+
+
+
+  {
+  
+  
+  "type" : "topic",
+  "title" : "00: Assignment Specifications ",
+  "img" : "topic---assignments/topic.png",
+  "videoid" : "",
+  "objectives" : "<p>specifications · assignments · grading guidelines · schedule · submission</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "topic---assignments",
+    
+    
+      "link" : "topic---assignments/index.html",
+    
+  "los": [
+     {
+      
+        
+  
+  "type" : "unit",
+  "title" : "Assignment 1 ",
+  "img" : "unit-assign-1/talk-2-assignment-1/project-1.png",
+  "videoid" : "",
+  "objectives" : "",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-assign-1",
+    
+    
+      "link" : "unit-assign-1/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Project 1 Specification ",
+  "img" : "unit-assign-1/talk-2-assignment-1/project-1.png",
+  "videoid" : "none",
+  "objectives" : "<p>Specification for Assignment 1</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-assign-1/talk-2-assignment-1",
+    
+    
+      "link" : "unit-assign-1/talk-2-assignment-1/project-1.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "archive",
+  "title" : "Project Submission Template ",
+  "img" : "unit-assign-1/archive/template.docx.png",
+  "videoid" : "",
+  "objectives" : "<p>An archive of a word document to be submitted with assignment 1</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-assign-1/archive",
+    
+    
+      "link" : "unit-assign-1/archive/template.docx.zip",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "web",
+  "title" : "Assignment 2 Submission ",
+  "img" : "unit-assign-1/web/web.jpg",
+  "videoid" : "",
+  "objectives" : "<p>Moodle assignment dropbox for Assignment 1</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-assign-1/web",
+    
+    
+      "link" : "https://moodle.wit.ie/course/view.php?id=132121",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } 
+   ]
+
+  }
+

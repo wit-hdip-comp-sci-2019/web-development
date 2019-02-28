@@ -1,0 +1,82 @@
+
+
+
+  {
+  
+  
+  "type" : "lab",
+  "title" : "Lab-05a Harp & Surge",
+  "img" : "book-01-deployment/img/main.png",
+  "videoid" : "yerJdD3IQ44",
+  "objectives" : "<p>Install software tools to serve a web site locally and also to deploy the web site to a public web server.</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "book-01-deployment",
+    
+    
+      "link" : "book-01-deployment/index.html",
+    
+  "los": [
+     ]
+,
+  "chapters" : [
+  
+    {
+    "title": "Objectives",
+    "shortTitle": "Lab-05a Harp & Surge",
+    "contentMd" : "#Objectives\n\nInstall software tools to serve a web site locally and also to deploy the web site to a public web server."
+    },
+  
+    {
+    "title": " Explorer & Command Prompt (Windows)",
+    "shortTitle": "01",
+    "contentMd" : "# Explorer & Command Prompt (Windows)\n\n## Explorer\n\nYou may be alrady familiar with the windows Explorer application:\n\n![](img/06.png)\n\n\nIn particular, you should get used to undersanding and managing the structure of folders based in on your `C:` drive:\n\n![](img/07.png)\n\nYour web development folder might be something like this:\n\n![](img/08.png)\n\n\n## Command Prompt\n\nOpen a command prompt on Windows. The easiest way to do this is in Windows to type 'cmd' in the Search Box on the Windows start menu:\n\n![](img/01.png)\n\nFrom now on, you will be using this command line regularly - so we can 'pin' it to the task par for convenience (do this by right clicking):\n\n![](img/02.png)\n\nThis should make it appear on the end of the taskbar like this (icon on extreme right):\n\n![](img/03.png)\n\nNow, you can launch it from the taskbar whenever you need it:\n\n![](img/04.png)\n\nTry out the `dir` command:\n\n![](img/05.png)\n\nAlso experiment with closing and reopening the console application.\n\n# Finder & Terminal\n\nOn Mac, the equivalent of Explorer is Finder:\n\n![](img/12.png)\n\nFor the Command prompt, install Iterm2:\n\n- <https://www.iterm2.com>\n\nThis is a move convenient implementation of the build in terminal.\n\n"
+    },
+  
+    {
+    "title": " Command Line (Windows)",
+    "shortTitle": "02",
+    "contentMd" : "# Command Line (Windows)\n\nThis is an alternative interface to Windows which it is important to become familiar with. In this window you can type what are sometimes called 'DOS' commands. These commands let you have a finer level of control of your PC, and are particularly important for programmers to master.\n\nHere are some simple commands:\n\n- dir\n    - list all files in a directory\n- cd ..\n    - change to a parent directory\n- cd `<directory name>`\n    - change to a specific directory\n\nIt is essential that you become adept at these commands, and a few others, gaining confidence in relating the command prompt and the explorer view.\n\n![](img/01x.png)\n\nIn the above, we have started a command prompt, and entered the following commands:\n\n~~~\ncd /\ncd dev\ncd web-development\ndir\n~~~\n\nThese commands did the following:\n\n- change the folder the 'root' of the current drive\n- change into the 'dev' folder in root\n- change into the 'web-development' folder in 'dev'\n- list tall the files and folders in that folder\n\nNote in all of the above that the 'prompt' in the command window is always showing the 'current' drive/directory. Try now to perform the equivalent on your workstation. You may not have exactly the same file names ... so adjust as necessary.\n\nAlso, if you have a 'space' in your directory (a bad idea generally), then you will have to use quotation marks in the commands. This can get difficulty to type, so in general it is best to adopt the following conventions:\n\n- Never use spaces in directory or file names\n- Never use upper case in directory or file names\n- If you wish to use readable multiple words for a directory or file name, separate the words with '-'. e.g.\n    - web-development\n    - java-projects\n\nPerhaps you might take this opportunity to adjust your workspace and projects to adopt the above conventions. If you do, then you will find that using DOS commands to navigate your folders will be considerably easier.\n\nBefore going on to the next step, make sure you are comfortable navigating in the command console around the file system, and in particular make sure you can navigate to your web development workspace.\n\nAlso, get used to using File Explorer in parallel - keeping an eye on where you are in the folder tree structure.\n\nFinally, this 15 minute tutorial on the DOS command line might be worth skimming:\n\n- [Windows Command Line in 15 Minutes](https://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html)\n\nThe Command line we have been touring here has largely been superseded by a newer application called `Powershell`. However, we will stick to the this one here for the moment.\n\n## Command Line (Mac)\n\nCommands on the mac as similar - review this short tutorial here for the basics:\n\n- <https://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/>\n"
+    },
+  
+    {
+    "title": " Installing Git, Node.js, Harp.js and Surge",
+    "shortTitle": "03",
+    "contentMd" : "# Installing Git, Node.js, Harp.js and Surge\n\n## Install Git\n\nAlthough we will not be using it directly for the moment, download and install Git:\n\n- <https://git-scm.com/>\n\nYou can accept all defaults during the install.\n\n\n## Installing Node\n\nWe will now install a set of tools to enable us to work with templates in html.\n\nFirst, install an application called node.js on your workstation:\n\n- <https://nodejs.org/en/>\n\n![](img/02x.png)\n\nDownload, select and install the `LTS` version (on the left) for your platform. Accept all defaults during the installation. \n\nIf the installation was successful, then you will have a new command called `node` installed on your system. You can test it by entering this on a command prompt:\n\n~~~\nnode -v\n~~~\n\nThe response should be a version number:\n\n![](img/03x.png)\n\n## Install Harp\n\nIf node is installed, then we can install some additional tools. Visit this site:\n\n- <http://harpjs.com/>\n\nInstall the application harp.js application. The procedure should be relatively straightforward, just enter the this command at the prompt:\n\n~~~\nnpm install -g harp\n~~~\n\nThis is the same for Mac or Windows.\n\nThis will take a few minutes (you might need to press return to move it along on Windows). \n\n![](img/04x.png)\n\nTo check if it installed successfully:\n\n~~~\nharp -V\n~~~\n\n(Note: capital 'V'). It should respond with a version number:\n\n~~~\n0.29.0\n~~~\n\n# Install Surge\n\nWith node and harp installed - you will also need to install:\n\n - <https://surge.sh/>\n\nThe simplest way to do this is to open a terminal and enter:\n\n~~~\nnpm install surge -g\n~~~\n\nAfter a minute or less it should complete. If successful, try this:\n\n~~~\nsurge -V\n~~~\n\nWe should get:\n\n~~~\n0.20.1\n~~~\n\n\nWe now have 2 key commands installed in our workstations:\n\n- harp\n- surge\n\nWe will use both of these in the reaming steps.\n"
+    },
+  
+    {
+    "title": " Using Harp",
+    "shortTitle": "04",
+    "contentMd" : "# Using Harp\n\nCreate a new folder for your project in your `web-development` folder called `lab-05a`. Then change into this folder using the `cd` command.\n\nBefore entering the next few commands, make sure you know EXACTLY where your command prompt session is located in the folder structure. Perhaps you may be somewhere like:\n\n- `C:\\dev\\web-development\\lab-05a`\n\n\nSee the previous step for guidance on this. If you are confused as to which folder tour command prompt is based in, just enter this command:\n\n~~~\ndir\n~~~\n\nThis will list the `current` directory contents.\n\n## Using Harp\n\nIf harp was successfully installed, from the command prompt try this command (make sure you are in the lab-05a folder) :\n\n~~~\nharp init demo\n~~~\n\nThis will respond with: \n\n~~~\nDownloading boilerplate: https://github.com/harp-boilerplates/default\nInitialized project at /Users/edeleastar/repos/wit-hdip-comp-sci/web-development/lab05a/demo\n~~~\n\nBack in the command prompt (again, make sure you are in lab-05a directory),  enter:\n\n~~~\ncd demo\nharp server\n~~~\n\nOn windows, you may get a dialog indicating from your firewall asking for permission to run this application. Select 'Allow Access'\n\nYou should see this on the command prompt: \n\n~~~\nHarp v0.25.0 – Chloi Inc. 2012–2015\nYour server is listening at http://localhost:9000/\nPress Ctl+C to stop the server\n------------\n~~~\n\nHere is a screenshot of the last few commands:\n\n![](img/05x.png)\n\nNow browse to this url here:\n\n- <http://localhost:9000>\n\nand you should see this page:\n\n![](img/21.png)\n\nTo stop 'serving' the page, enter Ctrl-C in the command prompt:\n\n~~~\nHarp v0.25.0 – Chloi Inc. 2012–2015\nYour server is listening at http://localhost:9000/\nPress Ctl+C to stop the server\n------------\n^C\n \n~~~\n\n"
+    },
+  
+    {
+    "title": " Project Setup",
+    "shortTitle": "05",
+    "contentMd" : "# Project Setup\n\nMake sure your command prompt is running `C:\\dev\\web-development\\lab-05a>` folder (or whatever is the correct folder on your workstation). If you are following on form the last step, then you may wish to enter:\n\n~~~\ncd ..\n~~~ \n\nfirst. Alternatively, you can enter:\n\n~~~\ncd /\ncd dev\ncd web-development\ncd lab-05a\n~~~\n\nto get there explicitly.\n\nCreate a new project from the command prompt now by entering the following command:\n\n~~~\nC:\\dev\\web-development\\lab0-5a>harp init grid-nav\n~~~\n\nOpening the folder should reveal these files:\n\n![](img/06x.png)\n\nA new folder called `grid-nav` has been created. We will use files like the one generated later - but for the moment delete all of these files and replace them with the following file called `harp.json`:\n\n## harp.json\n\n~~~\n{\n  \"globals\": \n  {\n\n  }\n}\n~~~\n\nYou will need to use Sublime to create this file (copy/paste the above) - and then save it into the new project folder.\n\n![](img/09x.png)\n\nNow get the solution to last weeks lab:\n\n- <https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.04.exercises>\n\nUnzip the project, and place its contents into a folder called `public` that you create in the lab-05a folder:\n\n![](img/10x.png)\n\nLook carefully at the above, your project should be exactly as shown. I.e. all the project files + folders are in a `public` folder inside the `grid-nav` folder in the `lab-05a` folder. If the structure does not match this, then the next steps will not work correctly.  \n\nMake sure it is configured like this before going on to the next step."
+    },
+  
+    {
+    "title": " Deployment",
+    "shortTitle": "06",
+    "contentMd" : "# Deployment\r\n\r\nNow we will `serve` the web site locally with this command:\r\n\r\n~~~\r\nharp server\r\n~~~\r\n\r\nThis will look like this:\r\n\r\n~~~\r\nC:\\dev\\web-development\\lab0-5a\\grid-nav>harp server\r\nYour server is listening at http://localhost:9000/\r\nPress Ctl+C to stop the server\r\n~~~\r\n\r\nNotice, again, that the command is executed from within the `lab-05a/grid-nav` directory.\r\n\r\nVerify that the site is available here:\r\n\r\n- <http://localhost:9000/home>\r\n\r\nIt should look like this:\r\n\r\n![](img/12x.png)\r\n\r\nTerminate the server again with ^C:\r\n\r\n~~~\r\nYour server is listening at http://localhost:9000/\r\nPress Ctl+C to stop the server\r\nTerminate batch job (Y/N)? y\r\n^C\r\nC:\\dev\\web-development\\lab0-5a\\grid-nav>\r\n~~~\r\n\r\nWe are about to try out the 'surge' service - have a quick look at the 2 minute video here to set the scene:\r\n\r\n- <https://surge.sh/help/getting-started-with-surge>\r\n\r\nFrom still within the `lab0-5a/grid-nav folder`, enter the following 2 command:\r\n\r\n~~~\r\nharp compile\r\nsurge ./www\r\n~~~\r\n\r\nOn windows, this may look like this:\r\n\r\n~~~\r\nC:\\dev\\web-development\\lab0-5a\\grid-nav>harp compile\r\nC:\\dev\\web-development\\lab0-5a\\grid-nav>surge ./www\r\n    Welcome to Surge!\r\n    Please login or create an account by entering your email and password:\r\n~~~\r\n\r\nYou are now about to create a new account with the surge.sh web service.\r\n\r\nEnter credential to create a new account now (press return after each entry) - be sure to remember the password. Surge will then deploy the site to a public server:\r\n\r\n~~~\r\n  project path: C:\\dev\\web-development\\lab0-5a\\grid-nav>\r\n               size: 34 files, 2.3 MB\r\n             domain: dull-pet.surge.sh\r\n             upload: [====================] 100%, eta: 0.0s\r\n   propagate on CDN: [====================] 100%\r\n               plan: Free\r\n              users: youremail@domain.com\r\n         IP address: 192.241.214.148\r\n\r\n    Success! Project is published and running at dull-pet.surge.sh\r\n~~~\r\n\r\nThe `domain` can be customised - in the above example 'dull-pet' was generated, you can replace this with something more suitable (but unique, so perhaps include your initials, the current date or something that may not be used by someone else).\r\n\r\nOpen a browser to inspect the running site. It might be something like:\r\n\r\n- <https://dull-pet.surge.sh/home>\r\n\r\n(change dull-pet to the domain generated by your command)\r\n\r\nThis is now deployed and accessible globally! Make sure the navigation works as expected.\r\n"
+    },
+  
+    {
+    "title": " Removing Web Sites from Surge",
+    "shortTitle": "07",
+    "contentMd" : "# Removing Web Sites from Surge\n\nIf you have published a number of sites you may want to recall what domains were generated, or perhaps remove some or all of the published pages.\n\nThe various commands are listed here:\n\n- <https://surge.sh/help>\n\nTo list all web sites:\n\n~~~\nC:\\dev\\iot-web>surge list\n              email: youremail@domain.com\n              token: *****************\n\n      iot-1.surge.sh\n      dull-pet.surge.sh\n      highfalutin-exchange.surge.sh\n\n\nC:\\dev\\iot-web>\n~~~\n\nTo remove (delete) a site from the server use the `teardown` command:\n\n~~~\nC:\\dev\\iot-web>surge teardown highfalutin-exchange.surge.sh\n              email: youremail@domain.com\n              token: *****************\n             domain: highfalutin-exchange.surge.sh\n\n    Success - highfalutin-exchange.surge.sh has been removed.\n\n\nC:\\dev\\iot-web>\n~~~\n\n"
+    },
+  
+    {
+    "title": "Exercises",
+    "shortTitle": "Exercises",
+    "contentMd" : "#Exercises\n\nSee if you can deploy one of your other lab projects using surge. Perhaps the 'bundle store' project from lab03a.\n\nHere are the steps you will need to do this:\n\n# 1: Verify harp & surge installed\n\nMake sure you have the node+harp+surge packages installed on your computer. Open a command prompt and enter\n\n~~~\nnode -v\nharp -V\n~~~\n\n# 2: Prepare Project Folder\n\nCreate a new (empty) folder to contain your project. Into this folder place the following file:\n\n## harp.json\n\n~~~\n{\n  \"globals\": \n  {\n\n  }\n}\n~~~\n\n#3: Copy Project Files\n\nPlace your entire project into a folder called `public` inside this project folder (as we did in step 05).\n\n#4: Run the Server\n\nFrom the command line, enter the command:\n\n~~~\nharp server\n~~~\n\n#5: Verify Site\n\nVerify that your side it available on:\n\n    - <http://localhost:9000>\n\nIf your site has 'index.html' as its main page, then the above link will work. If the main page is named something else, then you will need to append the correct file name. E.g.:\n\n    - <http://localhost:9000.home>\n\n#6: Publish Site\n\nTerminate the server with ^C, and then enter:\n\n~~~\nharp compile\nsurge\n~~~\n\nThis will deploy the web site:\n\n~~~\n  project path: G:\\dev\\iot-web\\\n               size: 34 files, 2.3 MB\n             domain: XXX.surge.sh\n             upload: [====================] 100%, eta: 0.0s\n   propagate on CDN: [====================] 100%\n               plan: Free\n              users: youremail@domain.com\n         IP address: 192.241.214.148\n\n    Success! Project is published and running at XXX.surge.sh\n~~~\n\n#7: Verify Deployment\n\nVerify that the site is available on the domain. You will have the opportunity to change the domain `XXX`\n"
+    }
+  
+  ]
+  }
+

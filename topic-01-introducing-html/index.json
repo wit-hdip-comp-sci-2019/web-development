@@ -1,0 +1,140 @@
+
+
+
+  {
+  
+  
+  "type" : "topic",
+  "title" : " 01: Introducing HTML ",
+  "img" : "topic-01-introducing-html/topic.png",
+  "videoid" : "",
+  "objectives" : "<p>web · client/server · browser · html · documents · elements · attributes · links ·images · page structure · nesting · wireframing · block · inline</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "topic-01-introducing-html",
+    
+    
+      "link" : "topic-01-introducing-html/index.html",
+    
+  "los": [
+     {
+      
+        
+  
+  "type" : "unit",
+  "title" : "HTML Fundamentals ",
+  "img" : "unit/talk-2-introduction/a-introduction.png",
+  "videoid" : "",
+  "objectives" : "<p>HTML Fundamentals</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit",
+    
+    
+      "link" : "unit/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "talk",
+  "title" : "The Nature of the Web ",
+  "img" : "unit/talk-2-introduction/a-introduction.png",
+  "videoid" : "none",
+  "objectives" : "<p>code · html · http · standards · evolution · role of client · role of servers · learning resources</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit/talk-2-introduction",
+    
+    
+      "link" : "unit/talk-2-introduction/a-introduction.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "talk",
+  "title" : "HTML Basics ",
+  "img" : "unit/talk-3-html/b-html-page-structure.png",
+  "videoid" : "none",
+  "objectives" : "<p>elements  · attributes · paths · absolute · relative · nesting · block · inline · labs</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit/talk-3-html",
+    
+    
+      "link" : "unit/talk-3-html/b-html-page-structure.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "lab",
+  "title" : "Lab-01 HTML Structure",
+  "img" : "unit/book-b/img/main.png",
+  "videoid" : "none",
+  "objectives" : "<p>folders · head · title · link · image · references</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit/book-b",
+    
+    
+      "link" : "unit/book-b/index.html",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "panelvideo",
+  "title" : "01: Introducing HTML ",
+  "img" : "unit/panelvideo/",
+  "videoid" : "cQRSDIuYfIM",
+  "objectives" : "<p>01: Introducing HTML</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit/panelvideo",
+    
+    
+      "link" : "unit/panelvideo/cQRSDIuYfIM",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } 
+   ]
+
+  }
+
