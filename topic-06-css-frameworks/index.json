@@ -1,0 +1,347 @@
+
+
+
+  {
+  
+  
+  "type" : "topic",
+  "title" : "06: CSS Frameworks ",
+  "img" : "topic-06-css-frameworks/topic.png",
+  "videoid" : "",
+  "objectives" : "<p>review  · bootstrap · semantic ui · container · segment · grid · stackable · tables · icons · images  · row · col</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "topic-06-css-frameworks",
+    
+    
+      "link" : "topic-06-css-frameworks/index.html",
+    
+  "los": [
+     {
+      
+        
+  
+  "type" : "unit",
+  "title" : "Semantic HTML  ",
+  "img" : "unit-a/talk-1-labs-review/lab-review.png",
+  "videoid" : "",
+  "objectives" : "<p>Semantic HTML</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-a",
+    
+    
+      "link" : "unit-a/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "talk",
+  "title" : " Lab Review ",
+  "img" : "unit-a/talk-1-labs-review/lab-review.png",
+  "videoid" : "none",
+  "objectives" : "<p>lab-1  · lab-2 ·lab-3 · lab-4 · lab-5 · lab-6</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-a/talk-1-labs-review",
+    
+    
+      "link" : "unit-a/talk-1-labs-review/lab-review.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Semantic HTML ",
+  "img" : "unit-a/talk-1-semantic-html/semantic-html.png",
+  "videoid" : "none",
+  "objectives" : "<p>header · main · nav · aside · article · footer · section · figure</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-a/talk-1-semantic-html",
+    
+    
+      "link" : "unit-a/talk-1-semantic-html/semantic-html.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "talk",
+  "title" : "CSS Style Guide ",
+  "img" : "unit-a/talk-2-css-style-guide/css-guide.png",
+  "videoid" : "none",
+  "objectives" : "<p>validity · names · name style · selectors · shorthand · delimiters · order · stops · quotations</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-a/talk-2-css-style-guide",
+    
+    
+      "link" : "unit-a/talk-2-css-style-guide/css-guide.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "lab",
+  "title" : "Lab-06a Nav Params",
+  "img" : "unit-a/book-nav-2/img/main.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Introduce semantic elements. Define a parametrised navigation partial</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-a/book-nav-2",
+    
+    
+      "link" : "unit-a/book-nav-2/index.html",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "unit",
+  "title" : "CSS Frameworks & Semantic UI ",
+  "img" : "unit-b/talk-1-css-frameworks/sematic-ui-part-1.png",
+  "videoid" : "",
+  "objectives" : "<p>CSS Frameworks &amp; Semantic UI</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-b",
+    
+    
+      "link" : "unit-b/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Semantic-UI I: Container & Segment ",
+  "img" : "unit-b/talk-1-css-frameworks/sematic-ui-part-1.png",
+  "videoid" : "none",
+  "objectives" : "<p>project structure · semantic ui archive · container · segment · raised · stacked</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-b/talk-1-css-frameworks",
+    
+    
+      "link" : "unit-b/talk-1-css-frameworks/sematic-ui-part-1.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Semantic-UI II: Grids & Images ",
+  "img" : "unit-b/talk-2-grids-and-images/sematic-ui-part-2.png",
+  "videoid" : "none",
+  "objectives" : "<p>row · column · aligned · center · top  · image · small · medium · large</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-b/talk-2-grids-and-images",
+    
+    
+      "link" : "unit-b/talk-2-grids-and-images/sematic-ui-part-2.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Semantic-UI III: Tables ",
+  "img" : "unit-b/talk-4-tables/sematic-ui-part-3.png",
+  "videoid" : "none",
+  "objectives" : "<p>table · celled · padded · single line · striped · inverted</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-b/talk-4-tables",
+    
+    
+      "link" : "unit-b/talk-4-tables/sematic-ui-part-3.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "lab",
+  "title" : "Lab-06b Semantic-UI",
+  "img" : "unit-b/book-semantic-ui/img/main.png",
+  "videoid" : "none",
+  "objectives" : "<p>Create a revised version of bundle-store using the Semantic UI CSS framework.</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-b/book-semantic-ui",
+    
+    
+      "link" : "unit-b/book-semantic-ui/index.html",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "unit",
+  "title" : "Web Project Repositories ",
+  "img" : "unit-c/github-01-bundle/github.jpg",
+  "videoid" : "",
+  "objectives" : "<p>Web Project Repositories</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-c",
+    
+    
+      "link" : "unit-c/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "github",
+  "title" : "Bundle Store ",
+  "img" : "unit-c/github-01-bundle/github.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Web project source from Lab 01, 02, 03, &amp; 05</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-c/github-01-bundle",
+    
+    
+      "link" : "https://github.com/wit-hdip-comp-sci-2019/bundle-store",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "github",
+  "title" : "Grid Layout ",
+  "img" : "unit-c/github-02-grid/github.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Web project source from Lab 03 &amp; 04</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-c/github-02-grid",
+    
+    
+      "link" : "https://github.com/wit-hdip-comp-sci-2019/grid-layout",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "github",
+  "title" : "Bundle Store - Templates ",
+  "img" : "unit-c/github-03-bundle-ejs/github.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Web project source from Lab 06 &amp; 06</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-c/github-03-bundle-ejs",
+    
+    
+      "link" : "https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } 
+   ]
+
+  }
+
