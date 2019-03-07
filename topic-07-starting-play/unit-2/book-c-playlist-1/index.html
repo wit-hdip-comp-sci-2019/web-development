@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Play Project Structure  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-07b Playlist 1">
+          Lab-07b Playlist 1
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-07b Playlist 1">
+            <h1>Objectives</h1>
+<p>Import, rename and run a new starter project. Extend the project to include a Model. (Note: the video shows java + play revisions a little behind your current installation)</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Creating a Play App</h1>
+<h2>Create New Project</h2>
+<p>Create a new play project - this time using a different procedure from the first lab. Open a shell and enter the following:</p>
+<pre><code class="lang-bash">git clone https://github.com/wit-hdip-comp-sci-2019/play-template-1</code></pre>
+<p>The shell should show something like this:</p>
+<pre><code class="lang-bash">Cloning into &#39;play-template-1&#39;...
+remote: Counting objects: 66, done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 66 (delta 9), reused 66 (delta 9), pack-reused 0
+Unpacking objects: 100% (66/66), done.</code></pre>
+<h2>Rename Project</h2>
+<p>The default name of the project should be changed now. This will require the following procedure:</p>
+<ul>
+<li>Rename the folder <code>play-template-1</code>. Call the folder <code>playlist</code> instead.</li>
+<li><p>Use Sublime Text to edit the file: <code>playlist/conf/application.conf</code>. The first three lines contains the following:</p>
+<pre><code class="lang-bash">  # This is the main configuration file for the application.
+  # ~~
+  application.name=play-template-1</code></pre>
+</li>
+<li><p>Change <code>play-template-1</code> above to <code>playlist</code>, and save the file:</p>
+<pre><code class="lang-bash">  # This is the main configuration file for the application.
+  # ~~
+  application.name=playlist</code></pre>
+</li>
+</ul>
+<h2>Import into Idea</h2>
+<p>Still in the shell, and in the project folder enter the following command:</p>
+<pre><code>play idealize</code></pre>
+<p>You should get this response:</p>
+<pre><code>~        _            _
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/
+~
+~ play! 1.5.2, https://www.playframework.com
+~
+~ OK, the application is ready for Intellij Idea
+~ Use File, Open Project... to open &quot;playlist.ipr&quot;
+~</code></pre>
+<p>Now we can import the project into Idea. Launch Idea, and select <code>File-&gt;Open</code>. Select the Directory containing the project you have just created (play-template-1)</p>
+<p><img src="img/17.png" alt=""></p>
+<p>(Again - you may need to press the button on the extreme bottom left to get the view shown above)</p>
+<p>Explore the <code>controllers</code> and <code>views</code> folders - examining each file.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Running a Play Application</h1>
+<p>Inside the project folder, enter the following command in the shell/command prompt:</p>
+<pre><code>play run</code></pre>
+<p>Which should respond with:</p>
+<pre><code>~        _            _
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/
+~
+~ play! 1.5.2, https://www.playframework.com
+~
+~ Ctrl+C to stop
+~
+~ using java version &quot;1.8.0_162&quot;
+Listening for transport dt_socket at address: 8000
+17:50:30,555 INFO  ~ Starting /Users/edeleastar/dev/play-template-1
+17:50:30,658 WARN  ~ You&#39;re running Play! in DEV mode
+17:50:30,760 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+~ Server is up and running</code></pre>
+<p>Navigate now to:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>You should see view like these:</p>
+<p><img src="img/03.png" alt="">
+<img src="img/04.png" alt="">
+<img src="img/05.png" alt=""></p>
+<p>To stop the application, enter Ctrl+C in the shell:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>This will stop the application. Try</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>... and try again, and verify that the app has now stopped.</p>
+<p>Practice starting and stopping the app.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Playlist Branding</h1>
+<p>We are going to evolve this project into a simple playlist maker, enabling a user to create a playlist of songs.</p>
+<p>First, we can make some simple changes to rebrand the app as <code>Playlist</code> instead of <code>Template 1</code></p>
+<p>Edit the following files and make the changes as shown:</p>
+<h2>views/tags/menu.html</h2>
+<pre><code class="lang-html">...
+  &lt;header class=&quot;ui header item&quot;&gt; &lt;a href=&quot;/&quot;&gt; Playlist &lt;/a&gt;&lt;/header&gt;
+...</code></pre>
+<h2>views/about.html</h2>
+<pre><code class="lang-html">...
+&lt;p&gt;
+  A Little Playlist Maker - Version 1
+&lt;/p&gt;
+...</code></pre>
+<h2>views/start.html</h2>
+<pre><code class="lang-html">...
+&lt;h1 class=&quot;ui header&quot;&gt;
+  Welcome to Playlist 1
+&lt;/h1&gt;
+&lt;p&gt;
+  A small app to let you compose playlists.
+&lt;/p&gt;
+...</code></pre>
+<p>Run the app (it may be still running). Check out the new &#39;branding&#39;. Make sure the menu operates as expected.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Static Playlist</h1>
+<p>In this step we will start to display the playlist itself. First, introduce new partial called <code>listsongs.html</code>:</p>
+<h2>views/tags/listsongs.html</h2>
+<pre><code class="lang-html">&lt;table class=&quot;ui fixed table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Song&lt;/th&gt;
+      &lt;th&gt;Artist&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+      &lt;/td&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>Now change the dashboard view to invoke this partial:</p>
+<h2>views/dashboard.html</h2>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    Playlist Title
+  &lt;/h2&gt;
+  #{listsongs/}
+&lt;/section&gt;</code></pre>
+<p>Make sure the app runs successfully. The table will be empty.</p>
+<p>To test out the UX, we might include some actual songs (replace the <code>&lt;tbody&gt;</code> of listsongs with the following):</p>
+<h2>views/tags/listsongs.html</h2>
+<pre><code class="lang-html">&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      Piano Sonata No. 3
+    &lt;/td&gt;
+    &lt;td&gt;
+      Beethoven
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      Piano Sonata No. 7
+    &lt;/td&gt;
+    &lt;td&gt;
+      Beethoven
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      Piano Sonata No. 10
+    &lt;/td&gt;
+    &lt;td&gt;
+      Beethoven
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;</code></pre>
+<p>... and also give the playlist a title in dashboard:</p>
+<h2>views/dashboard.html</h2>
+<pre><code class="lang-html">....
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    Beethoven Sonatas
+  &lt;/h2&gt;
+...</code></pre>
+<p>Exercise the UX fully again. Make sure the playlist above is being displayed. </p>
+<p>Keep an eye on the shell (console) used to launch the app:</p>
+<p><img src="img/12.png" alt=""></p>
+<p>Locate where in the controllers these messages are being generated:</p>
+<pre><code class="lang-js">...
+    Logger.info(&quot;Rendering Dashboard&quot;);
+...</code></pre>
+<p>These logging messages are a useful technique for figuring out what might be going wrong with an app. There are three variants of the logging statement: <code>info</code>, <code>error</code> and <code>debug</code>. Experiment now with some of these, and exercise the app to make sure the log messages appear.</p>
+<pre><code class="lang-js">...
+    logger.Error(&quot;some error has occurred&quot;);
+...</code></pre>
+<pre><code class="lang-js">...
+    Logger.debug(&quot;some step has occurred...&quot;);
+...</code></pre>
+<p>Introduce some of the above log statements, and verify that they appear as expected on the console.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Playlist Model</h1>
+<p>The app as we have it now could have been completely built as a static web site. However, the framework and tools we have used in this version enable us to evolve this static site into an interactive app</p>
+<h2>Model Classes</h2>
+<p>We can introduce &#39;model&#39; classes to implement the playlist in our app. Introduce these two new classes into the <code>models</code> package:</p>
+<h2>app/models/Song.java</h2>
+<pre><code>package models;
+
+public class Song
+{
+  public String title;
+  public String artist;
+
+  public Song(String title, String artist)
+  {
+    this.title = title;
+    this.artist = artist;
+  }
+}</code></pre>
+<h2>app/models/Playlist.java</h2>
+<pre><code>package models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Playlist
+{
+  public String title;
+  public List&lt;Song&gt; songs = new ArrayList&lt;Song&gt;();
+
+  public Playlist(String title)
+  {
+    this.title = title;
+  }
+}</code></pre>
+<h2>Controller</h2>
+<p>In the Dashboard controller, we can define a playlist object in Java, add some songs, and send to the view:</p>
+<pre><code class="lang-js">package controllers;
+
+import models.Playlist;
+import models.Song;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Dashboard extends Controller
+{
+  public static void index() {
+    Logger.info(&quot;Rendering Dashboard&quot;);
+
+    Song s1 = new Song(&quot;Piano Sonata No. 3&quot;, &quot;Beethoven&quot;);
+    Song s2 = new Song(&quot;Piano Sonata No. 7&quot;, &quot;Beethoven&quot;);
+    Song s3 = new Song(&quot;Piano Sonata No. 10&quot;, &quot;Beethoven&quot;);
+    Playlist playlist = new Playlist(&quot;Beethoven Sonatas&quot;);
+    playlist.songs.add (s1);
+    playlist.songs.add (s2);
+    playlist.songs.add (s3);
+
+    render (&quot;dashboard.html&quot;, playlist);
+  }
+}</code></pre>
+<h2>Views</h2>
+<p>The next step is to eliminate some of the static content from the listsongs partial. Here is a new version to replace the current version:</p>
+<h2>views/tags/listsongs.html</h2>
+<pre><code class="lang-html">&lt;table class=&quot;ui fixed table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Song&lt;/th&gt;
+      &lt;th&gt;Artist&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    #{list items:_playlist.songs, as:&#39;song&#39;}
+      &lt;tr&gt;
+        &lt;td&gt;
+          ${song.title}
+        &lt;/td&gt;
+        &lt;td&gt;
+          ${song.artist}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    #{/list}
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>In the above, we are <code>iterating</code> over an <code>array</code> of <code>songs</code> inside a <code>playlist</code> object</p>
+<p>Here is a new version of the dashboard, which will have to pass the playlist to the partial :</p>
+<h2>app/views/dashboard.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    Beethoven Sonatas
+  &lt;/h2&gt;
+  #{listsongs playlist:playlist/}
+&lt;/section&gt;</code></pre>
+<p>This playlist object, in turn, must be passed to the dashboard controller for this to work. We already did this in the Dashboard conntroller.</p>
+<p>Run the app now - and verify that you can see the playlists.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Multiple playlists</h1>
+<p>Here is a revised Dashboard index method:</p>
+<h2>app/controllers/dashboard.java</h2>
+<pre><code>...
+  public static void index() {
+    Logger.info(&quot;Rendering Dashboard&quot;);
+
+    Song s1 = new Song(&quot;Piano Sonata No. 3&quot;, &quot;Beethoven&quot;);
+    Song s2 = new Song(&quot;Piano Sonata No. 7&quot;, &quot;Beethoven&quot;);
+    Song s3 = new Song(&quot;Piano Sonata No. 10&quot;, &quot;Beethoven&quot;);
+    Playlist p1 = new Playlist(&quot;Beethoven Sonatas&quot;);
+    p1.songs.add (s1);
+    p1.songs.add (s2);
+    p1.songs.add (s3);
+
+    Song s4 = new Song(&quot;Piano Concerto No. 1&quot;, &quot;Beethoven&quot;);
+    Song s5 = new Song(&quot;Piano Concerto No. 12&quot;, &quot;Beethoven&quot;);
+    Song s6 = new Song(&quot;Piano Concerto No. 23&quot;, &quot;Beethoven&quot;);
+    Playlist p2 = new Playlist(&quot;Beethoven Concertos&quot;);
+    p2.songs.add (s4);
+    p2.songs.add (s5);
+    p2.songs.add (s6);
+
+    List&lt;Playlist&gt; playlists = new ArrayList&lt;Playlist&gt;();
+    playlists.add(p1);
+    playlists.add(p2);
+
+    render (&quot;dashboard.html&quot;, playlists);
+  }
+...</code></pre>
+<p>The above code will have errors - unless you import these libraries:</p>
+<pre><code>import java.util.ArrayList;
+import java.util.List;</code></pre>
+<p>Before pasting in the above code - try to use the Eclipse autocorrect feature in insert them automatically.</p>
+<p>Notice that we are now creating 2 playlists: p1 and p2. Each of these contains 3 songs. Read this code carefully and make sure you can understand the data structure.</p>
+<p>Here is a new version of the dashboard view:</p>
+<h2>app/views/dashboard.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+#{list items:playlists, as:&#39;playlist&#39;}
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h2 class=&quot;ui header&quot;&gt;
+      ${playlist.title}
+    &lt;/h2&gt;
+    #{listsongs playlist:playlist/}
+  &lt;/section&gt;
+#{/list}</code></pre>
+<p>Browse the dashboard app now - and you should see the two views:</p>
+<p><img src="img/13.png" alt=""></p>
+<p>See if you can follow the logic from the controller to the view:</p>
+<pre><code>...
+    render (&quot;dashboard.html&quot;, playlists);
+...</code></pre>
+<p>Then in the view - a loop iterating over the playlists </p>
+<pre><code>#{list items:playlists, as:&#39;playlist&#39;}
+  ...
+  ...
+#{/list}</code></pre>
+<p>... and finally in <code>listsongs.html</code>, iterating over each song in a single playlist:</p>
+<pre><code>    ...
+    #{list items:_playlist.songs, as:&#39;song&#39;}
+      ...
+      ...
+    #{/list}
+    ...</code></pre>
+<p>This is a complex flow from java into one template... then into another.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1: Download and Rename Sample Solution</h2>
+<p>A complete version of the app as it should be at the end of this lab:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/playlist/releases/tag/playist-1.end">https://github.com/edeleastar/playlist/releases/tag/playist-1.end</a></li>
+</ul>
+<p>Download this, and unzip it. Then, from a shell inside the folder enter:</p>
+<pre><code>play idealize</code></pre>
+<p>... and then open the project. Run the project (using <code>play run</code> from the command line) and examine the running program by browsing to:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<h2>Exercise 2: Review Playlist Data Structure</h2>
+<p>Look again at the playlist as represented in:</p>
+<pre><code>    Song s1 = new Song(&quot;Piano Sonata No. 3&quot;, &quot;Beethoven&quot;);
+    Song s2 = new Song(&quot;Piano Sonata No. 7&quot;, &quot;Beethoven&quot;);
+    Song s3 = new Song(&quot;Piano Sonata No. 10&quot;, &quot;Beethoven&quot;);
+    Playlist p1 = new Playlist(&quot;Beethoven Sonatas&quot;);
+    p1.songs.add (s1);
+    p1.songs.add (s2);
+    p1.songs.add (s3);
+
+    Song s4 = new Song(&quot;Piano Concerto No. 1&quot;, &quot;Beethoven&quot;);
+    Song s5 = new Song(&quot;Piano Concerto No. 12&quot;, &quot;Beethoven&quot;);
+    Song s6 = new Song(&quot;Piano Concerto No. 23&quot;, &quot;Beethoven&quot;);
+    Playlist p2 = new Playlist(&quot;Beethoven Concertos&quot;);
+    p2.songs.add (s4);
+    p2.songs.add (s5);
+    p2.songs.add (s6);
+
+    List&lt;Playlist&gt; playlists = new ArrayList&lt;Playlist&gt;();
+    playlists.add(p1);
+    playlists.add(p2);</code></pre>
+<p>Review the structure carefully. Can you draw a picture of the structure of the data? Extend your version of the app to contain a new playlist - make up some songs. Verify that they are rendered as expected.</p>
+<h2>Exercise 3: New Fields</h2>
+<p>Extend the song model to also have a <code>duration</code> field + a <code>genre</code> field. Change the constructor to initialise these fields. Modify the dashboard view to display these new fields.</p>
+<h2>Exercise 4: Extend Views</h2>
+<p>Extend the following views:</p>
+<ul>
+<li>Welcome: Extend the welcome view to contain a more detailed outline of the purpose of the application</li>
+<li>About: Extend the about view to provide contact details (may be fictitious) for the author/company that created the app.</li>
+</ul>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

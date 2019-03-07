@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Introducing Play Framework  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-07a Play Setup">
+          Lab-07a Play Setup
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-07a Play Setup">
+            <h1>Objectives</h1>
+<p>Install and test Git + the Play Framework (Note: the video shows java + play revisions a little behind your current installation)</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Install Git</h1>
+<p>You may have already installed this in a previous lab. If the installation succeeded, then verify the version. Do this by opening a shell (command prompt on Windows) and enter the following:</p>
+<pre><code>git --version</code></pre>
+<p>The system might respond with something like this:</p>
+<pre><code>git version 2.16.1.windows.4</code></pre>
+<p>To install git for your platform:</p>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+</ul>
+<p>Accept all the default options if they are presented (usually it is just Windows that offers options).</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Installing and Running Play</h1>
+<p>If you are running a Mac, skip to the step 03.</p>
+<h2>Windows</h2>
+<p>Visit the following site:</p>
+<ul>
+<li><a href="http://www.playframework.org">http://www.playframework.org</a></li>
+</ul>
+<p>In particular, visit the download page:</p>
+<ul>
+<li><a href="https://www.playframework.com/releases">https://www.playframework.com/releases</a></li>
+</ul>
+<p>On the this page, select and download <code>play-1-5.2.zip</code> (the version number is very important)</p>
+<p><img src="img/11.png" alt=""></p>
+<p>Unzip to somewhere on your PC - a good location might be:</p>
+<pre><code>C:\dev</code></pre>
+<p>Once you have unzipped it, the folder might look like this:</p>
+<p><img src="img/19.png" alt=""></p>
+<p>In the above, the play archive has been downloaded and expanded in <code>c:\dev</code></p>
+<p>We need to now add the play folder to the <code>system path</code> - which will enable us to run the play command from a command prompt.</p>
+<h2>Windows</h2>
+<p>For Windows, you need to do the following: Locate the &quot;This PC&quot; icon in Explorer:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Right click on this and select &#39;Properties&#39;:</p>
+<p><img src="img/12.png" alt="">
+<img src="img/13.png" alt=""></p>
+<p>Select &#39;Advanced System Settings&#39; on the left:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>Select &#39;Environment Variables&#39;:</p>
+<p><img src="img/15.png" alt=""></p>
+<p>Under &quot;System Variables&quot; (the bottom list), locate the &#39;Path&#39; entry and select Edit. Your system will most likely look a little different from the one shown below:</p>
+<p><img src="img/21.png" alt=""></p>
+<p>With this view open, press <code>New</code> - add a new entry to this list:</p>
+<p><img src="img/22.png" alt=""></p>
+<p>This new entry should be the path where play is installed. This could be <code>C:\dev\play-1.5.2</code> as in the above example.</p>
+<p>NB: DO NOT DELETE ANY OF THE CURRENT VALUES OF THE PATH!</p>
+<p>Press &quot;Ok&quot; all the way back and rerun the command prompt (close the one already open).</p>
+<p>To test, just type &quot;play&quot; from a command prompt you should see something like this:</p>
+<pre><code>~        _            _
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/
+~
+~ play! 1.5.2, http://www.playframework.org
+~
+~ Usage: play cmd [app_path] [--options]
+~
+~ with,  new      Create a new application
+~        run      Run the application in the current shell
+~        help     Show play help</code></pre>
+<p>Or, if you did not manage to get the play folder on the path, then this command here should work (if you used the recommended folder structure)</p>
+<pre><code>C:\dev\play1-1.5.2\play</code></pre>
+<p>However, it is best to ensure that the play command is on the system path.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h2>Setting the Path on a Mac</h2>
+<p>The Mac is completely different - but has an identical PATH mechanism that needs to be adjusted. This path can be initialised in a file called <code>.bash_profile</code> in the user home folder. </p>
+<p>Any file starting with a <code>.</code> is by default hidden, so the first step is to reveal all of these files:</p>
+<ul>
+<li><a href="https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks">https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks</a></li>
+</ul>
+<p>The simplest way of doing this is the enter these commands:</p>
+<pre><code>  CMD + SHIFT + .</code></pre>
+<p>Try the above command while your finder is observing your home folder. For example - before revealing hidden files:</p>
+<p><img src="img/01x.png" alt=""></p>
+<p>... and after revealing hidden files:</p>
+<p><img src="img/02x.png" alt=""></p>
+<p>Hidden files are displayed in a greyed out font shown above.</p>
+<p>One of the revealed files will be may be:</p>
+<ul>
+<li><code>.bash_profile</code></li>
+</ul>
+<p>If the file does not exist, the create it.</p>
+<p>Now edit this file, and append the new folder (containing the expanded play archive) onto the end if the PATH sequence:</p>
+<pre><code>PATH=$PATH:$HOME/bin:/usr/local/bin:$HOME/dev/play-1.5.2
+export PATH</code></pre>
+<p>If you do not have any .bash_profile file, then you can create one to look like the extract above.</p>
+<p>All of the above assumes you extracted the play archive into the dev folder in your home folder.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Create a Play Project</h1>
+<p>Back in the command line, change to a directory where you keep your web development projects and enter:</p>
+<pre><code>play new playdemo</code></pre>
+<p>You should get:</p>
+<pre><code>~        _            _ 
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/   
+~
+~ play! 1.5.2, http://www.playframework.org
+~
+~ The new application will be created in c:\dev\playdemo
+~ What is the application name? [playdemo]</code></pre>
+<p>Press return when prompted for the name to accept the default (playdemo)</p>
+<pre><code>~
+~ OK, the application is created.
+~ Start it with : play run playdemo
+~ Have fun!
+~</code></pre>
+<p>Explore the generated folder - called &#39;playdemo&#39;. It should contain these folders:</p>
+<ul>
+<li>app</li>
+<li>conf</li>
+<li>documentation</li>
+<li>lib</li>
+<li>modules</li>
+<li>public</li>
+<li>test</li>
+</ul>
+<p>Explore the contents of the <code>app</code>,  <code>conf</code> and <code>public</code> folders. Use Sublime to this this (for the moment).</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Running a Play Application</h1>
+<p>Back in the shell, from inside the playdemo folder, type the following command:</p>
+<pre><code>play run</code></pre>
+<p>Play will respond with something like this:</p>
+<pre><code>~        _            _
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/
+~
+~ play! 1.5.2, https://www.playframework.com
+~
+~ Ctrl+C to stop
+~
+~ using java version &quot;1.8.0_201&quot;
+Listening for transport dt_socket at address: 8000
+09:41:27,910 INFO  ~ Starting /Users/edeleastar/dev/playdemo
+:: loading settings :: url = jar:file:/Users/edeleastar/dev/play-1.5.2/framework/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+09:41:28,327 INFO  ~ Module docviewer is available (/Users/edeleastar/dev/play-1.5.2/modules/docviewer)
+09:41:28,721 WARN  ~ You&#39;re running Play! in DEV mode
+09:41:28,764 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+~ Server is up and running</code></pre>
+<p>On Windows, you may get a dialog from the firewall, asking for permission to run, which you should agree to.</p>
+<p><img src="img/45.png" alt=""></p>
+<p>Now run the browser, and navigate to:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>you should see something like this:</p>
+<p><img src="img/46.png" alt=""></p>
+<p>Also notice that a log message will appear in the command window indicating that the app has started:</p>
+<pre><code>16:30:58,912 INFO  ~ Application &#39;playdemo&#39; is now started !</code></pre>
+<p>To stop the application, press &quot;Control+C&quot; in the command prompt.  If you refresh the browser window, then you should now get an error</p>
+<p>Start the app again by typing &#39;play run&#39; as above. Verify that the app has started by browsing/refreshing to:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>Try this a few times to get used to starting/stopping the application</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Import into Idea</h1>
+<p>Now, making sure you are still in the playdemo folder, run this command:</p>
+<pre><code>play idealize</code></pre>
+<p>The system will respond with:</p>
+<pre><code>        _            _
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/
+~
+~ play! 1.5.2, https://www.playframework.com
+~
+~ OK, the application is ready for Intellij Idea
+~ Use File, Open Project... to open &quot;playdemo.ipr&quot;
+~</code></pre>
+<p>Now, launch IntelliJ Idea, and select <code>Open</code>:</p>
+<p><img src="img/32.png" alt=""></p>
+<p>Navigate to the playdemo folder, and select the project folder to import:</p>
+<p><img src="img/33.png" alt=""></p>
+<p>Be sure to select the &#39;playdemo&#39; only as shown above.</p>
+<p>Once opened by Idea, it might look like this:</p>
+<p><img src="img/34.png" alt=""></p>
+<p>You may need to press &#39;project&#39; icon on the left margin - and then expand the project window to reveal the project details. See if you can navigate to and open the Application class:</p>
+<p><img src="img/35.png" alt=""></p>
+<p>If it all works as shown above - then you are up and running and you can skip the rest of this step.</p>
+<p>However, if first time you run this - there may be an error visible on the title bar as <code>Project SDK is not defined</code></p>
+<p><img src="img/37.png" alt=""></p>
+<p>Press the <code>Setup SDK</code> button:</p>
+<p><img src="img/38.png" alt=""></p>
+<p>Press <code>Configure</code>:</p>
+<p><img src="img/39.png" alt=""></p>
+<p>Press <code>+</code>:</p>
+<p><img src="img/41.png" alt=""></p>
+<p>Select <code>JDK</code></p>
+<p><img src="img/43.png" alt=""></p>
+<p>Navigate to the appropriate folders on your system. The JDK for java 8 is shown above. 9 and 10 may also be fine, but not 11.</p>
+<p><img src="img/44.png" alt=""></p>
+<p>Press <code>OK</code></p>
+<p>This should remove the error - and the project should now be correctly configured.</p>
+<p><img src="img/47.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1:</h2>
+<p>Using steps 04 and 05, create another project - called <code>playdemo1</code> and import into Idea. Experiment with having 2 project open in the IDE simultaneously.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
