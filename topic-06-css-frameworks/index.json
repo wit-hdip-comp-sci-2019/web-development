@@ -5,8 +5,8 @@
   
   
   "type" : "topic",
-  "title" : "06: CSS Frameworks ",
-  "img" : "topic-06-css-frameworks/topic.png",
+  "title" : "06: Semantic + CSS Frameworks ",
+  "img" : "topic-06-css-frameworks/topic.jpg",
   "videoid" : "",
   "objectives" : "<p>review  · bootstrap · semantic ui · container · segment · grid · stackable · tables · icons · images  · row · col</p>",
     
@@ -24,10 +24,10 @@
         
   
   "type" : "unit",
-  "title" : "Semantic HTML  ",
+  "title" : "06a: Semantic HTML  ",
   "img" : "unit-a/talk-1-labs-review/lab-review.png",
   "videoid" : "",
-  "objectives" : "<p>Semantic HTML</p>",
+  "objectives" : "<p>06a: Semantic HTML</p>",
     
       "properties" : {},
     
@@ -139,10 +139,10 @@
         
   
   "type" : "unit",
-  "title" : "CSS Frameworks & Semantic UI ",
+  "title" : "06b: CSS Frameworks & Semantic UI ",
   "img" : "unit-b/talk-1-css-frameworks/sematic-ui-part-1.png",
   "videoid" : "",
-  "objectives" : "<p>CSS Frameworks &amp; Semantic UI</p>",
+  "objectives" : "<p>06b: CSS Frameworks &amp; Semantic UI</p>",
     
       "properties" : {},
     
@@ -254,10 +254,10 @@
         
   
   "type" : "unit",
-  "title" : "Web Project Repositories ",
-  "img" : "unit-c/github-01-bundle/github.jpg",
+  "title" : "06c: Colour ",
+  "img" : "unit-c/talk/colour.png",
   "videoid" : "",
-  "objectives" : "<p>Web Project Repositories</p>",
+  "objectives" : "<p>06c: Colour</p>",
     
       "properties" : {},
     
@@ -272,16 +272,85 @@
       
         
     
+  "type" : "talk",
+  "title" : "Designing with Colour ",
+  "img" : "unit-c/talk/colour.png",
+  "videoid" : "none",
+  "objectives" : "<p>An introduction to Colour in the context of web site design.</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-c/talk",
+    
+    
+      "link" : "unit-c/talk/colour.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "panelvideo",
+  "title" : "Colour ",
+  "img" : "unit-c/panelvideo/",
+  "videoid" : "JDKIYq42omM",
+  "objectives" : "<p>Colour</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-c/panelvideo",
+    
+    
+      "link" : "unit-c/panelvideo/JDKIYq42omM",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "unit",
+  "title" : "06d: Web Project Repositories ",
+  "img" : "unit-d/github-01-bundle/github.jpg",
+  "videoid" : "",
+  "objectives" : "<p>06d: Web Project Repositories</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-d",
+    
+    
+      "link" : "unit-d/index.html",
+    
+  "los": [
+     {
+      
+        
+    
   "type" : "github",
   "title" : "Bundle Store ",
-  "img" : "unit-c/github-01-bundle/github.jpg",
+  "img" : "unit-d/github-01-bundle/github.jpg",
   "videoid" : "none",
   "objectives" : "<p>Web project source from Lab 01, 02, 03, &amp; 05</p>",
     
       "properties" : {},
     
     
-      "folder" : "unit-c/github-01-bundle",
+      "folder" : "unit-d/github-01-bundle",
     
     
       "link" : "https://github.com/wit-hdip-comp-sci-2019/bundle-store",
@@ -297,14 +366,14 @@
     
   "type" : "github",
   "title" : "Grid Layout ",
-  "img" : "unit-c/github-02-grid/github.jpg",
+  "img" : "unit-d/github-02-grid/github.jpg",
   "videoid" : "none",
   "objectives" : "<p>Web project source from Lab 03 &amp; 04</p>",
     
       "properties" : {},
     
     
-      "folder" : "unit-c/github-02-grid",
+      "folder" : "unit-d/github-02-grid",
     
     
       "link" : "https://github.com/wit-hdip-comp-sci-2019/grid-layout",
@@ -320,14 +389,14 @@
     
   "type" : "github",
   "title" : "Bundle Store - Templates ",
-  "img" : "unit-c/github-03-bundle-ejs/github.jpg",
+  "img" : "unit-d/github-03-bundle-ejs/github.jpg",
   "videoid" : "none",
   "objectives" : "<p>Web project source from Lab 06 &amp; 06</p>",
     
       "properties" : {},
     
     
-      "folder" : "unit-c/github-03-bundle-ejs",
+      "folder" : "unit-d/github-03-bundle-ejs",
     
     
       "link" : "https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs",
@@ -338,6 +407,75 @@
       
     } 
    ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "talk",
+  "title" : "",
+  "img" : "/",
+  "videoid" : "none",
+  "objectives" : "",
+    
+      "properties" : {},
+    
+    
+      "folder" : "",
+    
+    
+      "link" : "/error: missing talk",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "talk",
+  "title" : "",
+  "img" : "/",
+  "videoid" : "none",
+  "objectives" : "",
+    
+      "properties" : {},
+    
+    
+      "folder" : "",
+    
+    
+      "link" : "/error: missing talk",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "panelvideo",
+  "title" : "06a: Semantic + CSS Frameworks ",
+  "img" : "panelvideo/",
+  "videoid" : "ANCxR3YLoYU",
+  "objectives" : "<p>06a: Semantic + CSS Frameworks</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "panelvideo",
+    
+    
+      "link" : "panelvideo/ANCxR3YLoYU",
+    
+  "los": [
+     ]
 
       
     } 

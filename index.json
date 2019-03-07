@@ -107,8 +107,8 @@
   },
  {
   "type" : "topic",
-  "title" : "06: CSS Frameworks ",
-  "img" : "topic-06-css-frameworks/topic.png",
+  "title" : "06: Semantic + CSS Frameworks ",
+  "img" : "topic-06-css-frameworks/topic.jpg",
   "videoid" : "",
   "objectives" : "<p>review  · bootstrap · semantic ui · container · segment · grid · stackable · tables · icons · images  · row · col</p>",
   
@@ -116,6 +116,18 @@
   
   "folder" : "topic-06-css-frameworks",
   "link" : "topic-06-css-frameworks/index.html"
+  },
+ {
+  "type" : "topic",
+  "title" : "07: Applications ",
+  "img" : "topic-07-starting-play/topic.png",
+  "videoid" : "",
+  "objectives" : "<p>sites · apps · frameworks · command line · ide · java · request · response · front-end · back-end</p>",
+  
+    "properties" : {},
+  
+  "folder" : "topic-07-starting-play",
+  "link" : "topic-07-starting-play/index.html"
   }
  ]
   }
