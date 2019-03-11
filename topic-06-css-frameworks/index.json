@@ -414,52 +414,6 @@
       
         
   
-  "type" : "talk",
-  "title" : "",
-  "img" : "/",
-  "videoid" : "none",
-  "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "",
-    
-    
-      "link" : "/error: missing talk",
-    
-  "los": [
-     ]
-
-      
-    } ,
-   {
-      
-        
-  
-  "type" : "talk",
-  "title" : "",
-  "img" : "/",
-  "videoid" : "none",
-  "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "",
-    
-    
-      "link" : "/error: missing talk",
-    
-  "los": [
-     ]
-
-      
-    } ,
-   {
-      
-        
-  
   "type" : "panelvideo",
   "title" : "06a: Semantic + CSS Frameworks ",
   "img" : "panelvideo/",
