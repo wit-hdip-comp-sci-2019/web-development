@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Models  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-08b Playlist-3">
+          Lab-08b Playlist-3
+        </a>
+      
+        <a class="item" data-tab="Exercise Solutions">
+          Exercise Solutions
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-08b Playlist-3">
+            <h1>Objectives</h1>
+<p>Move the playlists into their own view. Introduce routes for opening the playlist and also deleting individual songs.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercise Solutions">
+            <h1>Exercise Solutions</h1>
+<h2>Exercise 2: New Playlist</h2>
+<p>Working only in the data.yml, create a new Playlist. If this works correctly, you should see the playlist in the dashboard just by restarting the application.</p>
+<h2>Solution</h2>
+<h3>conf/data.yml</h3>
+<pre><code>Song(s1):
+  title: Piano Sonata No. 3
+  artist: Beethoven
+  duration: 5
+Song(s2):
+  title: Piano Sonata No. 7
+  artist: Beethoven
+  duration: 6
+Song(s3):
+  title: Piano Sonata No. 10
+  artist: Beethoven
+  duration: 8  
+Song(s4):
+  title: Piano Concerto No. 27
+  artist: Beethoven
+  duration: 8
+Song(s5):
+  title: Piano Concertos No. 17
+  artist: Beethoven
+Song(s6):
+  title: Piano Concerto No. 10
+  artist: Beethoven
+  duration: 12    
+Song(s7):
+  title: Opus 120 Thirty-three variations on a waltz by Diabelli in C major
+  artist: Beethoven
+Song(s8):
+  title: Opus 120 Thirty-three variations on a waltz by Diabelli in C major
+  artist: Beethoven
+
+Playlist(p1):
+  title: Bethoven Sonatas
+  duration: 19
+  songs:
+  - s1
+  - s2
+  - s3
+
+Playlist(p2):
+  title: Bethoven Concertos
+  duration: 23
+  songs:
+  - s4
+  - s5
+  - s6  
+
+Playlist(p3):
+  title: Beethoven Variations
+  duration: 26
+  songs:
+  - s7
+  - s8</code></pre>
+<h2>Exercise 2:</h2>
+<p>We would like an &#39;admin&#39; interface to the application, which displays all the songs in the database - ignoring the playlists they belong to for the moment. The view should also display the IDs of the songs. This is a &#39;hidden&#39; view, that does not appear in the menu. It is accessed by browsing directly to:</p>
+<ul>
+<li><a href="http://localhost:9000/admin">http://localhost:9000/admin</a></li>
+</ul>
+<h3>Solution</h3>
+<h2>conf/routes</h2>
+<pre><code>GET     /admin                                  Admin.index</code></pre>
+<h2>views/admin.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;admin&quot;/}
+
+  &lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    All Known Songs in the Database:
+  &lt;/h2&gt;
+  &lt;table class=&quot;ui fixed table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;ID &lt;/th&gt;
+        &lt;th&gt;Song&lt;/th&gt;
+        &lt;th&gt;Artist&lt;/th&gt;
+        &lt;th&gt;Duration&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      #{list items:songs, as:&#39;song&#39;}
+        &lt;tr&gt;
+          &lt;td&gt;
+            ${song.id}
+          &lt;/td&gt;
+          &lt;td&gt;
+            ${song.title}
+          &lt;/td&gt;
+          &lt;td&gt;
+            ${song.artist}
+          &lt;/td&gt;
+          &lt;td&gt;        
+            ${song.duration}
+          &lt;/td&gt;        
+        &lt;/tr&gt;
+      #{/list}
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/section&gt;</code></pre>
+<h2>controllers/Admin.java</h2>
+<pre><code>package controllers;
+
+import java.util.List;
+
+import models.Song;
+import play.mvc.Controller;
+
+public class Admin extends Controller
+{
+  public static void index() {
+   List&lt;Song&gt; songs = Song.findAll();
+   render (&quot;admin.html&quot;, songs);
+  }
+}</code></pre>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Playlist Summary</h1>
+<p>We would like to change the app to just display a list of playlists on the dashboard, not the complete contents of each playlist. Replace the current dashboard with the following:</p>
+<h2>views/dashboard.html</h2>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+#{list items:playlists, as:&#39;playlist&#39;}
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h2 class=&quot;ui header&quot;&gt;
+      ${playlist.title} 
+    &lt;/h2&gt;
+      &lt;p&gt; Total Duration: ${playlist.duration} &lt;/p&gt;
+    &lt;a href=&quot;#&quot;&gt; View &lt;/a&gt;
+  &lt;/section&gt;
+#{/list}</code></pre>
+<p>This will render like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>The <code>view</code> links are currently inert (try them), but we would like them to cause a new view to be rendered, containing the playlist concerned.</p>
+<p>As each playlist has an ID generated by the database, which can make this convenient to implement. Here is a new version of the <code>view</code> link:</p>
+<h2>views/dashboard.html</h2>
+<pre><code class="lang-html">      &lt;a href=&quot;/playlists/${playlist.id}&quot;&gt; View &lt;/a&gt;</code></pre>
+<p>With this change in place, try hovering over each view link (without pressing it). In Chrome, keep an eye on the status bar which should show a the link including the id:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Hover over each link and note how the ID changes. Clicking on any link causes the following error:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>We need a new controller to display a new view containing the playlist details. We will do this in the next step.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Router + Controller</h1>
+<p>The starting point for any new link in our app is to first define a <code>route</code> to support this link. All supported routes are defined in <code>config/conf</code></p>
+<h2>config/conf</h2>
+<pre><code># Routes
+# This file defines all application routes (Higher priority routes first)
+# 
+
+# Home page
+GET     /                                       Start.index
+GET     /dashboard                              Dashboard.index
+GET     /about                                  About.index
+GET     /admin                                  Admin.index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}</code></pre>
+<p>In particular, these are the main routes currently supported:</p>
+<pre><code class="lang-html">GET     /                                       Start.index
+GET     /dashboard                              Dashboard.index
+GET     /about                                  About.index
+GET     /admin                                  Admin.index</code></pre>
+<p>These are the three patterns our app responds to: </p>
+<ul>
+<li><code>/</code></li>
+<li><code>/dashboard</code></li>
+<li><code>/about</code></li>
+<li><code>/admin</code></li>
+</ul>
+<p>Any other pattern will generate a <code>not found</code> error from our app.</p>
+<p>Also note that each of these statements matches a route pattern with a function inside a controller. So, for instance, this route:</p>
+<pre><code>GET     /about                                  About.index</code></pre>
+<p>... ensures that this function would be called if the route was triggered:</p>
+<pre><code class="lang-js">public class About extends Controller
+{
+  public static void index() {
+    Logger.info(&quot;Rendering about&quot;);
+    render (&quot;about.html&quot;);
+  }
+}</code></pre>
+<p>Reflect on this connection for a moment before proceeding.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Controller/View/Route</h1>
+<p>We have a new pattern <code>/playlist/id</code>, which we would like to route to a controller that would render a new view detailing the playlist contents:</p>
+<h2>views/dashboard.html</h2>
+<pre><code class="lang-html">...
+      &lt;a href=&quot;/playlist/${playlist.id}&quot;&gt; View &lt;/a&gt;
+...</code></pre>
+<p>Supporting a new link link this usually requires three things:</p>
+<ul>
+<li>a controller</li>
+<li>a view</li>
+<li>a route</li>
+</ul>
+<p>Here is is the new controller:</p>
+<h2>app/controllers/PlaylistCtrl.java</h2>
+<pre><code>package controllers;
+
+import java.util.List;
+
+import models.Playlist;
+import models.Song;
+import play.mvc.Controller;
+
+public class PlaylistCtrl extends Controller
+{
+  public static void index(Long id)
+  {
+    render(&quot;playlist.html&quot;);
+  }
+}</code></pre>
+<p>This will render a view called <code>playlist</code>. This is the playlist view (for the moment):</p>
+<h2>app/views/playlist.html</h2>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Playlist&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    Playlist details...
+  &lt;/h2&gt;
+&lt;/section&gt;</code></pre>
+<p>Finally, the route:</p>
+<h2>conf/routes</h2>
+<pre><code>GET     /playlists/{id}                         PlaylistCtrl.index</code></pre>
+<p>Notice that the route includes this segment: <code>{id}</code>. This means it matches any route that includes an extra wildcard segment at the end.</p>
+<p>Implement all of the above now and verify that the view is rendered as expected. i.e. when we click on a &#39;View&#39; link we see the above page.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Playlists</h1>
+<p>In order to display the correct playlist, we need to extract the id from the url and then fetch the playlist from the model. Modify the playlist controller as follows:</p>
+<pre><code class="lang-js">...
+
+public class PlaylistCtrl extends Controller
+{
+  public static void index(Long id)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Playlist id = &quot; + id);
+    render(&quot;playlist.html&quot;, playlist);
+  }
+}</code></pre>
+<p>The <code>id</code> from the route is passed as a parameter to the method. We use this id to get the correct playlist object:</p>
+<pre><code>    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Playlist id = &quot; + id);</code></pre>
+<p>Run the app and select each of the playlist links in turn. The logs will display each of the Ids as you select the playlist. A different id should be logged for each.</p>
+<p>Check the database to verify that these IDs are correct:</p>
+<ul>
+<li><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#104;&#x74;&#116;&#112;&#x3a;&#x2f;&#47;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#x74;&#58;&#57;&#48;&#48;&#x30;&#47;&#x40;&#100;&#x62;">&#104;&#x74;&#116;&#112;&#x3a;&#x2f;&#47;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#x74;&#58;&#57;&#48;&#48;&#x30;&#47;&#x40;&#100;&#x62;</a></li>
+</ul>
+<p>Occasionally, you may see an error like this:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>When this occurs - restart the application (Ctrl-C and the <code>play run</code> again).</p>
+<p>Here is a revised version of the Playlist view:</p>
+<h2>app/views/playlist.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Playlist&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    ${playlist.title}
+  &lt;/h2&gt;
+  &lt;table class=&quot;ui table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Song&lt;/th&gt;
+        &lt;th&gt;Artist&lt;/th&gt;
+      &lt;/tr&gt; 
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    #{list items:playlist.songs, as:&#39;song&#39;}
+      &lt;tr&gt;
+        &lt;td&gt;
+          ${song.title}
+        &lt;/td&gt;
+        &lt;td&gt;
+          ${song.artist}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    #{/list}
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/section&gt;</code></pre>
+<p>Rerun the app now and verify that you can view each playlist. Check the database to confirm the IDs match.</p>
+<p>We alrady have a <code>listsongs.html</code> partial:</p>
+<h2>app/views/tags/listsongs.html</h2>
+<pre><code>&lt;table class=&quot;ui fixed table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Song&lt;/th&gt;
+      &lt;th&gt;Artist&lt;/th&gt;
+      &lt;th&gt;Duration&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    #{list items:_playlist.songs, as:&#39;song&#39;}
+      &lt;tr&gt;
+        &lt;td&gt;
+          ${song.title}
+        &lt;/td&gt;
+        &lt;td&gt;
+          ${song.artist}
+        &lt;/td&gt;
+        &lt;td&gt;        
+          ${song.duration}
+        &lt;/td&gt;        
+      &lt;/tr&gt;
+    #{/list}
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>We could change the Playlist controler to call this to do the work of building the song table:</p>
+<h2>app/views/playlist.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Playlist&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    ${playlist.title}
+  &lt;/h2&gt;
+  #{listsongs playlist:playlist /}
+&lt;/section&gt;</code></pre>
+<p>Verify that all of this works as expected.</p>
+<p>This last step is a little challenging to understand fully - particularly how the listsongs.html partial is parameterised by the playlist passed from playlist.html. Look carefully at these templates for a minute and try to absorb the syntax.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Deleting Songs 1</h1>
+<p>Having a playlist app, without the ability to create/delete songs or playlists is clearly very limited. We have, essentially, an app that allows us to <code>Read</code> our models, but not <code>Create</code>, <code>Update</code> or <code>Delete</code> elements of the model.</p>
+<p>We can start with providing a facility to delete songs from individual playlists. Our view will need to look like this:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>and pressing the delete button should remove the corresponding song.</p>
+<p>Any new button/link/action on our page requires:</p>
+<ul>
+<li>an new button element in the view for each song</li>
+<li>a route matching the new button element</li>
+<li>a matching controller method</li>
+</ul>
+<p>.. and it may also involve some interaction with the model.</p>
+<h1>View</h1>
+<p>The new button must appear in each song row. Here is a revised listsongs partial:</p>
+<h2>app/views/tags/listsongs.html</h2>
+<pre><code class="lang-html">&lt;table class=&quot;ui fixed table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Song&lt;/th&gt;
+      &lt;th&gt;Artist&lt;/th&gt;
+      &lt;th&gt;Duration&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    #{list items:_playlist.songs, as:&#39;song&#39;}
+      &lt;tr&gt;
+        &lt;td&gt;
+          ${song.title}
+        &lt;/td&gt;
+        &lt;td&gt;
+          ${song.artist}
+        &lt;/td&gt;
+        &lt;td&gt;        
+          ${song.duration}
+        &lt;/td&gt;      
+         &lt;td&gt;
+            &lt;a href=&quot;/playlists/${_playlist.id}/deletesong/${song.id}&quot; class=&quot;ui tiny red button&quot;&gt;Delete Song&lt;/a&gt;
+         &lt;/td&gt;         
+      &lt;/tr&gt;
+    #{/list}
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>Look at the new element</p>
+<pre><code>         &lt;td&gt;
+            &lt;a href=&quot;/playlists/${_playlist.id}/deletesong/${song.id}&quot; class=&quot;ui tiny red button&quot;&gt;Delete Song&lt;/a&gt;
+         &lt;/td&gt;</code></pre>
+<p>It is just an <code>&lt;a&gt;</code> element - styled to look like a button. The <code>href</code> is manufactured to include the ids of both the playlist + the song. So it might be:</p>
+<pre><code>... href=&quot;/playlists/123/deletesong/321&quot; ...</code></pre>
+<p>... where 123 is the id of the playlist, and 321 is the id of the song.</p>
+<h1>Route</h1>
+<p>We now need a new route - containing both the playlist and song id - and linking to a new method in the playlist controller:</p>
+<h2>conf/routes</h2>
+<pre><code class="lang-js">GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong</code></pre>
+<h1>Controller</h1>
+<p>This is the new method to handle this route:</p>
+<h2>app/ontrollers/PlaylistCtrl.java</h2>
+<pre><code class="lang-js">...
+  public static void deletesong (Long id, Long songid)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Song song = Song.findById(songid);
+    Logger.info (&quot;Removing&quot; + song.title);
+
+    render(&quot;playlist.html&quot;, playlist);
+  }
+...</code></pre>
+<p>Try all of this now - and verify that the logs shows the attempt to delete the song when the button is pressed.</p>
+<p>We havent yet deleted the song - we will leave that to the next step.</p>
+<p>To summarise, for every song we are generating a <code>delete</code> button. This button&#39;s href contains the id of the playlist + the song we want to delete. When the user presses this button, it triggers a call to our new Controller method. This method is then able to locate the playlist/song in the database using the IDs from the route.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Delete Song 2</h1>
+<p>This is our deleteSong method:</p>
+<pre><code>  public static void deletesong (Long id, Long songid)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Song song = Song.findById(songid);
+    Logger.info (&quot;Removing&quot; + song.title);
+
+    render(&quot;playlist.html&quot;, playlist);
+  }</code></pre>
+<p>Note that we have 2 ids:</p>
+<ul>
+<li>id of the playlist</li>
+<li>id of the song in the playlist (songid)</li>
+</ul>
+<p>These ids are generated by this link:</p>
+<pre><code> &lt;a href=&quot;/playlists/${playlist.id}/deletesong/${song.id}&quot; class=&quot;ui tiny red button&quot;&gt;Delete Song&lt;/a&gt;</code></pre>
+<p>Annd are interpreted by this route:</p>
+<pre><code class="lang-js">GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong</code></pre>
+<p>Follow carefully the <code>id</code> and <code>songid</code> identifiers in the above.</p>
+<p>To actually delete the song, we need to remove it from the playlist songs collection + delete from the database:</p>
+<pre><code>  public static void deletesong (Long id, Long songid)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Song song = Song.findById(songid);
+    Logger.info (&quot;Removing&quot; + song.title);
+    playlist.songs.remove(song);
+    playlist.save();
+    song.delete();
+    render(&quot;playlist.html&quot;, playlist);
+  }</code></pre>
+<p>Try this now - and make sure the songs are removed. Also, check that they are removed from the database table.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1: Download and Rename Sample Solution</h2>
+<p>A complete version of the app as it should be at the end of this lab:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/playlist/releases/tag/playlist.3.end">https://github.com/edeleastar/playlist/releases/tag/playlist.3.end</a></li>
+</ul>
+<p>However, if you already have a project called &#39;playlist&#39; in Idea, then it might be confusing So, first rename the project to <code>playlist-2</code> (covered in step 1 of lab07b), and then run this command:</p>
+<pre><code>play idealize</code></pre>
+<p>... and then open with Idea.</p>
+<h2>Exercise 2: UX Enhancements</h2>
+<p>Introduce a &#39;Delete Playlist&#39; button for each playlist, represented by a <code>trash</code> icon. E.g:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>In addition, the <code>view</code> link is replace by a <code>folder open</code> icon. You can learn how to use these icons in Semantic UI here:</p>
+<ul>
+<li><a href="https://semantic-ui.com/elements/icon.html">https://semantic-ui.com/elements/icon.html</a></li>
+</ul>
+<p>Bind the <code>delete playlist</code> button to a new function to be implemented in the Dashboard controller, which should log the id of the playlist to be deleted.</p>
+<h2>Exercise 3: Delete Playlist Functionality</h2>
+<p>Make the button actually delete the denoted playlist.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
