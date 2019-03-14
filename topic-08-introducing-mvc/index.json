@@ -1,0 +1,209 @@
+
+
+
+  {
+  
+  
+  "type" : "topic",
+  "title" : "08: Models & Views ",
+  "img" : "topic-08-introducing-mvc/topic.png",
+  "videoid" : "",
+  "objectives" : "<p>Models · Views · Controllers  · conf  · Song · Playlist · ArrayList · OneToMany · Bootstrap</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "topic-08-introducing-mvc",
+    
+    
+      "link" : "topic-08-introducing-mvc/index.html",
+    
+  "los": [
+     {
+      
+        
+  
+  "type" : "unit",
+  "title" : "Controllers + Views ",
+  "img" : "unit-1/talk-0-mvc/mvc.png",
+  "videoid" : "",
+  "objectives" : "<p>Controllers + Views</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-1",
+    
+    
+      "link" : "unit-1/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Model View Controller ",
+  "img" : "unit-1/talk-0-mvc/mvc.png",
+  "videoid" : "none",
+  "objectives" : "<p>request · router · controller · view · response</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-1/talk-0-mvc",
+    
+    
+      "link" : "unit-1/talk-0-mvc/mvc.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Views ",
+  "img" : "unit-1/talk-1-views/views.png",
+  "videoid" : "none",
+  "objectives" : "<p>extends · set · list · list · menu · listsongs`</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-1/talk-1-views",
+    
+    
+      "link" : "unit-1/talk-1-views/views.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "lab",
+  "title" : "Lab-08a Playlist-2",
+  "img" : "unit-1/book-a-playlist-2/img/main.png",
+  "videoid" : "none",
+  "objectives" : "<p>Move the playlist model into the database. Prime the database from a YAML file.</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-1/book-a-playlist-2",
+    
+    
+      "link" : "unit-1/book-a-playlist-2/index.html",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "unit",
+  "title" : "Models ",
+  "img" : "unit-2/talk-2-models/models.png",
+  "videoid" : "",
+  "objectives" : "<p>Models</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-2",
+    
+    
+      "link" : "unit-2/index.html",
+    
+  "los": [
+     {
+      
+        
+    
+  "type" : "talk",
+  "title" : "Models ",
+  "img" : "unit-2/talk-2-models/models.png",
+  "videoid" : "none",
+  "objectives" : "<p>table  · row  · mem · yaml · Song · Playlist · ArrayList · OneToMany · OnApplicationStart</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-2/talk-2-models",
+    
+    
+      "link" : "unit-2/talk-2-models/models.pdf",
+    
+  "los": [
+     ]
+
+      
+    } ,
+   {
+      
+        
+    
+  "type" : "lab",
+  "title" : "Lab-08b Playlist-3",
+  "img" : "unit-2/book-b-playlist-3/img/main.png",
+  "videoid" : "none",
+  "objectives" : "<p>Move the playlists into their own view. Introduce routes for opening the playlist and also deleting individual songs.</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "unit-2/book-b-playlist-3",
+    
+    
+      "link" : "unit-2/book-b-playlist-3/index.html",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+      
+    } ,
+   {
+      
+        
+  
+  "type" : "panelvideo",
+  "title" : "08: Introducing MVC ",
+  "img" : "panelvideo/",
+  "videoid" : "938uuQ_P66Q",
+  "objectives" : "<p>08: Introducing MVC</p>",
+    
+      "properties" : {},
+    
+    
+      "folder" : "panelvideo",
+    
+    
+      "link" : "panelvideo/938uuQ_P66Q",
+    
+  "los": [
+     ]
+
+      
+    } 
+   ]
+
+  }
+

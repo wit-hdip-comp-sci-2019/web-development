@@ -128,6 +128,18 @@
   
   "folder" : "topic-07-starting-play",
   "link" : "topic-07-starting-play/index.html"
+  },
+ {
+  "type" : "topic",
+  "title" : "08: Models & Views ",
+  "img" : "topic-08-introducing-mvc/topic.png",
+  "videoid" : "",
+  "objectives" : "<p>Models · Views · Controllers  · conf  · Song · Playlist · ArrayList · OneToMany · Bootstrap</p>",
+  
+    "properties" : {},
+  
+  "folder" : "topic-08-introducing-mvc",
+  "link" : "topic-08-introducing-mvc/index.html"
   }
  ]
   }
