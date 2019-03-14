@@ -46,7 +46,7 @@
   "title" : "Model View Controller ",
   "img" : "unit-1/talk-0-mvc/mvc.png",
   "videoid" : "none",
-  "objectives" : "<p>request · router · controller · view · response</p>",
+  "objectives" : "<p>request · router · controller · view · response ·</p>",
     
       "properties" : {},
     
@@ -185,7 +185,7 @@
         
   
   "type" : "panelvideo",
-  "title" : "08: Introducing MVC ",
+  "title" : "08: Introducing MVC  ",
   "img" : "panelvideo/",
   "videoid" : "938uuQ_P66Q",
   "objectives" : "<p>08: Introducing MVC</p>",
