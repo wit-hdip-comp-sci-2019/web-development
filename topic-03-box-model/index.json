@@ -4,250 +4,175 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "topic",
   "title" : "03: Box & Grid ",
-  "img" : "topic-03-box-model/topic.png",
+  "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>padding · border · margin · width · grid · grid-template-columns · grid-column-start · span  · grid-gap</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "topic-03-box-model",
-    
-    
-      "link" : "topic-03-box-model/index.html",
-    
+  "folder" : "topic-03-box-model",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Box Model ",
-  "img" : "unit-a/talk-1-html-evolution/d-html_evolution.png",
+  "img" : "talk-1-html-evolution/d-html_evolution.png",
   "videoid" : "",
   "objectives" : "<p>Box Model</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a",
-    
-    
-      "link" : "unit-a/index.html",
-    
+  "folder" : "unit-a",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Web Standards Evolution ",
-  "img" : "unit-a/talk-1-html-evolution/d-html_evolution.png",
+  "img" : "d-html_evolution.png",
   "videoid" : "none",
   "objectives" : "<p>standards  · w3c · whatwg · sgml · xhtml · html5 ·</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-1-html-evolution",
-    
-    
-      "link" : "unit-a/talk-1-html-evolution/d-html_evolution.pdf",
-    
+  "folder" : "talk-1-html-evolution",
+  "link" : "d-html_evolution.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Box Model Fundamentals ",
-  "img" : "unit-a/talk-2-box-model/a-box-model-1.png",
+  "img" : "a-box-model-1.png",
   "videoid" : "none",
   "objectives" : "<p>content · padding · border · margin · variations · fonts · dimensions</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-2-box-model",
-    
-    
-      "link" : "unit-a/talk-2-box-model/a-box-model-1.pdf",
-    
+  "folder" : "talk-2-box-model",
+  "link" : "a-box-model-1.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Box Model Example ",
-  "img" : "unit-a/talk-3-box-example/a-box-model-example.png",
+  "img" : "a-box-model-example.png",
   "videoid" : "none",
   "objectives" : "<p>border-width · border-style · padding · width · margin-left · text-align · float</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-3-box-example",
-    
-    
-      "link" : "unit-a/talk-3-box-example/a-box-model-example.pdf",
-    
+  "folder" : "talk-3-box-example",
+  "link" : "a-box-model-example.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-03a Layout",
-  "img" : "unit-a/book-a/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>fonts · content · images · classes · folding editor · sidebar · float</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/book-a",
-    
-    
-      "link" : "unit-a/book-a/index.html",
-    
+  "folder" : "book-a",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Layout ",
-  "img" : "unit-b/talk-2-box/box.png",
+  "img" : "talk-2-box/box.png",
   "videoid" : "",
   "objectives" : "<p>Layout</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b",
-    
-    
-      "link" : "unit-b/index.html",
-    
+  "folder" : "unit-b",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Box Layout ",
-  "img" : "unit-b/talk-2-box/box.png",
+  "img" : "box.png",
   "videoid" : "none",
   "objectives" : "<p>Some important characteristics of the box model layout rules.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/talk-2-box",
-    
-    
-      "link" : "unit-b/talk-2-box/box.pdf",
-    
+  "folder" : "talk-2-box",
+  "link" : "box.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Grid ",
-  "img" : "unit-b/talk-4-grid/grid.png",
+  "img" : "grid.png",
   "videoid" : "none",
   "objectives" : "<p>The new Grid standard support a clean, simple way of defining multi-column layouts</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/talk-4-grid",
-    
-    
-      "link" : "unit-b/talk-4-grid/grid.pdf",
-    
+  "folder" : "talk-4-grid",
+  "link" : "grid.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-03b Multicolumn",
-  "img" : "unit-b/book-b/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>header · maincontent · navigation · footer · primary · secondary</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/book-b",
-    
-    
-      "link" : "unit-b/book-b/index.html",
-    
+  "folder" : "book-b",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "panelvideo",
   "title" : "03: Box & Grid ",
-  "img" : "panelvideo/",
+  "img" : "",
   "videoid" : "3fSWeaBIIyg",
   "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "panelvideo",
-    
-    
-      "link" : "panelvideo/3fSWeaBIIyg",
-    
+  "folder" : "panelvideo",
+  "link" : "3fSWeaBIIyg",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 

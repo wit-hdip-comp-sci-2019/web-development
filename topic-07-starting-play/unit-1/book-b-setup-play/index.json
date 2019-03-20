@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-07a Play Setup",
-  "img" : "book-b-setup-play/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "W0MJdoN1bHE",
   "objectives" : "<p>Install and test Git + the Play Framework (Note: the video shows java + play revisions a little behind your current installation)</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-b-setup-play",
-    
-    
-      "link" : "book-b-setup-play/index.html",
-    
+  "folder" : "book-b-setup-play",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

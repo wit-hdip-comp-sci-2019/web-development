@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-05a Harp & Surge",
-  "img" : "book-01-deployment/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "yerJdD3IQ44",
   "objectives" : "<p>Install software tools to serve a web site locally and also to deploy the web site to a public web server.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-01-deployment",
-    
-    
-      "link" : "book-01-deployment/index.html",
-    
+  "folder" : "book-01-deployment",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

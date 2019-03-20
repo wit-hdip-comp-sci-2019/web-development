@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-03b Multicolumn",
-  "img" : "book-b/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>header · maincontent · navigation · footer · primary · secondary</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-b",
-    
-    
-      "link" : "book-b/index.html",
-    
+  "folder" : "book-b",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

@@ -4,250 +4,175 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "topic",
   "title" : "07: Applications ",
-  "img" : "topic-07-starting-play/topic.png",
+  "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>sites · apps · frameworks · command line · ide · java · request · response · front-end · back-end</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "topic-07-starting-play",
-    
-    
-      "link" : "topic-07-starting-play/index.html",
-    
+  "folder" : "topic-07-starting-play",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Introducing Play Framework ",
-  "img" : "unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.png",
+  "img" : "talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.png",
   "videoid" : "",
   "objectives" : "<p>Introducing Play Framework</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-1",
-    
-    
-      "link" : "unit-1/index.html",
-    
+  "folder" : "unit-1",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Web Sites/Applications ",
-  "img" : "unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.png",
+  "img" : "a-introduction-to-dynamic-web.png",
   "videoid" : "none",
   "objectives" : "<p>theme · content · navigation · structure · templates · style · interaction · business logic · context · static · dynamic</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-1/talk-1-introducing-dynamic-web",
-    
-    
-      "link" : "unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf",
-    
+  "folder" : "talk-1-introducing-dynamic-web",
+  "link" : "a-introduction-to-dynamic-web.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Starting to Play ",
-  "img" : "unit-1/talk-2-starting-to-play/b-starting-to-play.png",
+  "img" : "b-starting-to-play.png",
   "videoid" : "none",
   "objectives" : "<p>download · expand · path · verify · run · idealize · skeleton app</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-1/talk-2-starting-to-play",
-    
-    
-      "link" : "unit-1/talk-2-starting-to-play/b-starting-to-play.pdf",
-    
+  "folder" : "talk-2-starting-to-play",
+  "link" : "b-starting-to-play.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-07a Play Setup",
-  "img" : "unit-1/book-b-setup-play/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "W0MJdoN1bHE",
   "objectives" : "<p>Install and test Git + the Play Framework (Note: the video shows java + play revisions a little behind your current installation)</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-1/book-b-setup-play",
-    
-    
-      "link" : "unit-1/book-b-setup-play/index.html",
-    
+  "folder" : "book-b-setup-play",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Play Project Structure ",
-  "img" : "unit-2/talk-3-project-structure/web-app-intro.png",
+  "img" : "talk-3-project-structure/web-app-intro.png",
   "videoid" : "",
   "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-2",
-    
-    
-      "link" : "unit-2/index.html",
-    
+  "folder" : "unit-2",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Web App Introduction ",
-  "img" : "unit-2/talk-3-project-structure/web-app-intro.png",
+  "img" : "web-app-intro.png",
   "videoid" : "none",
   "objectives" : "<p>structure  · front-end · backend · router · model  ·  view  ·  controller</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-2/talk-3-project-structure",
-    
-    
-      "link" : "unit-2/talk-3-project-structure/web-app-intro.pdf",
-    
+  "folder" : "talk-3-project-structure",
+  "link" : "web-app-intro.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Front-end ",
-  "img" : "unit-2/talk-4-front-end/front-end.jpg",
+  "img" : "front-end.jpg",
   "videoid" : "none",
   "objectives" : "<p>layout · partials · views · tags · about · dashboard · main · start</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-2/talk-4-front-end",
-    
-    
-      "link" : "unit-2/talk-4-front-end/front-end.pdf",
-    
+  "folder" : "talk-4-front-end",
+  "link" : "front-end.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Back-end ",
-  "img" : "unit-2/talk-5-back-end/back-end.png",
+  "img" : "back-end.png",
   "videoid" : "none",
   "objectives" : "<p>request · router · controller · view · response</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-2/talk-5-back-end",
-    
-    
-      "link" : "unit-2/talk-5-back-end/back-end.pdf",
-    
+  "folder" : "talk-5-back-end",
+  "link" : "back-end.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-07b Playlist 1",
-  "img" : "unit-2/book-c-playlist-1/img/main.jpg",
+  "img" : "img/main.jpg",
   "videoid" : "1qXvIIhGN9g",
   "objectives" : "<p>Import, rename and run a new starter project. Extend the project to include a Model. (Note: the video shows java + play revisions a little behind your current installation)</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-2/book-c-playlist-1",
-    
-    
-      "link" : "unit-2/book-c-playlist-1/index.html",
-    
+  "folder" : "book-c-playlist-1",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "panelvideo",
   "title" : "07: Starting to Play ",
-  "img" : "panelvideo/",
+  "img" : "",
   "videoid" : "8filEanmKTw",
   "objectives" : "<p>07: Starting to Play</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "panelvideo",
-    
-    
-      "link" : "panelvideo/8filEanmKTw",
-    
+  "folder" : "panelvideo",
+  "link" : "8filEanmKTw",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 

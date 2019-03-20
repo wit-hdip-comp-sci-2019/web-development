@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-04 Navigation",
-  "img" : "book/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Devise a simple navigation metaphor for a web site.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book",
-    
-    
-      "link" : "book/index.html",
-    
+  "folder" : "book",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

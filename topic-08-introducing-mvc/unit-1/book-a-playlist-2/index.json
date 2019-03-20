@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-08a Playlist-2",
-  "img" : "book-a-playlist-2/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Move the playlist model into the database. Prime the database from a YAML file.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-a-playlist-2",
-    
-    
-      "link" : "book-a-playlist-2/index.html",
-    
+  "folder" : "book-a-playlist-2",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

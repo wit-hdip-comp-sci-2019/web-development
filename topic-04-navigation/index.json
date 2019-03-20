@@ -4,204 +4,143 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "topic",
   "title" : "04: Navigation & Style ",
-  "img" : "topic-04-navigation/topic.jpeg",
+  "img" : "topic.jpeg",
   "videoid" : "",
   "objectives" : "<p>indentation · encoding · doctype · validity · semantics · entities · type attributes · quotations · nav · tab · current · padding · border · menu · li · ul · header · main · nav · aside · article · footer · section · figure</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "topic-04-navigation",
-    
-    
-      "link" : "topic-04-navigation/index.html",
-    
+  "folder" : "topic-04-navigation",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Navigation ",
-  "img" : "unit-a/talk-1-css-selectors/d-css-selectors.png",
+  "img" : "talk-1-css-selectors/d-css-selectors.png",
   "videoid" : "",
   "objectives" : "<p>Navigation</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a",
-    
-    
-      "link" : "unit-a/index.html",
-    
+  "folder" : "unit-a",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "CSS Cascade ",
-  "img" : "unit-a/talk-1-css-selectors/d-css-selectors.png",
+  "img" : "d-css-selectors.png",
   "videoid" : "none",
   "objectives" : "<p>Example of selector rule evaluation with a worked example</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-1-css-selectors",
-    
-    
-      "link" : "unit-a/talk-1-css-selectors/d-css-selectors.pdf",
-    
+  "folder" : "talk-1-css-selectors",
+  "link" : "d-css-selectors.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Navigation ",
-  "img" : "unit-a/talk-2-navigation/css-navigation.jpeg",
+  "img" : "css-navigation.jpeg",
   "videoid" : "none",
   "objectives" : "<p>nav · tab · current · padding · border · menu · li · ul</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-2-navigation",
-    
-    
-      "link" : "unit-a/talk-2-navigation/css-navigation.pdf",
-    
+  "folder" : "talk-2-navigation",
+  "link" : "css-navigation.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-04 Navigation",
-  "img" : "unit-a/book/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Devise a simple navigation metaphor for a web site.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/book",
-    
-    
-      "link" : "unit-a/book/index.html",
-    
+  "folder" : "book",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "panelvideo",
   "title" : "04a: Navigation ",
-  "img" : "unit-a/panelvideo/",
+  "img" : "",
   "videoid" : "PPMxjkDU4sY",
   "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/panelvideo",
-    
-    
-      "link" : "unit-a/panelvideo/PPMxjkDU4sY",
-    
+  "folder" : "panelvideo",
+  "link" : "PPMxjkDU4sY",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Design I: Introduction ",
-  "img" : "unit-b/talk-1/design-guides.png",
+  "img" : "talk-1/design-guides.png",
   "videoid" : "",
   "objectives" : "<p>Design I: Introduction</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b",
-    
-    
-      "link" : "unit-b/index.html",
-    
+  "folder" : "unit-b",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Design Guides for the Web ",
-  "img" : "unit-b/talk-1/design-guides.png",
+  "img" : "design-guides.png",
   "videoid" : "none",
   "objectives" : "<p>Introduction to web design principles</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/talk-1",
-    
-    
-      "link" : "unit-b/talk-1/design-guides.pdf",
-    
+  "folder" : "talk-1",
+  "link" : "design-guides.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "panelvideo",
   "title" : "04b: Design Guides for the Web ",
-  "img" : "unit-b/panelvideo/",
+  "img" : "",
   "videoid" : "w9HA7HuTTkw",
   "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/panelvideo",
-    
-    
-      "link" : "unit-b/panelvideo/w9HA7HuTTkw",
-    
+  "folder" : "panelvideo",
+  "link" : "w9HA7HuTTkw",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } 
    ]
 

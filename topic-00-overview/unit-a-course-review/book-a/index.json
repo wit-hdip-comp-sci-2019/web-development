@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-00 Editing HTML",
-  "img" : "book-a/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Introduction to Editing and viewing a html page</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-a",
-    
-    
-      "link" : "book-a/index.html",
-    
+  "folder" : "book-a",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

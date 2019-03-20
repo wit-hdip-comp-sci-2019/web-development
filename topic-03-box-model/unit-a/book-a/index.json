@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-03a Layout",
-  "img" : "book-a/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>fonts · content · images · classes · folding editor · sidebar · float</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-a",
-    
-    
-      "link" : "book-a/index.html",
-    
+  "folder" : "book-a",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

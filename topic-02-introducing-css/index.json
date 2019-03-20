@@ -4,204 +4,143 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "topic",
   "title" : "02: Introducing CSS ",
-  "img" : "topic-02-introducing-css/topic.jpg",
+  "img" : "topic.jpg",
   "videoid" : "",
   "objectives" : "<p>markup · style · function· stylesheet · rules · selectors · declarations· properties · values · classes · ids · inheritance</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "topic-02-introducing-css",
-    
-    
-      "link" : "topic-02-introducing-css/index.html",
-    
+  "folder" : "topic-02-introducing-css",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "HTML & CSS ",
-  "img" : "unit-a/talk-1-html-review/a-html-elements.jpg",
+  "img" : "talk-1-html-review/a-html-elements.jpg",
   "videoid" : "",
   "objectives" : "<p>HTML &amp; CSS</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a",
-    
-    
-      "link" : "unit-a/index.html",
-    
+  "folder" : "unit-a",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "HTML Elements ",
-  "img" : "unit-a/talk-1-html-review/a-html-elements.jpg",
+  "img" : "a-html-elements.jpg",
   "videoid" : "none",
   "objectives" : "<p>structural elements ·  head elements · text elements · list elements · image elements · shared attributes</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-1-html-review",
-    
-    
-      "link" : "unit-a/talk-1-html-review/a-html-elements.pdf",
-    
+  "folder" : "talk-1-html-review",
+  "link" : "a-html-elements.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "CSS Basics ",
-  "img" : "unit-a/talk-2-introducing-css/b-introducing-css.jpg",
+  "img" : "b-introducing-css.jpg",
   "videoid" : "none",
   "objectives" : "<p>markup · presentation · style · rules · selectors · declarations · properties · values</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-2-introducing-css",
-    
-    
-      "link" : "unit-a/talk-2-introducing-css/b-introducing-css.pdf",
-    
+  "folder" : "talk-2-introducing-css",
+  "link" : "b-introducing-css.pdf",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "CSS Fundamentals ",
-  "img" : "unit-b/talk-3-css-rules/c-css-rules.png",
+  "img" : "talk-3-css-rules/c-css-rules.png",
   "videoid" : "",
   "objectives" : "<p>CSS Fundamentals</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b",
-    
-    
-      "link" : "unit-b/index.html",
-    
+  "folder" : "unit-b",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "CSS Rules ",
-  "img" : "unit-b/talk-3-css-rules/c-css-rules.png",
+  "img" : "c-css-rules.png",
   "videoid" : "none",
   "objectives" : "<p>rule structure · combining rules · combining selectors</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/talk-3-css-rules",
-    
-    
-      "link" : "unit-b/talk-3-css-rules/c-css-rules.pdf",
-    
+  "folder" : "talk-3-css-rules",
+  "link" : "c-css-rules.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Class, ID & DIV ",
-  "img" : "unit-b/talk-4-class-id-div/class-id-div.png",
+  "img" : "class-id-div.png",
   "videoid" : "none",
   "objectives" : "<p>class · id · div</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/talk-4-class-id-div",
-    
-    
-      "link" : "unit-b/talk-4-class-id-div/class-id-div.pdf",
-    
+  "folder" : "talk-4-class-id-div",
+  "link" : "class-id-div.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-02 CSS Intro",
-  "img" : "unit-b/book/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>inheritance · classes · fonts · colours · indentation · best practices</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/book",
-    
-    
-      "link" : "unit-b/book/index.html",
-    
+  "folder" : "book",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "panelvideo",
   "title" : "02: Introducing CSS ",
-  "img" : "panelvideo/",
+  "img" : "",
   "videoid" : "yyS7nCNLNOc",
   "objectives" : "<p>02: Introducing CSS</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "panelvideo",
-    
-    
-      "link" : "panelvideo/yyS7nCNLNOc",
-    
+  "folder" : "panelvideo",
+  "link" : "yyS7nCNLNOc",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 

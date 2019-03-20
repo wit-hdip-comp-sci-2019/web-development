@@ -4,319 +4,223 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "topic",
   "title" : "05: Deployment & Templating ",
-  "img" : "topic-05-templating/topic.png",
+  "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>clients · servers · hosting · domains · dns · paths · http · command prompt · node · harp · surge · server · compile · EJS · dry · wet · engine · partials · includes · layouts · paths · compile</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "topic-05-templating",
-    
-    
-      "link" : "topic-05-templating/index.html",
-    
+  "folder" : "topic-05-templating",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Deployment ",
-  "img" : "unit-a/talk-1-deployment/deployment.png",
+  "img" : "talk-1-deployment/deployment.png",
   "videoid" : "",
   "objectives" : "<p>Deployment</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a",
-    
-    
-      "link" : "unit-a/index.html",
-    
+  "folder" : "unit-a",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Deployment ",
-  "img" : "unit-a/talk-1-deployment/deployment.png",
+  "img" : "deployment.png",
   "videoid" : "none",
   "objectives" : "<p>clients · servers · hosting · domains · dns · paths · http · response codes</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-1-deployment",
-    
-    
-      "link" : "unit-a/talk-1-deployment/deployment.pdf",
-    
+  "folder" : "talk-1-deployment",
+  "link" : "deployment.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Harp & Surge ",
-  "img" : "unit-a/talk-2-harp-and-surge/harp.png",
+  "img" : "harp.png",
   "videoid" : "none",
   "objectives" : "<p>command prompt · node · harp · surge · server · compile</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/talk-2-harp-and-surge",
-    
-    
-      "link" : "unit-a/talk-2-harp-and-surge/harp.pdf",
-    
+  "folder" : "talk-2-harp-and-surge",
+  "link" : "harp.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-05a Harp & Surge",
-  "img" : "unit-a/book-01-deployment/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "yerJdD3IQ44",
   "objectives" : "<p>Install software tools to serve a web site locally and also to deploy the web site to a public web server.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a/book-01-deployment",
-    
-    
-      "link" : "unit-a/book-01-deployment/index.html",
-    
+  "folder" : "book-01-deployment",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Templating ",
-  "img" : "unit-b/talk-4-templates/templates.png",
+  "img" : "talk-4-templates/templates.png",
   "videoid" : "",
   "objectives" : "<p>Templating</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b",
-    
-    
-      "link" : "unit-b/index.html",
-    
+  "folder" : "unit-b",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Templates ",
-  "img" : "unit-b/talk-4-templates/templates.png",
+  "img" : "templates.png",
   "videoid" : "none",
   "objectives" : "<p>EJS · dry · wet · engine · partials · includes · layouts · paths · compile</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/talk-4-templates",
-    
-    
-      "link" : "unit-b/talk-4-templates/templates.pdf",
-    
+  "folder" : "talk-4-templates",
+  "link" : "templates.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-05b Templates",
-  "img" : "unit-b/book-templates/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Refactor the bundle-store site to use EJS templates</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-b/book-templates",
-    
-    
-      "link" : "unit-b/book-templates/index.html",
-    
+  "folder" : "book-templates",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Design II: Typography (+ html coding standards) ",
-  "img" : "unit-c/talk-1-typograpahy/typography.png",
+  "img" : "talk-1-typograpahy/typography.png",
   "videoid" : "",
   "objectives" : "<p>Design II: Typography (+ html coding standards)</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-c",
-    
-    
-      "link" : "unit-c/index.html",
-    
+  "folder" : "unit-c",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Typography ",
-  "img" : "unit-c/talk-1-typograpahy/typography.png",
+  "img" : "typography.png",
   "videoid" : "none",
   "objectives" : "<p>The fundamentals of fonts &amp; typefaces in the context of web design.</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-c/talk-1-typograpahy",
-    
-    
-      "link" : "unit-c/talk-1-typograpahy/typography.pdf",
-    
+  "folder" : "talk-1-typograpahy",
+  "link" : "typography.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "HTML Style Guide ",
-  "img" : "unit-c/talk-3-coding-standards-html/coding-standards-html.jpg",
+  "img" : "coding-standards-html.jpg",
   "videoid" : "none",
   "objectives" : "<p>indentation · encoding · doctype · validity ·  semantics · entities · type attributes · quotations</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-c/talk-3-coding-standards-html",
-    
-    
-      "link" : "unit-c/talk-3-coding-standards-html/coding-standards-html.pdf",
-    
+  "folder" : "talk-3-coding-standards-html",
+  "link" : "coding-standards-html.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Semantic HTML ",
-  "img" : "unit-c/talk-3-semantic-html/semantic-html.png",
+  "img" : "semantic-html.png",
   "videoid" : "none",
   "objectives" : "<p>header · main · nav · aside · article · footer · section · figure</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-c/talk-3-semantic-html",
-    
-    
-      "link" : "unit-c/talk-3-semantic-html/semantic-html.pdf",
-    
+  "folder" : "talk-3-semantic-html",
+  "link" : "semantic-html.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "panelvideo",
   "title" : "05b: Typography ",
-  "img" : "unit-c/panelvideo/",
+  "img" : "",
   "videoid" : "Z308Hm3Pa78",
   "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-c/panelvideo",
-    
-    
-      "link" : "unit-c/panelvideo/Z308Hm3Pa78",
-    
+  "folder" : "panelvideo",
+  "link" : "Z308Hm3Pa78",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } ,
    {
-      
-        
+    
+  
+    "properties" : {},
   
   "type" : "panelvideo",
   "title" : "05a: Templating ",
-  "img" : "panelvideo/",
+  "img" : "",
   "videoid" : "b4qsSshHKoA",
   "objectives" : "",
-    
-      "properties" : {},
-    
-    
-      "folder" : "panelvideo",
-    
-    
-      "link" : "panelvideo/b4qsSshHKoA",
-    
+  "folder" : "panelvideo",
+  "link" : "b4qsSshHKoA",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 

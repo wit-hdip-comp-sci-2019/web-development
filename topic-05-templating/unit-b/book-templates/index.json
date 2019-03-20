@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-05b Templates",
-  "img" : "book-templates/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Refactor the bundle-store site to use EJS templates</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-templates",
-    
-    
-      "link" : "book-templates/index.html",
-    
+  "folder" : "book-templates",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   

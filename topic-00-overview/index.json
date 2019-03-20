@@ -4,89 +4,63 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "topic",
   "title" : "00: Module Overview ",
-  "img" : "topic-00-overview/topic.jpg",
+  "img" : "topic.jpg",
   "videoid" : "",
   "objectives" : "<p>topics · schedules · calendar · assignments · first lab</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "topic-00-overview",
-    
-    
-      "link" : "topic-00-overview/index.html",
-    
+  "folder" : "topic-00-overview",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
+    
+  
+    "properties" : {},
   
   "type" : "unit",
   "title" : "Course Preview + Html Editing ",
-  "img" : "unit-a-course-review/talk-1-overview/a-introduction.jpg",
+  "img" : "talk-1-overview/a-introduction.jpg",
   "videoid" : "",
   "objectives" : "<p>Course Preview + Html Editing</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a-course-review",
-    
-    
-      "link" : "unit-a-course-review/index.html",
-    
+  "folder" : "unit-a-course-review",
+  "link" : "index.html",
   "los": [
-     {
-      
-        
+   {
     
+  
+    "properties" : {},
+  
   "type" : "talk",
   "title" : "Module Overview ",
-  "img" : "unit-a-course-review/talk-1-overview/a-introduction.jpg",
+  "img" : "a-introduction.jpg",
   "videoid" : "none",
   "objectives" : "<p>calendar · topics · assessments · schedule</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a-course-review/talk-1-overview",
-    
-    
-      "link" : "unit-a-course-review/talk-1-overview/a-introduction.pdf",
-    
+  "folder" : "talk-1-overview",
+  "link" : "a-introduction.pdf",
   "los": [
-     ]
+   ]
 
-      
     } ,
    {
-      
-        
     
+  
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-00 Editing HTML",
-  "img" : "unit-a-course-review/book-a/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Introduction to Editing and viewing a html page</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "unit-a-course-review/book-a",
-    
-    
-      "link" : "unit-a-course-review/book-a/index.html",
-    
+  "folder" : "book-a",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 
-      
     } 
    ]
 
-      
     } 
    ]
 

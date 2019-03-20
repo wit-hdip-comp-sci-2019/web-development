@@ -4,22 +4,17 @@
   {
   
   
+    "properties" : {},
+  
   "type" : "lab",
   "title" : "Lab-01 HTML Structure",
-  "img" : "book-b/img/main.png",
+  "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>folders · head · title · link · image · references</p>",
-    
-      "properties" : {},
-    
-    
-      "folder" : "book-b",
-    
-    
-      "link" : "book-b/index.html",
-    
+  "folder" : "book-b",
+  "link" : "index.html",
   "los": [
-     ]
+   ]
 ,
   "chapters" : [
   
