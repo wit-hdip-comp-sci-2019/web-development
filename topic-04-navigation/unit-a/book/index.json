@@ -19,49 +19,49 @@
   "chapters" : [
   
     {
-    "title": "Objectives",
+    "title": "#Objectives",
     "shortTitle": "Lab-04 Navigation",
     "contentMd" : "#Objectives\n\nDevise a simple navigation metaphor for a web site.\n\n"
     },
   
     {
-    "title": " Setup",
+    "title": "# Setup",
     "shortTitle": "01",
     "contentMd" : "# Setup\n\nThis is a completed version of last weeks lab, including exercises, which extended the project to include several interlinked pages:\n\n- <https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.3b.exercises>\n\nDownload, unzip this project and expand it into your web-development folder. Make sure the project folder is called `lab04`. Your Sublime workspace should look like this:\n\n![](img/01.png)\n\nReview the site by opening the home page - it should be the same as this:\n\n\n- [Layout Site](https://wit-hdip-comp-sci-2019.github.io/grid-layout-v1/home.html)\n\n"
     },
   
     {
-    "title": " Refactor the CSS",
+    "title": "# Refactor the CSS",
     "shortTitle": "02",
     "contentMd" : "# Refactor the CSS\n\nThis is the style sheet:\n\n## home.css\n\n~~~\n.container {\n  display: grid;\n  grid-template-columns: 5% 10% 61% 5%;\n  grid-gap: 3%;\n}\n\n#header {\n  grid-column-start: 2;\n  grid-column-end: span 2;\n}\n\n#navigation {\n  grid-column-start: 2;\n}\n\n#maincontent {\n  grid-column-start: 3;\n  display: grid;\n  grid-template-columns: 70% 27%;\n  grid-gap: 3%;\n}\n\n#primary {\n  grid-column-start: 1;\n}\n\n#secondary {\n  grid-column-start: 2;\n}\n\n#footer {\n  grid-column-start: 2;\n  grid-column-end: span 2;\n}\n\n.small-right-img {\n  width: 50px;\n  float: right;\n  margin: 10px;\n}\n\n.medium-right-img {\n  width: 150px;\n  float: right;\n  margin: 10px;\n}\n\n.large-right-img {\n  width: 250px;\n  float: right;\n  margin: 10px;\n}\n\n.small-left-img {\n  width: 50px;\n  float: left;\n  margin: 10px;\n}\n\n.medium-left-img {\n  width: 150px;\n  float: left;\n  margin: 10px;\n}\n\n.large-left-img {\n  width: 250px;\n  float: left;\n  margin: 10px;\n}\n\n.small-centre-img {\n  display: block;\n  width: 50px;\n  margin-left: auto;\n  margin-right: auto\n}\n\n.medium-centre-img {\n  display: block;\n  width: 150px;\n  margin-left: auto;\n  margin-right: auto\n}\n\n.large-centre-img {\n  display: block;\n  width: 250px;\n  margin-left: auto;\n  margin-right: auto\n}\n~~~\n\n\nThis is a long file, requiring scrolling to see it in full. We might find it easier to manage it we have 2 smaller sheets:\n\n- grid.css: contains just the grid rules\n- image.css: the image related rules\n\n\n## grid.css\n\n~~~\n.container {\n  display: grid;\n  grid-template-columns: 5% 10% 61% 5%;\n  grid-gap: 3%;\n}\n\n#header {\n  grid-column-start: 2;\n  grid-column-end: span 2;\n}\n\n#navigation {\n  grid-column-start: 2;\n}\n\n#maincontent {\n  grid-column-start: 3;\n  display: grid;\n  grid-template-columns: 70% 27%;\n  grid-gap: 3%;\n}\n\n#primary {\n  grid-column-start: 1;\n}\n\n#secondary {\n  grid-column-start: 2;\n}\n\n#footer {\n  grid-column-start: 2;\n  grid-column-end: span 2;\n}\n~~~\n\n## image.css\n\n~~~\n.small-right-img {\n  width: 50px;\n  float: right;\n  margin: 10px;\n}\n\n.medium-right-img {\n  width: 150px;\n  float: right;\n  margin: 10px;\n}\n\n.large-right-img {\n  width: 250px;\n  float: right;\n  margin: 10px;\n}\n\n.small-left-img {\n  width: 50px;\n  float: left;\n  margin: 10px;\n}\n\n.medium-left-img {\n  width: 150px;\n  float: left;\n  margin: 10px;\n}\n\n.large-left-img {\n  width: 250px;\n  float: left;\n  margin: 10px;\n}\n\n.small-centre-img {\n  display: block;\n  width: 50px;\n  margin-left: auto;\n  margin-right: auto\n}\n\n.medium-centre-img {\n  display: block;\n  width: 150px;\n  margin-left: auto;\n  margin-right: auto\n}\n\n.large-centre-img {\n  display: block;\n  width: 250px;\n  margin-left: auto;\n  margin-right: auto\n}\n~~~\n\nWe can now replace the contents of home.css with include statements:\n\n\n## home.css\n\n~~~\n@import url(\"grid.css\");\n@import url(\"image.css\");\n~~~\n\nThese changes will simplify working with the style sheets - as we have each focussed on a specific trait of the site.\n\nMake sure the site works exactly the same as before.\n\n\n\n\n\n"
     },
   
     {
-    "title": " Restructure Grid",
+    "title": "# Restructure Grid",
     "shortTitle": "03",
     "contentMd" : "# Restructure Grid\n\nWe will restructure the page layout to a 3 column structure, with a reduced grid gap:\n\n\n## home.css\n\n~~~\n.container {\n  display: grid;\n  grid-template-columns: 5% 88% 5%;\n  grid-gap: 1%;\n}\n~~~\n\nThis will completely disrupt the layout (try it), until we revise the column start positions:\n\nChange the navigation to span 2 columns:\n\n~~~\n#navigation {\n  grid-column-start: 2;\n  grid-column-end: span 2;\n}\n~~~\n\nAlso adjust `maincontent` start column:\n\n~~~\n#maincontent {\n  grid-column-start: 2;\n  ...\n}\n~~~\n\nFinally, we can simplify the `footer` rule:\n\n~~~\n#footer {\n  grid-column-start: 2;\n}\n~~~\n\n\nYou should be able to view the page with the aid of the developer tools:\n\n![](img/02.png)\n\nThis is revealing the grid structure."
     },
   
     {
-    "title": " Navigation Menu",
+    "title": "# Navigation Menu",
     "shortTitle": "04",
     "contentMd" : "# Navigation Menu\n\nAll our pages have the following `navigation` section:\n\n~~~\n      <div id=\"navigation\">\n        <ul>\n          <li><a href=\"home.html\">Mauris</a></li>\n          <li><a href=\"page-01.html\">Cras</a></li>\n          <li><a href=\"page-02.html\">Proin</a></li>\n          <li><a href=\"page-03.html\">Integer</a></li>\n        </ul>\n      </div>\n~~~\n\nIn all of the pages, change this specific element:\n\n~~~\n        <ul>\n~~~\n\nto \n\n~~~\n        <ul id=\"menu\">\n~~~\n\nSo that each navigation section looks like this:\n\n~~~\n      <div id=\"navigation\">\n        <ul id=\"menu\">\n          <li><a href=\"home.html\">Mauris</a></li>\n          <li><a href=\"page-01.html\">Cras</a></li>\n          <li><a href=\"page-02.html\">Proin</a></li>\n          <li><a href=\"page-03.html\">Integer</a></li>\n        </ul>\n      </div>\n~~~\n\nCreate a new style sheet called `nav.css`, and include this rule:\n\n~~~\nul#menu li {\n  display: inline;\n}\n~~~\n\nBecause of the changes we have just made, we can target the `<li>`, making it `inline` instead of the the default `<block>` style.\n\nInclude nav.css in home.css:\n\n## home.css\n\n~~~\n@import url(\"grid.css\");\n@import url(\"image.css\");\n@import url(\"nav.css\");\n~~~\n\nExamine the header now in a browser - it should look like this:\n\n![](img/03.png)\n\nThe header items are displayed on a single line.\n\nWe can further adjust the spacing between each of the `<li>` elements:\n\n~~~\nul#menu li {\n  display: inline;\n  padding-right: 1em;\n  padding-left: 1em;\n}\n~~~\n\n\n![](img/04.png)"
     },
   
     {
-    "title": " Navigation Item",
+    "title": "# Navigation Item",
     "shortTitle": "05",
     "contentMd" : "# Navigation Item\n\nIntroduce this rule into nav.css:\n\n~~~\nul#menu a {\n  text-decoration: none;\n}\n~~~\n\nThis will remove the 'underline' associated with links on a page:\n\n![](img/05.png)\n\nNow we need to introduce a mechanism to reflect the current navigation context (the current page) in the navigation bar itself. \n\nTo do this, we will need additional information in the menu in each page:\n\n## home.html\n\n~~~\n        <ul id=\"menu\">\n          <li class=\"active\"><a href=\"home.html\">Mauris</a></li>\n          <li><a href=\"page-01.html\">Cras</a></li>\n          <li><a href=\"page-02.html\">Proin</a></li>\n          <li><a href=\"page-03.html\">Integer</a></li>\n        </ul>\n~~~\n\n## page-01.html\n\n~~~\n        <ul id=\"menu\">\n          <li><a href=\"home.html\">Mauris</a></li>\n          <li class=\"active\"><a href=\"page-01.html\">Cras</a></li>\n          <li><a href=\"page-02.html\">Proin</a></li>\n          <li><a href=\"page-03.html\">Integer</a></li>\n        </ul>\n~~~\n\n## page-02.html\n\n~~~\n        <ul id=\"menu\">\n          <li><a href=\"home.html\">Mauris</a></li>\n          <li><a href=\"page-01.html\">Cras</a></li>\n          <li class=\"active\"><a href=\"page-02.html\">Proin</a></li>\n          <li><a href=\"page-03.html\">Integer</a></li>\n        </ul>\n~~~\n\n## page-03.html\n\n~~~\n        <ul id=\"menu\">\n          <li><a href=\"home.html\">Mauris</a></li>\n          <li><a href=\"page-01.html\">Cras</a></li>\n          <li><a href=\"page-02.html\">Proin</a></li>\n          <li class=\"active\"><a href=\"page-03.html\">Integer</a></li>\n        </ul>\n~~~\n\nIn the above adjustments, an individual `<li>` is marked as `active` - depending on which page is displayed.\n\nNow we can define a rule to only effect the 'active' page:\n\n~~~\n#menu li.active a {\n  background: black;\n  padding: .5em 2em .5em 2em;\n  color: white;\n}\n~~~\n\n![](img/06.png)\n\n![](img/07.png)\n\nThis is the complete nav.css at this stage:\n\n\n## nav.css\n~~~\nul#menu li {\n  display: inline;\n  padding-right: 1em;\n  padding-left: 1em;\n}\n\nul#menu a {\n  text-decoration: none;\n}\n\n#menu li.active a {\n  background: black;\n  padding: .5em 2em .5em 2em;\n  color: white;\n}\n~~~\n"
     },
   
     {
-    "title": " Style folder",
+    "title": "# Style folder",
     "shortTitle": "06",
     "contentMd" : "# Style folder\n\n\nFinally, we can reorganise the project structure to keep all style sheets together in one folder for convenience and coherence. In the project, create a directory to hold all the stylesheets called 'css'. The move all the style sheets into this folder:\n\n![](img/08.png)\n\nYou will also need to change the `<link>` header element in each page to import the stylesheet from the css folder:\n\n~~~\n    <link rel=\"stylesheet\" href=\"css/home.css\">\n~~~\n\n\nVerify now that the site continues to work as expected."
     },
   
     {
-    "title": " Solution",
+    "title": "# Solution",
     "shortTitle": "Exercises",
     "contentMd" : "# Solution\n\nThis is the project as completed in this lab:\n\n- <https://github.com/wit-hdip-comp-sci-2019/grid-layout/releases/tag/lab.04.end>\n\n# Exercises\n\n## Exercise 1: Centre Header and Navigation\n\nMaking changes just to nav.css, center align the header and navigation sections:\n\n![](img/09.png)\n\nThis is the property that can achieve this effect:\n\n~~~\n  text-align: center;\n~~~\n\n## Exercises 2: Additional page\n\nCreate one additional page in the site, and tie it into the style and navigation structure already defined.\n"
     }

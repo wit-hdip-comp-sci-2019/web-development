@@ -19,49 +19,49 @@
   "chapters" : [
   
     {
-    "title": "Objectives",
+    "title": "#Objectives",
     "shortTitle": "Lab-07a Play Setup",
     "contentMd" : "#Objectives\n\nInstall and test Git + the Play Framework (Note: the video shows java + play revisions a little behind your current installation)"
     },
   
     {
-    "title": " Install Git",
+    "title": "# Install Git",
     "shortTitle": "01",
     "contentMd" : "# Install Git\n\nYou may have already installed this in a previous lab. If the installation succeeded, then verify the version. Do this by opening a shell (command prompt on Windows) and enter the following:\n\n~~~\ngit --version\n~~~\n\nThe system might respond with something like this:\n\n~~~\ngit version 2.16.1.windows.4\n~~~\n\n\nTo install git for your platform:\n\n- <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>\n\nAccept all the default options if they are presented (usually it is just Windows that offers options).\n"
     },
   
     {
-    "title": "Installing and Running Play",
+    "title": "#Installing and Running Play",
     "shortTitle": "02",
     "contentMd" : "#Installing and Running Play\n\nIf you are running a Mac, skip to the step 03.\n\n##Windows\n\nVisit the following site:\n\n- <http://www.playframework.org>\n\nIn particular, visit the download page:\n\n- <https://www.playframework.com/releases>\n\nOn the this page, select and download `play-1-5.2.zip` (the version number is very important)\n\n![](img/11.png)\n\nUnzip to somewhere on your PC - a good location might be:\n\n~~~\nC:\\dev\n~~~\n\nOnce you have unzipped it, the folder might look like this:\n\n![](img/19.png)\n\nIn the above, the play archive has been downloaded and expanded in `c:\\dev`\n\nWe need to now add the play folder to the `system path` - which will enable us to run the play command from a command prompt.\n\n## Windows\n\nFor Windows, you need to do the following: Locate the \"This PC\" icon in Explorer:\n\n![](img/09.png)\n\nRight click on this and select 'Properties':\n\n![](img/12.png)\n![](img/13.png)\n\nSelect 'Advanced System Settings' on the left:\n\n![](img/14.png)\n\nSelect 'Environment Variables':\n\n![](img/15.png)\n\nUnder \"System Variables\" (the bottom list), locate the 'Path' entry and select Edit. Your system will most likely look a little different from the one shown below:\n\n![](img/21.png)\n\nWith this view open, press `New` - add a new entry to this list:\n\n![](img/22.png)\n\nThis new entry should be the path where play is installed. This could be `C:\\dev\\play-1.5.2` as in the above example.\n\nNB: DO NOT DELETE ANY OF THE CURRENT VALUES OF THE PATH!\n\nPress \"Ok\" all the way back and rerun the command prompt (close the one already open).\n\nTo test, just type \"play\" from a command prompt you should see something like this:\n\n~~~\n~        _            _\n~  _ __ | | __ _ _  _| |\n~ | '_ \\| |/ _' | || |_|\n~ |  __/|_|\\____|\\__ (_)\n~ |_|            |__/\n~\n~ play! 1.5.2, http://www.playframework.org\n~\n~ Usage: play cmd [app_path] [--options]\n~\n~ with,  new      Create a new application\n~        run      Run the application in the current shell\n~        help     Show play help\n~~~\n\nOr, if you did not manage to get the play folder on the path, then this command here should work (if you used the recommended folder structure)\n\n~~~\nC:\\dev\\play1-1.5.2\\play\n~~~\n\nHowever, it is best to ensure that the play command is on the system path.\n\n"
     },
   
     {
-    "title": "# Setting the Path on a Mac",
+    "title": "## Setting the Path on a Mac",
     "shortTitle": "03",
     "contentMd" : "## Setting the Path on a Mac\n\nThe Mac is completely different - but has an identical PATH mechanism that needs to be adjusted. This path can be initialised in a file called `.bash_profile` in the user home folder. \n\nAny file starting with a `.` is by default hidden, so the first step is to reveal all of these files:\n\n - <https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks>\n\nThe simplest way of doing this is the enter these commands:\n\n ~~~\n  CMD + SHIFT + .\n ~~~\n\n\nTry the above command while your finder is observing your home folder. For example - before revealing hidden files:\n\n![](img/01x.png)\n\n... and after revealing hidden files:\n\n![](img/02x.png)\n\nHidden files are displayed in a greyed out font shown above.\n\nOne of the revealed files will be may be:\n\n- `.bash_profile`\n\nIf the file does not exist, the create it.\n\nNow edit this file, and append the new folder (containing the expanded play archive) onto the end if the PATH sequence:\n\n~~~\nPATH=$PATH:$HOME/bin:/usr/local/bin:$HOME/dev/play-1.5.2\nexport PATH\n~~~\n\n\nIf you do not have any .bash_profile file, then you can create one to look like the extract above.\n\nAll of the above assumes you extracted the play archive into the dev folder in your home folder."
     },
   
     {
-    "title": "Create a Play Project",
+    "title": "#Create a Play Project",
     "shortTitle": "04",
     "contentMd" : "#Create a Play Project\n\nBack in the command line, change to a directory where you keep your web development projects and enter:\n\n~~~\nplay new playdemo\n~~~\n\n\nYou should get:\n\n~~~\n~        _            _ \n~  _ __ | | __ _ _  _| |\n~ | '_ \\| |/ _' | || |_|\n~ |  __/|_|\\____|\\__ (_)\n~ |_|            |__/   \n~\n~ play! 1.5.2, http://www.playframework.org\n~\n~ The new application will be created in c:\\dev\\playdemo\n~ What is the application name? [playdemo] \n~~~\n\nPress return when prompted for the name to accept the default (playdemo)\n\n~~~\n~\n~ OK, the application is created.\n~ Start it with : play run playdemo\n~ Have fun!\n~\n~~~\n\nExplore the generated folder - called 'playdemo'. It should contain these folders:\n\n- app\n- conf\n- documentation\n- lib\n- modules\n- public\n- test\n\nExplore the contents of the `app`,  `conf` and `public` folders. Use Sublime to this this (for the moment).\n\n\n"
     },
   
     {
-    "title": " Running a Play Application",
+    "title": "# Running a Play Application",
     "shortTitle": "05",
     "contentMd" : "# Running a Play Application\n\nBack in the shell, from inside the playdemo folder, type the following command:\n\n~~~\nplay run\n~~~\n\nPlay will respond with something like this:\n\n~~~\n~        _            _\n~  _ __ | | __ _ _  _| |\n~ | '_ \\| |/ _' | || |_|\n~ |  __/|_|\\____|\\__ (_)\n~ |_|            |__/\n~\n~ play! 1.5.2, https://www.playframework.com\n~\n~ Ctrl+C to stop\n~\n~ using java version \"1.8.0_201\"\nListening for transport dt_socket at address: 8000\n09:41:27,910 INFO  ~ Starting /Users/edeleastar/dev/playdemo\n:: loading settings :: url = jar:file:/Users/edeleastar/dev/play-1.5.2/framework/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n09:41:28,327 INFO  ~ Module docviewer is available (/Users/edeleastar/dev/play-1.5.2/modules/docviewer)\n09:41:28,721 WARN  ~ You're running Play! in DEV mode\n09:41:28,764 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...\n~ Server is up and running\n~~~\n\nOn Windows, you may get a dialog from the firewall, asking for permission to run, which you should agree to.\n\n![](img/45.png)\n\nNow run the browser, and navigate to:\n\n- <http://localhost:9000/>\n\nyou should see something like this:\n\n![](img/46.png)\n\nAlso notice that a log message will appear in the command window indicating that the app has started:\n\n~~~\n16:30:58,912 INFO  ~ Application 'playdemo' is now started !\n~~~\n\nTo stop the application, press \"Control+C\" in the command prompt.  If you refresh the browser window, then you should now get an error\n\nStart the app again by typing 'play run' as above. Verify that the app has started by browsing/refreshing to:\n\n- <http://localhost:9000/>\n\nTry this a few times to get used to starting/stopping the application"
     },
   
     {
-    "title": " Import into Idea",
+    "title": "# Import into Idea",
     "shortTitle": "06",
     "contentMd" : "# Import into Idea\n\nNow, making sure you are still in the playdemo folder, run this command:\n\n~~~\nplay idealize\n~~~\n\nThe system will respond with:\n\n~~~\n        _            _\n~  _ __ | | __ _ _  _| |\n~ | '_ \\| |/ _' | || |_|\n~ |  __/|_|\\____|\\__ (_)\n~ |_|            |__/\n~\n~ play! 1.5.2, https://www.playframework.com\n~\n~ OK, the application is ready for Intellij Idea\n~ Use File, Open Project... to open \"playdemo.ipr\"\n~\n~~~\n\n\nNow, launch IntelliJ Idea, and select `Open`:\n\n![](img/32.png)\n\nNavigate to the playdemo folder, and select the project folder to import:\n\n![](img/33.png)\n\nBe sure to select the 'playdemo' only as shown above.\n\nOnce opened by Idea, it might look like this:\n\n![](img/34.png)\n\nYou may need to press 'project' icon on the left margin - and then expand the project window to reveal the project details. See if you can navigate to and open the Application class:\n\n![](img/35.png)\n\nIf it all works as shown above - then you are up and running and you can skip the rest of this step.\n\nHowever, if first time you run this - there may be an error visible on the title bar as `Project SDK is not defined`\n\n![](img/37.png)\n\nPress the `Setup SDK` button:\n\n![](img/38.png)\n\nPress `Configure`:\n\n![](img/39.png)\n\nPress `+`:\n\n![](img/41.png)\n\nSelect `JDK`\n\n![](img/43.png)\n\nNavigate to the appropriate folders on your system. The JDK for java 8 is shown above. 9 and 10 may also be fine, but not 11.\n\n![](img/44.png)\n\nPress `OK`\n\nThis should remove the error - and the project should now be correctly configured.\n\n![](img/47.png)\n\n"
     },
   
     {
-    "title": " Exercises",
+    "title": "# Exercises",
     "shortTitle": "Exercises",
     "contentMd" : "# Exercises\n\n## Exercise 1:\n\nUsing steps 04 and 05, create another project - called `playdemo1` and import into Idea. Experiment with having 2 project open in the IDE simultaneously.\n\n\n"
     }
