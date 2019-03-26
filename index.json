@@ -18,7 +18,6 @@
 ,
   "topics" : [  {
     
-    
   
     "properties" : {},
   
@@ -99,7 +98,6 @@
   },
  {
     
-    
   
     "properties" : {},
   
@@ -163,7 +161,6 @@
 
   },
  {
-    
     
   
     "properties" : {},
@@ -260,7 +257,6 @@
 
   },
  {
-    
     
   
     "properties" : {},
@@ -405,7 +401,6 @@
 
   },
  {
-    
     
   
     "properties" : {},
@@ -583,7 +578,6 @@
   },
  {
     
-    
   
     "properties" : {},
   
@@ -727,7 +721,6 @@
 
   },
  {
-    
     
   
     "properties" : {},
@@ -952,7 +945,6 @@
 
   },
  {
-    
     
   
     "properties" : {},
@@ -1258,7 +1250,6 @@
   },
  {
     
-    
   
     "properties" : {},
   
@@ -1435,7 +1426,6 @@
   },
  {
     
-    
   
     "properties" : {},
   
@@ -1469,7 +1459,7 @@
   "title" : "Model View Controller ",
   "img" : "mvc.png",
   "videoid" : "none",
-  "objectives" : "<p>request · router · controller · view · response ·</p>",
+  "objectives" : "<p>request · router · controller · view · response</p>",
   "folder" : "talk-0-mvc",
   "link" : "mvc.pdf",
   "los": [
@@ -1565,13 +1555,157 @@
     "properties" : {},
   
   "type" : "panelvideo",
-  "title" : "08: Introducing MVC  ",
+  "title" : "08: Introducing MVC ",
   "img" : "",
   "videoid" : "938uuQ_P66Q",
   "objectives" : "<p>08: Introducing MVC</p>",
   "folder" : "panelvideo",
   "link" : "938uuQ_P66Q",
   "los": [
+   ]
+
+    } 
+   ]
+
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "topic",
+  "title" : "09: Forms ",
+  "img" : "topic.png",
+  "videoid" : "",
+  "objectives" : "<p>routes · get · post · delete · template loops · submit · buttons · 404</p>",
+  "folder" : "topic-09-forms",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Todo List Case Study ",
+  "img" : "talk-b-todo-1/forms.jpg",
+  "videoid" : "",
+  "objectives" : "<p>Todo List Case Study</p>",
+  "folder" : "unit-1",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Todo ",
+  "img" : "forms.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>A Separate case study - a simple todo list application</p>",
+  "folder" : "talk-b-todo-1",
+  "link" : "forms.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Add Todo ",
+  "img" : "todo-2.png",
+  "videoid" : "none",
+  "objectives" : "<p>add item to todolist - detailed walkthrough</p>",
+  "folder" : "talk-b-todo-2",
+  "link" : "todo-2.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-09a Todolist-1",
+  "img" : "img/main.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Develop a completely new application, using the techniques we have explored so far.</p>",
+  "folder" : "book-a-todolist",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Creating a Playlist ",
+  "img" : "talk-c-playlist-mgmt/playlist-mgmt.png",
+  "videoid" : "",
+  "objectives" : "<p>Creating a Playlist</p>",
+  "folder" : "unit-2",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Playlist Management ",
+  "img" : "playlist-mgmt.png",
+  "videoid" : "none",
+  "objectives" : "<p>List, add and delete playlists</p>",
+  "folder" : "talk-c-playlist-mgmt",
+  "link" : "playlist-mgmt.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Song Management ",
+  "img" : "song-mgmt.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>List, add and delete Songs</p>",
+  "folder" : "talk-c-song-mgmt",
+  "link" : "song-mgmt.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-09b Playlist-4",
+  "img" : "img/main.jpeg",
+  "videoid" : "none",
+  "objectives" : "<p>Introduce forms into a play application to enable the user to create playlists.</p>",
+  "folder" : "book-b-playlist-4",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
    ]
 
     } 

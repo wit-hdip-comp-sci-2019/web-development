@@ -1,0 +1,95 @@
+
+
+
+  {
+  
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-09a Todolist-1",
+  "img" : "img/main.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Develop a completely new application, using the techniques we have explored so far.</p>",
+  "folder" : "book-a-todolist",
+  "link" : "index.html",
+  "los": [
+   ]
+,
+  "chapters" : [
+  
+    {
+    "title": "# Objectives",
+    "shortTitle": "Lab-09a Todolist-1",
+    "contentMd" : "# Objectives\n\nDevelop a completely new application, using the techniques we have explored so far.\n"
+    },
+  
+    {
+    "title": "# Create New Application",
+    "shortTitle": "01",
+    "contentMd" : "# Create New Application\n\nEach time we start a new application, we will 'clone' a starter app like this:\n\n## Create New Project\n\nCreate a new play project using this command:\n\n~~~bash\ngit clone https://github.com/wit-hdip-comp-sci-2019/play-template-1\n~~~\n\nThe shell should show something like this:\n\n~~~\nCloning into 'play-template-1'...\nremote: Counting objects: 66, done.\nremote: Compressing objects: 100% (47/47), done.\nremote: Total 66 (delta 9), reused 66 (delta 9), pack-reused 0\nUnpacking objects: 100% (66/66), done.\n~~~\n\n## Rename Project\n\nThe default name of the project should be changed now. This will require the following procedure:\n\n- Rename the folder `play-template-1`. Call the folder `todolist` instead.\n- Use Sublime Text to edit this file: `playlist/conf/application.conf`. The first three lines contains the following:\n\n    ~~~\n    # This is the main configuration file for the application.\n    # ~~\n    application.name=play-template-1\n    ~~~\n\n- Change `play-template-1` above to `todolist`, and save the file:\n\n    ~~~\n    # This is the main configuration file for the application.\n    # ~~\n    application.name=todolist\n    ~~~\n\n## Import into Idea\n\nStill in the shell, and in the project folder enter the following command:\n\n~~~\nplay idealize\n~~~\n\nYou should get this response:\n\n~~~\n~        _            _\n~  _ __ | | __ _ _  _| |\n~ | '_ \\| |/ _' | || |_|\n~ |  __/|_|\\____|\\__ (_)\n~ |_|            |__/\n~\n~ play! 1.5.2, https://www.playframework.com\n~\n~ OK, the application is ready for Intellij Idea\n~ Use File, Open Project... to open \"todolist.ipr\"\n~\n~~~\n\nLaunch Idea eclipse, and select `Open`. Select the todlist folder and presse `Open`. The project should open like this:\n\n![](img/01x.png)\n\nOpen a command prompt inside the `todolist` folder, and run the app:\n\n~~~\nplay run\n~~~\n\nVerify that the skeleton app is available:\n\n- <http://localhost:9000>\n\nDo not proceed to the next step until the above procedure has been completed without any errors.\n"
+    },
+  
+    {
+    "title": "# Static Todo List",
+    "shortTitle": "02",
+    "contentMd" : "# Static Todo List\n\nReplace the contents of the Dashboard view with the following:\n\n## app/views/dashboard.html\n\n~~~\n#{extends 'main.html' /}\n#{set title:'Dashboard' /}\n\n#{menu id:\"dashboard\"/}\n\n<section class=\"ui raised segment\">\n  <header class=\"ui header\">\n    Todo List\n  </header>\n  <div class=\"ui bulleted list\">\n    <div class=\"ui item\"> Make tea</div>\n    <div class=\"ui item\"> Go for snooze</div>\n    <div class=\"ui item\"> Make more tea</div>\n  </div>\n</section>\n\n<form class=\"ui stacked segment form\" action=\"/dashboard/addtodo\" method=\"POST\">\n  <div class=\"field\">\n    <label>Title</label>\n    <input placeholder=\"Title\" type=\"text\" name=\"title\">\n  </div>\n  <button class=\"ui blue submit button\">Add Todo</button>\n</form>\n~~~\n\nAlso, change the title in the menu:\n\n## app/views/tags/menu.html\n\n~~~\n<nav class=\"ui menu\">\n  <header class=\"ui header item\"> <a href=\"/\"> Todo List </a></header>\n  <div class=\"right menu\">\n    <a id=\"dashboard\" class=\"item\" href=\"/dashboard\"> Dashboard  </a>\n    <a id=\"about\" class=\"item\" href=\"/about\"> About </a>\n  </div>\n</nav>\n\n<script>\n  $(\"#${_id}\").addClass(\"active item\");\n</script>\n~~~\n\nThe Dashboard will look like this:\n\n![](img/01.png)\n\nNotice that the dashboard has a form - with a single text entry - the user can interact with."
+    },
+  
+    {
+    "title": "# Todo Model",
+    "shortTitle": "03",
+    "contentMd" : "# Todo Model\n\nIn the models package, bring in the following class:\n\n## app/models/Todo.java\n\n~~~\npackage models;\n\nimport play.db.jpa.Model;\n\nimport javax.persistence.Entity;\n\n@Entity\npublic class Todo extends Model\n{\n  public String title;\n\n  public Todo(String title)\n  {\n    this.title = title;\n  }\n}\n~~~\n\nThis class models a simple todo item - containing a string."
+    },
+  
+    {
+    "title": "# Add Todo Route + Action",
+    "shortTitle": "04",
+    "contentMd" : "# Add Todo Route + Action\n\nExamine the dashboard form again - particularly the `action` attribute of the `<form>` element:\n\n~~~\n...\n<form class=\"ui stacked segment form\" action=\"/dashboard/addtodo\" method=\"POST\">\n...\n~~~\n\nThis is the route we need to support. i.e. we need an entry in our routes file to match this route with a controller method.\n\nHere it is:\n\n## conf/routes\n\n~~~\n...\nPOST    /dashboard/addtodo                      Dashboard.addTodo\n...\n~~~\n\n\nAdd the above to the routes file just under the existing `/dashboard` route.\n\nNow add a new method in Dashboard class to handle the route:\n\n~~~\n  public static void addTodo(String title)\n  {\n    Todo todo = new Todo(title);\n    todo.save();\n    Logger.info(\"Adding Todo\" + title);\n    redirect(\"/dashboard\");\n  }\n~~~\n\nRun the application now - and verify that you can add a todo item. The UX will not display them yet however (we still have the static elements). \n\nWe can view them in the database however:\n\n- <localhost:9000/@db>\n\nWe should see something like this:\n\n![](img/02.png)\n\n\n"
+    },
+  
+    {
+    "title": "# Todo UX",
+    "shortTitle": "05",
+    "contentMd" : "# Todo UX\n\nIn order to display the Todos - we need to change the `Dashboard.index()` method such that it fetches all of them from the database, and sends them to the view:\n\n## app/controllers/Dashboard.java\n\n~~~\n  public static void index()\n  {\n    Logger.info(\"Rendering Dashboard\");\n    List<Todo> todolist = Todo.findAll();\n    render(\"dashboard.html\", todolist);\n  }\n~~~\n\nNow we can start to display them in the dashboard view. Replace just the todolist section with the following:\n\n## app/views/dashboard.html\n\n~~~\n...\n<section class=\"ui raised segment\">\n  <header class=\"ui header\">\n    Todo List\n  </header>\n  <div class=\"ui bulleted list\">\n    #{list items:todolist, as:'todo'}\n      <div class=\"ui item\"> ${todo.title} </div>\n    #{/list}\n  </div>\n</section>\n...\n~~~\n\nWe have removed the static todo items, and we should now be rendering the todo items as submitted by the user (and stored in the database).\n\n![](img/03.png)\n\nTry adding more todos - and verify that they appear in the list after you press `Add Todo`. Also, verify that you can see them in the database."
+    },
+  
+    {
+    "title": "# Exercise 1: Yaml + Bootatrap",
+    "shortTitle": "Ex-1",
+    "contentMd" : "# Exercise 1: Yaml + Bootatrap\n\nUsing a new yaml file, which you create in the `conf` folder - seed the database with 3 todo items. The yaml file is usually called `data.yml`. Here is an example of a single todo item:\n\n~~~\nTodo(t1):\n  title: Make tea\n~~~\n\nRemember, you will need to introduce the bootstrap class into the project:\n\n~~~\nimport java.util.List;\n\nimport play.*;\nimport play.jobs.*;\nimport play.test.*;\n\nimport models.*;\n\n@OnApplicationStart\npublic class Bootstrap extends Job \n{ \n  public void doJob()\n  {\n    Fixtures.loadModels(\"data.yml\");\n  }\n}\n~~~\n\nThis must be created in the app folder of the project\n\n![](img/02x.png)\n\nThis is covered in detail in Lab08a:\n\n- [Create Bootstrap class](https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html#/03)\n\nTo see if this works as expected - stop the app (Ctrl+C in the console that started the app) - and re start it. This time it should display the todo items loaded from the yaml file.\n\nTry adding a few more, but remember, this is loaded just once on application startup. So they will not appear until you restart the app again.\n"
+    },
+  
+    {
+    "title": "# Exercise 2: Tables",
+    "shortTitle": "Ex-2",
+    "contentMd" : "# Exercise 2: Tables\n\nChange the todo view segment in the dashboard view:\n\n## app/views/dashboard.html\n\n~~~\n...\n<section class=\"ui raised segment\">\n  <header class=\"ui header\">\n    Todo List\n  </header>\n  <div class=\"ui bulleted list\">\n  #{list items:todolist, as:'todo'}\n    <div class=\"ui item\"> ${todo.title} </div>\n  #{/list}\n  </div>\n</section>\n...\n~~~\n\nHave them display the todo items in a 2 column table instead of a list. Here is an example of a 2 column table to get you started.  \n\n~~~\n<table class=\"ui fixed table\">\n  <thead>\n    <tr>\n      <th>title 1</th>\n      <th>title 2</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td> col 1</td>\n      <td> col 2 </td>\n    </tr> \n  </tbody>\n</table>\n~~~\n\nThe dashboard should look like this:\n\n![](img/04.png)"
+    },
+  
+    {
+    "title": "# Exercise 3: Delete button",
+    "shortTitle": "Ex-3",
+    "contentMd" : "# Exercise 3: Delete button\n\nInclude a 'delete' button into the second column of the todo table to look like this:\n\n![](img/05.png)\n\nExamples of various style of buttons here:\n\n- <https://semantic-ui.com/elements/button.html>\n\nLeave the `href` for the button as `#` for the moment.\n"
+    },
+  
+    {
+    "title": "# Exercise 4: Delete Implementation",
+    "shortTitle": "Ex-4",
+    "contentMd" : "# Exercise 4: Delete Implementation\n\nIntroduce the following route into the application:\n\n## conf/routes.html\n\n~~~\nGET     /dashboard/deletetodo/{id}              Dashboard.deleteTodo\n~~~\n\nIn the view, we can implement the `href` for the button:\n\n~~~\n...\n        <td> <a href=\"/dashboard/deletetodo/${todo.id} \" class=\"ui tiny red button\"> Delete </a> </td>\n...        \n~~~\n\nThis requires this method in the Dashboard controller\n\n~~~\n  public static void deleteTodo(Long id)\n  {\n    // Implementation here...\n    // ...\n    redirect(\"/dashboard\");\n  }\n~~~\n\n\nHow would you go about deleting the todo item from the application model? Some hints below (it is not that hard!)\n\n### Hints\n\nTo find a todo in the database:\n\n~~~\n    Todo todo = Todo.findById(id);\n~~~\n\nTo remove some object from the database:\n\n~~~\n   obj.delete();\n~~~"
+    },
+  
+    {
+    "title": "# Exercise 5: Admin Feature",
+    "shortTitle": "Ex-5",
+    "contentMd" : "# Exercise 5: Admin Feature\n\nIntroduce a new route into the app:\n\n- <http://localhost:9000/admin>\n\nWhich should display:\n\n![](img/06.png)\n\nThis will involve:\n\n- a new route\n- a new controller called Admin\n- a method in that controller that fetches all todos and sends them to a new view\n- call this new view `admin.html`\n\n## Hint\n\nExercise 2 Solution in Lab08b implemented something similar:\n\n- [Admin Exercise Solution from Lab08b](https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html)"
+    },
+  
+    {
+    "title": "# Exercises",
+    "shortTitle": "Solution",
+    "contentMd" : "# Exercises\n\n## Solution - including all exercises:\n\n- <https://github.com/wit-hdip-comp-sci-2019/todolist/releases/tag/todolist-1.exercises>\n\n## Exercise 1: Open and Run Sample Solution\n\nFirst, download the zip of the project above and unzip. Then run:\n\n~~~\nplay idealize\n~~~\n\nfrom inside the unzipped folder. In Idea, open the project in a 'New Window' - so that you can compare the solution with your own version of todolist.\n\n"
+    }
+  
+  ]
+  }
+
