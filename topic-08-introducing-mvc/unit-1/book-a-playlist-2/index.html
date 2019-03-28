@@ -587,9 +587,7 @@ public class Bootstrap extends Job
 <p><img src="img/00a.png" alt=""></p>
 <p>The class should be in the <code>app</code> package:</p>
 <p><img src="img/00b.png" alt=""></p>
-<p>Restart the project - and visit the Dashboard view. You should see the playlists in data.yml rendered to the view. </p>
-<p><img src="img/00c.png" alt=""></p>
-<p>Keep a close eye on the console as you do this - you should see something like this:</p>
+<p>Restart the app and keep a close eye on the console as you do this - you should see something like this:</p>
 <pre><code>~        _            _
 ~  _ __ | | __ _ _  _| |
 ~ | &#39;_ \| |/ _&#39; | || |_|
@@ -634,6 +632,8 @@ public class Dashboard extends Controller
     render (&quot;dashboard.html&quot;, playlists);
   }
 }</code></pre>
+<p>Restart the project - and visit the Dashboard view. You should see the playlists in data.yml rendered to the view. </p>
+<p><img src="img/00c.png" alt=""></p>
 <p>Notice in the above we are requesting all playlists from the database:</p>
 <pre><code>    List&lt;Playlist&gt; playlists = Playlist.findAll();</code></pre>
 <p>Before sending them to the view.</p>

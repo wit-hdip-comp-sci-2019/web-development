@@ -1234,38 +1234,6 @@
   
     "properties" : {},
   
-  "type" : "talk",
-  "title" : "",
-  "img" : "",
-  "videoid" : "none",
-  "objectives" : "",
-  "folder" : "",
-  "link" : "error: missing talk",
-  "los": [
-   ]
-
-    } ,
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "talk",
-  "title" : "",
-  "img" : "",
-  "videoid" : "none",
-  "objectives" : "",
-  "folder" : "",
-  "link" : "error: missing talk",
-  "los": [
-   ]
-
-    } ,
-   {
-    
-  
-    "properties" : {},
-  
   "type" : "panelvideo",
   "title" : "06a: Semantic + CSS Frameworks ",
   "img" : "",
