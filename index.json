@@ -1234,6 +1234,38 @@
   
     "properties" : {},
   
+  "type" : "talk",
+  "title" : "",
+  "img" : "",
+  "videoid" : "none",
+  "objectives" : "",
+  "folder" : "",
+  "link" : "error: missing talk",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "",
+  "img" : "",
+  "videoid" : "none",
+  "objectives" : "",
+  "folder" : "",
+  "link" : "error: missing talk",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
   "type" : "panelvideo",
   "title" : "06a: Semantic + CSS Frameworks ",
   "img" : "",
@@ -1602,7 +1634,7 @@
   "type" : "talk",
   "title" : "Todo ",
   "img" : "forms.jpg",
-  "videoid" : "none",
+  "videoid" : "AZIugqUyYG8",
   "objectives" : "<p>A Separate case study - a simple todo list application</p>",
   "folder" : "talk-b-todo-1",
   "link" : "forms.pdf",
@@ -1618,7 +1650,7 @@
   "type" : "talk",
   "title" : "Add Todo ",
   "img" : "todo-2.png",
-  "videoid" : "none",
+  "videoid" : "FDWAzZs_frU",
   "objectives" : "<p>add item to todolist - detailed walkthrough</p>",
   "folder" : "talk-b-todo-2",
   "link" : "todo-2.pdf",
@@ -1634,7 +1666,7 @@
   "type" : "lab",
   "title" : "Lab-09a Todolist-1",
   "img" : "img/main.jpg",
-  "videoid" : "none",
+  "videoid" : "LeDDzRpc2Ro",
   "objectives" : "<p>Develop a completely new application, using the techniques we have explored so far.</p>",
   "folder" : "book-a-todolist",
   "link" : "index.html",
@@ -1666,7 +1698,7 @@
   "type" : "talk",
   "title" : "Playlist Management ",
   "img" : "playlist-mgmt.png",
-  "videoid" : "none",
+  "videoid" : "ieWoRUBZY9o",
   "objectives" : "<p>List, add and delete playlists</p>",
   "folder" : "talk-c-playlist-mgmt",
   "link" : "playlist-mgmt.pdf",
@@ -1682,7 +1714,7 @@
   "type" : "talk",
   "title" : "Song Management ",
   "img" : "song-mgmt.jpg",
-  "videoid" : "none",
+  "videoid" : "5MgEGu6xm_Q",
   "objectives" : "<p>List, add and delete Songs</p>",
   "folder" : "talk-c-song-mgmt",
   "link" : "song-mgmt.pdf",
@@ -1698,7 +1730,7 @@
   "type" : "lab",
   "title" : "Lab-09b Playlist-4",
   "img" : "img/main.jpeg",
-  "videoid" : "none",
+  "videoid" : "7S-kuHH__K0",
   "objectives" : "<p>Introduce forms into a play application to enable the user to create playlists.</p>",
   "folder" : "book-b-playlist-4",
   "link" : "index.html",
@@ -1706,6 +1738,54 @@
    ]
 
     } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "User Experience Introduction (UX) ",
+  "img" : "talk/ux-intro.jpg",
+  "videoid" : "",
+  "objectives" : "<p>User Experience Introduction (UX)</p>",
+  "folder" : "unit-3",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Defining UX ",
+  "img" : "ux-intro.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>The usability, accessibility &amp; pleasure provided by the user interaction</p>",
+  "folder" : "talk",
+  "link" : "ux-intro.pdf",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "panelvideo",
+  "title" : "09: Forms ",
+  "img" : "",
+  "videoid" : "GLQqvbhFGxw",
+  "objectives" : "<p>09: Forms</p>",
+  "folder" : "panelvideo",
+  "link" : "GLQqvbhFGxw",
+  "los": [
    ]
 
     } 
