@@ -4,7 +4,7 @@
   {
   
   
-    "properties" : {"highlightstyle":"railscasts","slack":"https://wit-hdip-comp-sci-19.slack.com/messages/CEPDU3KQW","moodle":"https://moodle.wit.ie/course/view.php?id=132121","youtube":"https://www.youtube.com/playlist?list=PLEuhMaR29LyA16R5bJ7wBjO3oVSUpJUly","parent":"https://wit-hdip-comp-sci-2019.github.io/","courseurl":"http://wit-hdip-comp-sci-2019.github.io/web-development/","credits":"Eamonn de Leastar, Annetta Stack, WIT","license":"Unless otherwise stated, this work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.","faPanelicon":"far fa-newspaper","faColour":"#00bfa5","crest":"crestwit.jpg","cresturl":"https://www.wit.ie/courses/school/science/department_of_computing_maths_physics/hdipcomputerscience2yearparttime","ects":5,"auth":"true"},
+    "properties" : {"highlightstyle":"railscasts","slack":"https://wit-hdip-comp-sci-19.slack.com/messages/CEPDU3KQW","moodle":"https://moodle.wit.ie/course/view.php?id=132121","youtube":"https://www.youtube.com/playlist?list=PLEuhMaR29LyA16R5bJ7wBjO3oVSUpJUly","parent":"https://wit-hdip-comp-sci-2019.github.io/","courseurl":"http://wit-hdip-comp-sci-2019.github.io/web-development/","credits":"Eamonn de Leastar, Annetta Stack, WIT","license":"Unless otherwise stated, this work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.","faPanelicon":"far fa-newspaper","faColour":"#00bfa5","crest":"crestwit.jpg","cresturl":"https://www.wit.ie/courses/school/science/department_of_computing_maths_physics/hdipcomputerscience2yearparttime","ects":5},
   
   "type" : "course",
   "title" : " Web Development ",
@@ -84,6 +84,86 @@
   "img" : "web.jpg",
   "videoid" : "",
   "objectives" : "<p>Moodle assignment dropbox for Assignment 1</p>",
+  "folder" : "web",
+  "link" : "https://moodle.wit.ie/course/view.php?id=132121",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Assignment 2 ",
+  "img" : "talk-3-assignment-2/assignment-2.jpg",
+  "videoid" : "",
+  "objectives" : "<p>Assignment 2</p>",
+  "folder" : "unit-assign-2",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Project 2 Specification ",
+  "img" : "assignment-2.jpg",
+  "videoid" : "none",
+  "objectives" : "<p>Specification for Assignment 2</p>",
+  "folder" : "talk-3-assignment-2",
+  "link" : "assignment-2.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "panelvideo",
+  "title" : "Assignment 2 Briefing ",
+  "img" : "",
+  "videoid" : "ye9t_85fWzI",
+  "objectives" : "<p>Assignment 2 Briefing</p>",
+  "folder" : "panelvideo",
+  "link" : "ye9t_85fWzI",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "archive",
+  "title" : "Project Submission Template ",
+  "img" : "template.docx.png",
+  "videoid" : "",
+  "objectives" : "<p>An archive of a word document to be submitted with assignment 2</p>",
+  "folder" : "archive",
+  "link" : "template.docx.zip",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "web",
+  "title" : "Assignment 2 Submission ",
+  "img" : "web.jpg",
+  "videoid" : "",
+  "objectives" : "<p>Moodle assignment dropbox for Assignment 2</p>",
   "folder" : "web",
   "link" : "https://moodle.wit.ie/course/view.php?id=132121",
   "los": [
@@ -1234,6 +1314,38 @@
   
     "properties" : {},
   
+  "type" : "talk",
+  "title" : "",
+  "img" : "",
+  "videoid" : "none",
+  "objectives" : "",
+  "folder" : "",
+  "link" : "error: missing talk",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "",
+  "img" : "",
+  "videoid" : "none",
+  "objectives" : "",
+  "folder" : "",
+  "link" : "error: missing talk",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
   "type" : "panelvideo",
   "title" : "06a: Semantic + CSS Frameworks ",
   "img" : "",
@@ -1753,6 +1865,118 @@
   "objectives" : "<p>09: Forms</p>",
   "folder" : "panelvideo",
   "link" : "GLQqvbhFGxw",
+  "los": [
+   ]
+
+    } 
+   ]
+
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "topic",
+  "title" : "10: Sessions ",
+  "img" : "topic.png",
+  "videoid" : "",
+  "objectives" : "<p>stateless · stateful · tracking · cookies · signup · login · logout · session object · clearing</p>",
+  "folder" : "topic-10-sessions",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Sessions in Todo ",
+  "img" : "talk-a-todo-review/todo-review.jpg",
+  "videoid" : "",
+  "objectives" : "<p>Sessions in Todo</p>",
+  "folder" : "unit",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Todo Review ",
+  "img" : "todo-review.jpg",
+  "videoid" : "4qXOi_41QhA",
+  "objectives" : "<p>A quick tour of the Todo app so far</p>",
+  "folder" : "talk-a-todo-review",
+  "link" : "todo-review.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Sessions ",
+  "img" : "c-sessions.png",
+  "videoid" : "pQLmcI5xQyo",
+  "objectives" : "<p>Sessions, via hidden form fields, url rewriting and cookies.</p>",
+  "folder" : "talk-b-sessions-intro",
+  "link" : "c-sessions.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Sessions in Todo ",
+  "img" : "todo-sessions.png",
+  "videoid" : "nDSc74DZQSU",
+  "objectives" : "<p>Introduce session management into the Todo app</p>",
+  "folder" : "talk-d-todo-sessions",
+  "link" : "todo-sessions.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-10 Todolist-2",
+  "img" : "img/main.png",
+  "videoid" : "Wd1d6RuX-hA",
+  "objectives" : "<p>Incorporate sessions tracking into the todo app</p>",
+  "folder" : "book-sessions",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "panelvideo",
+  "title" : "10: Sessions ",
+  "img" : "",
+  "videoid" : "-NM2D1oV0tE",
+  "objectives" : "<p>10: Sessions</p>",
+  "folder" : "panelvideo",
+  "link" : "-NM2D1oV0tE",
   "los": [
    ]
 

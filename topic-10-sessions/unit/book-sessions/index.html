@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Sessions in Todo  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-10 Todolist-2">
+          Lab-10 Todolist-2
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="07">
+          07
+        </a>
+      
+        <a class="item" data-tab="08">
+          08
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-10 Todolist-2">
+            <h1>Objectives</h1>
+<p>Incorporate sessions tracking into the todo app</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Setup</h1>
+<p>The starting point for this lab is the solutions to the Todo List app from the last lab. You will need to have completed these exercises in order to proceed.</p>
+<p>If you still have some exercises not completed, then perhaps download this solution here:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/todolist/releases/tag/todolist-1.exercises">https://github.com/edeleastar/todolist/releases/tag/todolist-1.exercises</a></li>
+</ul>
+<p>and import into Idea as we have described in earlier labs. This solution includes:</p>
+<ul>
+<li>Exercise 1: Yaml + Bootatrap</li>
+<li>Exercise 2: Tables</li>
+<li>Exercise 3: Delete button</li>
+<li>Exercise 4: Delete Implementation</li>
+<li>Exercise 5: Admin Feature</li>
+</ul>
+<p>Review each of these exercises, and make sure you can follow the essentials of the implementation.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Views</h1>
+<p>Assuming you are working from the sample solution - or your own completed todolist - we will start with the View.</p>
+<h1>Menus</h1>
+<p>Replace the existing menu partial with the following:</p>
+<h2>app/views/tags/menu.html</h2>
+<pre><code>&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;header class=&quot;ui header item&quot;&gt; &lt;a href=&quot;#&quot;&gt; Todo List &lt;/a&gt;&lt;/header&gt;
+  &lt;div class=&quot;right menu&quot;&gt;
+    &lt;a id=&quot;dashboard&quot; class=&quot;item&quot; href=&quot;/dashboard&quot;&gt; Dashboard  &lt;/a&gt;
+    &lt;a id=&quot;about&quot; class=&quot;item&quot; href=&quot;/about&quot;&gt; About &lt;/a&gt;
+    &lt;a id=&quot;logout&quot; class=&quot;item&quot; href=&quot;/logout&quot;&gt; Logout &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;script&gt;
+  $(&quot;#${_id}&quot;).addClass(&quot;active item&quot;);
+&lt;/script&gt;</code></pre>
+<p>Introduce this new menu alongside the existing one:</p>
+<h2>app/views/tags/welcomenenu.html</h2>
+<pre><code>&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;header class=&quot;ui header item&quot;&gt; &lt;a href=&quot;#&quot;&gt; Todo List &lt;/a&gt;&lt;/header&gt;
+  &lt;div class=&quot;right menu&quot;&gt;
+    &lt;a id=&quot;signup&quot; class=&quot;item&quot; href=&quot;/signup&quot;&gt; Signup  &lt;/a&gt;
+    &lt;a id=&quot;login&quot; class=&quot;item&quot; href=&quot;/login&quot;&gt;  Login   &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;script&gt;
+  $(&quot;#${_id}&quot;).addClass(&quot;active item&quot;);
+&lt;/script&gt;</code></pre>
+<h2>New Views</h2>
+<p>Bring in these new views:</p>
+<h2>app/views/login.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;login&#39; /}
+#{welcomemenu id:&quot;login&quot;/}
+
+&lt;div class=&quot;ui two column middle aligned grid basic segment&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;form class=&quot;ui stacked segment form&quot; action=&quot;/authenticate&quot; method=&quot;POST&quot;&gt;
+      &lt;h3 class=&quot;ui header&quot;&gt;Log-in&lt;/h3&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Email&lt;/label&gt; &lt;input placeholder=&quot;Email&quot; name=&quot;email&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Password&lt;/label&gt; &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;ui blue submit button&quot;&gt;Login&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img class=&quot;ui image&quot; src=&quot;/public/images/todo-2.jpg&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>views/app/signup.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Signup&#39; /}
+#{welcomemenu id:&quot;signup&quot;/}
+
+&lt;div class=&quot;ui two column grid basic middle aligned segment&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;form class=&quot;ui stacked segment form&quot; action=&quot;/register&quot; method=&quot;POST&quot;&gt;
+      &lt;h3 class=&quot;ui header&quot;&gt;Register&lt;/h3&gt;
+      &lt;div class=&quot;two fields&quot;&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;First Name&lt;/label&gt;
+          &lt;input placeholder=&quot;First Name&quot; type=&quot;text&quot; name=&quot;firstname&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Last Name&lt;/label&gt;
+          &lt;input placeholder=&quot;Last Name&quot; type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input placeholder=&quot;Email&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Password&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;ui blue submit button&quot;&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img class=&quot;ui image&quot; src=&quot;/public/images/todo-1.png&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Finally for this step, change one line in the <code>start.html</code> view, from this:</p>
+<pre><code>...
+#{menu id:&quot;start&quot;/}
+...</code></pre>
+<p>to this:</p>
+<pre><code>...
+#{welcomemenu id:&quot;start&quot;/}
+...</code></pre>
+<p>Save everything now, and make sure that the app launches:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>The app should start with a new menu:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>However, the menu items will not work yet (try them).</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Accounts Routes + Controler</h1>
+<p>Introduce the following new routes into the conf/routes file:</p>
+<h2>conf/routes</h2>
+<pre><code>GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login</code></pre>
+<p>These routes lead to an accounts controller, which we can now bring in:</p>
+<h2>app/controllers/accounts.java</h2>
+<pre><code>package controllers;
+
+import play.Logger;
+import play.mvc.Controller;
+
+public class Accounts extends Controller
+{
+  public static void signup()
+  {
+    render(&quot;signup.html&quot;);
+  }
+
+  public static void login()
+  {
+    render(&quot;login.html&quot;);
+  }
+}</code></pre>
+<p>Restart the app now, and you the signup/login forms should be rendered:</p>
+<p><img src="img/02.png" alt=""></p>
+<p><img src="img/03.png" alt=""></p>
+<p>The submit buttons will not work yet however (try them).</p>
+<p>Notice we seem to have missing images in the above. Download these two images here:</p>
+<p><img src="img/todo-1.png" alt="">
+<img src="img/todo-2.jpg" alt=""></p>
+<p>Place them in the <code>public/images</code> folder in your project. If this goes correctly, the views should look like this:</p>
+<p><img src="img/04.png" alt=""></p>
+<p><img src="img/05.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Member model</h1>
+<p>We need a model to represent users (we will call them members) signed up to our application. Here is the class:</p>
+<h2>app/models/Member.java</h2>
+<pre><code>package models;
+
+import play.db.jpa.Model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+public class Member extends Model
+{
+  public String firstname;
+  public String lastname;
+  public String email;
+  public String password;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  public List&lt;Todo&gt; todolist = new ArrayList&lt;Todo&gt;();
+
+  public Member(String firstname, String lastname, String email, String password)
+  {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.email = email;
+    this.password = password;
+  }
+
+  public static Member findByEmail(String email)
+  {
+    return find(&quot;email&quot;, email).first();
+  }
+
+  public boolean checkPassword(String password)
+  {
+    return this.password.equals(password);
+  }
+}</code></pre>
+<p>Look carefully at this class. It is relatively simple, except we see each menber has a <code>OneToMany</code> relationship to our existing todo class:</p>
+<pre><code>  @OneToMany(cascade = CascadeType.ALL)
+  public List&lt;Todo&gt; todolist = new ArrayList&lt;Todo&gt;();</code></pre>
+<p>We already have a <code>data.yml</code> file containing some todos:</p>
+<h2>conf/data.yml</h2>
+<pre><code>Todo(t1):
+  title: Make tea
+
+Todo(t2):
+  title: Go for snooze
+
+Todo(t3):
+  title: Make more tea</code></pre>
+<p>We can extend this now, with some member objects:</p>
+<pre><code>Todo(t1):
+  title: Make tea
+
+Todo(t2):
+  title: Go for snooze
+
+Todo(t3):
+  title: Make more tea
+
+Member(m1):
+  firstname: homer
+  lastname: simpson
+  email: homer@simpson.com
+  password: secret
+
+Member(m2):
+  firstname: marge
+  lastname: simpson
+  email: marge@simpson.com
+  password: secret</code></pre>
+<p>Restart the app now - and browse to the database:</p>
+<ul>
+<li><a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x6c;&#x6f;&#x63;&#97;&#x6c;&#x68;&#111;&#x73;&#x74;&#58;&#x39;&#48;&#48;&#48;&#47;&#64;&#100;&#98;">&#x6c;&#x6f;&#x63;&#97;&#x6c;&#x68;&#111;&#x73;&#x74;&#58;&#x39;&#48;&#48;&#48;&#47;&#64;&#100;&#98;</a>
+
+</li>
+</ul>
+<p>When you connect, you should be able to see the Members table containing the users above:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>You should make sure you can view the above. If you cannot, it may be:</p>
+<ul>
+<li>incorrect connection string in the database login panel:</li>
+</ul>
+<p><img src="img/07.png" alt=""></p>
+<ul>
+<li>you connect before the app at properly launched. Do not browse to database until you have seen the first screen in the browser</li>
+<li>you are connect to a previous version of the app. Just close the browser window and connect again.</li>
+</ul>
+<p>Before proceeding, try to work out a procedure for reliably and consistently connecting to the database.</p>
+<h2>Database Errors</h2>
+<p>One last small change. Occasionally you will see an error from the app related to the database, particularly when you are making some small adjustments to the app, but without restarting</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Here is a small change to <code>Bootstrap.java</code> which will fix this problem:</p>
+<h2>app/Bootstrap.java</h2>
+<pre><code>import java.util.List;
+
+import play.*;
+import play.jobs.*;
+import play.test.*;
+
+import models.*;
+
+@OnApplicationStart
+public class Bootstrap extends Job
+{
+  public void doJob()
+  {
+    if (Member.count() == 0)
+    {
+      Fixtures.loadModels(&quot;data.yml&quot;);
+    }
+  }
+}</code></pre>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Signup</h1>
+<p>Review our signup form, and notice the action the form triggers:</p>
+<h2>app/views/signup.html</h2>
+<pre><code>...
+    &lt;form class=&quot;ui stacked segment form&quot; action=&quot;/register&quot; method=&quot;POST&quot;&gt;
+...</code></pre>
+<p>We now implement this route:</p>
+<h2>conf/routes</h2>
+<pre><code>POST   /register                                Accounts.register</code></pre>
+<p>and here is the implementation of the matching action in the <code>Accounts</code> controller:</p>
+<h2>app/controllers/Accounts.java</h2>
+<pre><code>...
+  public static void register(String firstname, String lastname, String email, String password)
+  {
+    Logger.info(&quot;Registering new user &quot; + email);
+    Member member = new Member(firstname, lastname, email, password);
+    member.save();
+    redirect(&quot;/&quot;);
+  }
+...</code></pre>
+<p>Restart the app now - and try the signup form. Register a new Member. Explore the database to see if the Member is actually created in the members table.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Login &amp; Logout</h1>
+<p>Now for the login form - a new route:</p>
+<h2>conf/routes</h2>
+<pre><code>POST   /authenticate                            Accounts.authenticate</code></pre>
+<h2>app/controllers/Accounts.java</h2>
+<pre><code>...
+  public static void authenticate(String email, String password)
+  {
+    Logger.info(&quot;Attempting to authenticate with &quot; + email + &quot;:&quot; + password);
+
+    Member member = Member.findByEmail(email);
+    if ((member != null) &amp;&amp; (member.checkPassword(password) == true)) {
+      Logger.info(&quot;Authentication successful&quot;);
+      session.put(&quot;logged_in_Memberid&quot;, member.id);
+      redirect (&quot;/dashboard&quot;);
+    } else {
+      Logger.info(&quot;Authentication failed&quot;);
+      redirect(&quot;/login&quot;);
+    }
+  }
+...</code></pre>
+<p>Restart the app now, and try to log in. If you try with one of the preloaded user details, you should be in to the dashboard.</p>
+<p>If you try to logout, you get a 404. We can now implement this as well:</p>
+<h2>conf/routes</h2>
+<pre><code>GET    /logout                                  Accounts.logout</code></pre>
+<h2>app/controllers/Accounts.java</h2>
+<pre><code>...
+  public static void logout()
+  {
+    session.clear();
+    redirect (&quot;/&quot;);
+  }
+...</code></pre>
+<p>We should now be able to log in and log out.</p>
+<p>Try the following:</p>
+<ul>
+<li>Log in as Homer, and create some todos</li>
+<li>Log out</li>
+<li>Log in as Marge - what todos are presented when marge logs in?</li>
+</ul>
+<p>You might notice that the same todos are presented to each member. Clearly there is something wrong here - we should be segmenting them per user.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="07">
+            <h1>Current User</h1>
+<p>To complete the app, a new method in the Accounts controller:</p>
+<h2>app/controller/Accounts.java</h2>
+<pre><code>...
+  public static Member getLoggedInMember()
+  {
+    Member member = null;
+    if (session.contains(&quot;logged_in_Memberid&quot;)) {
+      String memberId = session.get(&quot;logged_in_Memberid&quot;);
+      member = Member.findById(Long.parseLong(memberId));
+    } else {
+      login();
+    }
+    return member;
+  }
+...</code></pre>
+<p>The Dashoard index method can now be updated:</p>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>...
+  public static void index()
+  {
+    Logger.info(&quot;Rendering Dashboard&quot;);
+    Member member = Accounts.getLoggedInMember();
+    List&lt;Todo&gt; todolist = member.todolist;
+    render(&quot;dashboard.html&quot;, member, todolist);
+  }
+...</code></pre>
+<p>Notice how we are changing how we retrieve the todos. Also, we are not passing <code>member</code> as well as <code>todolist</code> to the view.</p>
+<p>We also need a new version of the <code>addTodo</code> method:</p>
+<pre><code>  public static void addTodo(String title)
+  {
+    Member member = Accounts.getLoggedInMember();
+    Todo todo = new Todo(title);
+    member.todolist.add(todo);
+    member.save();
+    Logger.info(&quot;Adding Todo&quot; + title);
+    redirect(&quot;/dashboard&quot;);
+  }</code></pre>
+<p>We can make use of the <code>member</code> in the dashboard view, replacing the header with the following:</p>
+<h2>app/views/dashboard.html</h2>
+<pre><code>...
+  &lt;header class=&quot;ui header&quot;&gt;
+    ${member.firstname} ${member.lastname}&#39;s Todo List
+  &lt;/header&gt;
+...</code></pre>
+<p>Restart the app now - and as different member, create some todos. Make sure that each member only sees his/her own todos.</p>
+<p>We might also change the data.yml file to associate the todos with the members:</p>
+<h2>conf/data.yml</h2>
+<pre><code>Todo(t1):
+  title: Make tea
+
+Todo(t2):
+  title: Go for snooze
+
+Todo(t3):
+  title: Make more tea
+
+Member(m1):
+  firstname: homer
+  lastname: simpson
+  email: homer@simpson.com
+  password: secret
+  todolist:
+  - t1
+  - t2
+
+Member(m2):
+  firstname: marge
+  lastname: simpson
+  email: marge@simpson.com
+  password: secret
+  todolist:
+  - t3</code></pre>
+<p>Restart the app, and verify that the indicated todos are visible when the user logs in.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="08">
+            <h1>Delete Todos</h1>
+<p>Delete a todo will cause an error:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>We will need to rethink how we do the todo delete method.</p>
+<p>The main problem is that any given todo now &#39;belongs&#39; to a member - so just deleting it will cause a problem for the &#39;integrity&#39; of the database.</p>
+<p>Here is a revised version of the method:</p>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>...
+  public static void deleteTodo(Long id, Long todoid)
+  {
+    Member member = Member.findById(id);
+    Todo todo = Todo.findById(todoid);
+    member.todolist.remove(todo);
+    member.save();
+    todo.delete();
+    Logger.info(&quot;Deleting &quot; + todo.title);
+    redirect(&quot;/dashboard&quot;);
+  }
+...</code></pre>
+<p>This version is different:</p>
+<ul>
+<li>we are expecting the id of the member + the id of the todo</li>
+<li>We fetch both the member and the todo from the database</li>
+<li>remove it from the member list</li>
+<li>save the member</li>
+<li>delete the todo</li>
+</ul>
+<p>For this to work, we need this revised route:</p>
+<h2>conf/routes</h2>
+<pre><code>GET     /dashboard/{id}/deletetodo/{todoid}     Dashboard.deleteTodo</code></pre>
+<p>(replace the existing deleteTodo route)</p>
+<p>We also need a completely revised button in the dashboard:</p>
+<pre><code>        &lt;td&gt; &lt;a href=&quot;/dashboard/${member.id}/deletetodo/${todo.id} &quot; class=&quot;ui tiny red button&quot;&gt; Delete &lt;/a&gt; &lt;/td&gt;</code></pre>
+<p>Restart the app - and verify that the todos can now be deleted successfully.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<p>Archive of the project so far:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/todolist/releases/tag/todolist-2.end">https://github.com/edeleastar/todolist/releases/tag/todolist-2.end</a></li>
+</ul>
+<h2>Exercise 1: Locate the Session Cookie in Chrome Developer Tools</h2>
+<p>The developer tools in chrome allow you to see in detail the workings of the browser. In particular, under <code>Application-&gt;Cookies</code> we can see the cookie our application has created:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>If we log out, it will be deleted:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>Experiment with locating the cookie - try to delete it manually, and see what effect it has on the app.</p>
+<p>The developer tools can also reveal the cookie in transit during a request:</p>
+<p><img src="img/12.png" alt=""></p>
+<p>See if you can locate the above view in Chrome.</p>
+<h2>Exercise 2: Introduce sessions into Playlist.</h2>
+<p>This is the final playlist project:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/playlist/releases/tag/playlist.4.end">https://github.com/edeleastar/playlist/releases/tag/playlist.4.end</a></li>
+</ul>
+<p>Using this, or your own completed solution from lab 09, try to incorporate the <code>session</code> support we have just implemented in todo into the playlist app.</p>
+<p>Essentially, we would like only members to be able to use the playlist app, and the members playlists are kept separate from other members.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
