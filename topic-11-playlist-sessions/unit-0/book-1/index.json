@@ -1,0 +1,59 @@
+
+
+
+  {
+  
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-11a Playlist Review",
+  "img" : "img/main.jpg",
+  "videoid" : "rurGzFfEfoM",
+  "objectives" : "<p>Review the Playlist Application</p>",
+  "folder" : "book-1",
+  "link" : "index.html",
+  "los": [
+   ]
+,
+  "chapters" : [
+  
+    {
+    "title": "#Objectives",
+    "shortTitle": "Lab-11a Playlist Review",
+    "contentMd" : "#Objectives\n\nReview the Playlist Application\n"
+    },
+  
+    {
+    "title": "# Setup",
+    "shortTitle": "01",
+    "contentMd" : "# Setup\n\nIn Lab 09b, we extended the original playlist application to support the creation and deletion of playlists + songs.\n\nThis is the version as we left it:\n\n- <https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end>\n\n\nDownload this archive - unzip it, and make it available for Idea by entering:\n\n~~~\nplay idealize\n~~~\n\nInside the download folder. Open the project in Idea:\n\n![](img/01.png)\n\nYou can run the application from inside IDE via the terminal (as shown above).\n\nVerify the basic operation of the app:\n\n![](img/02.png)\n\nAll the buttons should work\n\n![](img/03.png)\n"
+    },
+  
+    {
+    "title": "# Review the Static Routes + Controllers",
+    "shortTitle": "02",
+    "contentMd" : "# Review the Static Routes + Controllers\n\nIn order to refresh our understanding of how the application works, start by looking at the routes file:\n\n## conf/routes\n\n~~~java\nGET     /                                       Start.index\nGET     /dashboard                              Dashboard.index\nGET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist\nPOST    /dasghboard/addplaylist                 Dashboard.addPlaylist\n\nGET     /playlists/{id}                         PlaylistCtrl.index\nGET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong\nPOST    /playlists/{id}/addsong                 PlaylistCtrl.addSong\n\nGET     /about                                  About.index\nGET     /admin                                  Admin.index\n~~~\n\nEach of these represents a link that the application can serve. These links are in the various views our application presents.\n\n## Landing Page\n\nThis is the route for the entire application\n~~~\nGET     /                                       Start.index\n~~~\n\nit will render the start page:\n\n![](img/04.png)\n\nThis is the controller method:\n\n## app/controllers/start.java\n\n~~~\n  public static void index() {\n    Logger.info(\"Rendering Start\");\n    render (\"start.html\");\n  }\n~~~\n\n... and this is the start view:\n\n## views/start.html\n\n~~~html\n#{extends 'main.html' /}\n#{set title:'Start' /}\n\n#{menu id:\"start\"/}\n\n<section class=\"ui center aligned middle aligned segment\">\n  <h1 class=\"ui header\">\n    Welcome to Playlist 1\n  </h1> \n  <p>\n    A small app to let you compose playlists. This app will allow you to create, manage and share your playlists. Simple enter the playlist details one the dashboard.\n  </p>\n</section>\n~~~\n\nRendering as :\n\n![](img/04.png)\n\n\n## Exercise\n\nCarry our the above inspection for the following routes:\n\n~~~\nGET     /dashboard                              Dashboard.index\nGET     /about                                  About.index\nGET     /admin                                  Admin.index\n~~~\n\nI.e. Examine the controller + the associated view. Perhaps put them into a single text file using sublime so you can look at each controller method + view to get familiar with the life cycle, response composition and rendered page.\n\n\n\n"
+    },
+  
+    {
+    "title": "# Review the Dynamic Routes + Controllers",
+    "shortTitle": "03",
+    "contentMd" : "# Review the Dynamic Routes + Controllers\n\nThese routes here are a little different, in that they each contain at least one item in braces:\n\n~~~\nGET     /playlists/{id}                         PlaylistCtrl.index\nGET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist\nGET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong\n~~~\n\nTake this one for instance:\n\n~~~\nGET     /playlists/{id}                         PlaylistCtrl.index\n~~~\n\nThis is the matching controller method:\n\n~~~\n  public static void index(Long id)\n  {\n    Playlist playlist = Playlist.findById(id);\n    Logger.info (\"Playlist id = \" + id);\n    render(\"playlist.html\", playlist);\n  }\n~~~\n\nand this is the view:\n\n~~~html\n#{extends 'main.html' /}\n#{set title:'Playlist' /}\n\n#{menu id:\"dashboard\"/}\n\n<section class=\"ui segment\">\n  <h2 class=\"ui header\">\n    ${playlist.title}\n  </h2>\n  #{listsongs playlist:playlist /}\n  #{addsong playlist:playlist /}\n</section>\n~~~\n\nThis renders as:\n\n![](img/05.png)\n\nThe key aspect to note here is the `{id}` is replaced by an actual number (9 in the example). And this number is passed to index as `id`:\n\n~~~\n  public static void index(Long id)\n~~~\n\n.. and then used to locate the specific playlist in the model:\n\n~~~\n    Playlist playlist = Playlist.findById(id);\n~~~ \n\nThis fetched playlist is then passed to the view:\n\n~~~\n    render(\"playlist.html\", playlist);\n~~~\n\n.. and is in turn passed by the view to the `listsongs` partial:\n\n~~~\n  #{listsongs playlist:playlist /}\n~~~\n\nListsongs then iterates through the array, displaying each song in turn:\n\n\n~~~\n<table class=\"ui fixed table\">\n  ...  \n    #{list items:_playlist.songs, as:'song'}\n      <tr>\n        <td>\n          ${song.title}\n        </td>\n        <td>\n          ${song.artist}\n        </td>\n        <td>        \n          ${song.duration}\n        </td>      \n         <td>\n            <a href=\"/playlists/${_playlist.id}/deletesong/${song.id}\" class=\"ui tiny red button\">Delete Song</a>\n          </td>         \n      </tr>\n    #{/list}\n  ...\n</table>\n~~~\n\nSounds complicated! - However this is typical of the life cycle of requests/response in web applications.\n\n## Exercise \n\nTry the above exercise - inspecting the life cycle of these routes:\n\n\n~~~\nGET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist\nGET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong\n~~~\n\nThe last one is particularly interesting - notice there are 2 variables in braces: `{id}` and `{songid}`. Why are both needed?\n\n\n"
+    },
+  
+    {
+    "title": "# Review POST Routes",
+    "shortTitle": "04",
+    "contentMd" : "# Review POST Routes\n\n\nThe final routes of interest are the POST routes:\n\n~~~\nPOST    /dasghboard/addplaylist                 Dashboard.addPlaylist\nPOST    /playlists/{id}/addsong                 PlaylistCtrl.addSong\n~~~\n\nPOST is always used in the context of a from - and the above support forms for creating playlists or songs.\n\nLooking at this one in more detail:\n\n~~~\nPOST    /dasghboard/addplaylist                 Dashboard.addPlaylist\n~~~\n\nThis route is associated with this form:\n\n## views/tags/addplaylist.html\n\n~~~\n<form class=\"ui stacked segment form\" action=\"/dashboard/addplaylist\" method=\"POST\">\n  <div class=\"field\">\n    <label>Title</label>\n    <input placeholder=\"Title\" type=\"text\" name=\"title\">\n  </div>\n  <button class=\"ui blue submit button\">Add Playlist</button>\n</form>\n~~~\n\n.. and this controller method:\n\n~~~\n  public static void addPlaylist (String title)\n  {\n    Playlist playlist = new Playlist (title, 0);\n    Logger.info (\"Adding a new playlist called \" + title);\n    playlist.save();\n    redirect (\"/dashboard\");\n  }\n~~~\n\nWhen the method completes, it just triggers the dashboard route again:\n\n~~~\n  public static void index() \n  {\n    Logger.info(\"Rendering Admin\");\n    List<Playlist> playlists = Playlist.findAll();\n    render (\"dashboard.html\", playlists);\n  }\n~~~\n\nThis will display the list of playlists - this time the database query will return one less.\n\n## Exercise\n\nInspect this route in detail:\n\n~~~\nPOST    /playlists/{id}/addsong                 PlaylistCtrl.addSong\n~~~\n\nLocating:\n\n- the view from which it is triggered\n- the form that matched the route\n- the controller method that is invoked\n- the response that is generated"
+    },
+  
+    {
+    "title": "# Exercises",
+    "shortTitle": "Exercises",
+    "contentMd" : "# Exercises\n\n## Exercise 1: Todolist 1\n\nConsider carrying out the same exercise for the TodoList 1 application\n\n## Exercise 2: Todolist 2\n\nConsider carrying out the same exercise for the TodoList 2 application - this is the same application but with the addition of Session support.\n"
+    }
+  
+  ]
+  }
+

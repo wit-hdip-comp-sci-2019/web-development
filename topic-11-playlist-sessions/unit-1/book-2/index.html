@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Playlist Sessions  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-11b Playlist 5">
+          Lab-11b Playlist 5
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="07">
+          07
+        </a>
+      
+        <a class="item" data-tab="08">
+          08
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-11b Playlist 5">
+            <h1>Objectives</h1>
+<p>Incorporate Sessions into the latest Playlist Application</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Accounts + Members</h1>
+<p>This lab assumes you have completed Lab-09b: Playlist-4. If you are unsure - you can download this completed version:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end">https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end</a></li>
+</ul>
+<p>The Todolist application evolved <code>Member</code> model + an  <code>Accounts</code> controller that we used to manage signup/login features. These are the classes from the Todo appkication here:</p>
+<h2>Accounts</h2>
+<pre><code>package controllers;
+
+import models.Member;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Accounts extends Controller
+{
+  public static void signup()
+  {
+    render(&quot;signup.html&quot;);
+  }
+
+  public static void login()
+  {
+    render(&quot;login.html&quot;);
+  }
+
+  public static void register(String firstname, String lastname, String email, String password)
+  {
+    Logger.info(&quot;Registering new user &quot; + email);
+    Member member = new Member(firstname, lastname, email, password);
+    member.save();
+    redirect(&quot;/&quot;);
+  }
+
+  public static void authenticate(String email, String password)
+  {
+    Logger.info(&quot;Attempting to authenticate with &quot; + email + &quot;:&quot; + password);
+
+    Member member = Member.findByEmail(email);
+    if ((member != null) &amp;&amp; (member.checkPassword(password) == true)) {
+      Logger.info(&quot;Authentication successful&quot;);
+      session.put(&quot;logged_in_Memberid&quot;, member.id);
+      redirect (&quot;/dashboard&quot;);
+    } else {
+      Logger.info(&quot;Authentication failed&quot;);
+      redirect(&quot;/login&quot;);
+    }
+  }
+
+  public static void logout()
+  {
+    session.clear();
+    redirect (&quot;/&quot;);
+  }
+
+  public static Member getLoggedInMember()
+  {
+    Member member = null;
+    if (session.contains(&quot;logged_in_Memberid&quot;)) {
+      String memberId = session.get(&quot;logged_in_Memberid&quot;);
+      member = Member.findById(Long.parseLong(memberId));
+    } else {
+      login();
+    }
+    return member;
+  }
+}</code></pre>
+<h2>Member</h2>
+<pre><code>package models;
+
+import play.db.jpa.Model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+public class Member extends Model
+{
+  public String firstname;
+  public String lastname;
+  public String email;
+  public String password;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  public List&lt;Todo&gt; todolist = new ArrayList&lt;Todo&gt;();
+
+  public Member(String firstname, String lastname, String email, String password)
+  {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.email = email;
+    this.password = password;
+  }
+
+  public static Member findByEmail(String email)
+  {
+    return find(&quot;email&quot;, email).first();
+  }
+
+  public boolean checkPassword(String password)
+  {
+    return this.password.equals(password);
+  }
+}</code></pre>
+<p>Bring these two classes into your Playlist application now. The Member class will have an error:</p>
+<pre><code>  public List&lt;Todo&gt; todolist = new ArrayList&lt;Todo&gt;();</code></pre>
+<p>This is a holdover from the Todo application. Replace the above line with this:</p>
+<pre><code>  public List&lt;Playlist&gt; playlists = new ArrayList&lt;Playlist&gt;();</code></pre>
+<p>Each member will have a list of <code>Playlist</code> objects, called playlists. This is the members personal collection of playlists.</p>
+<p>The project should now be without errors:</p>
+<p><img src="img/06.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Signup &amp; Login Forms + welcome Memu</h1>
+<p>Todolist also has signup and login views - which implement simple forms for this purpose:</p>
+<h2>views/signup.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Signup&#39; /}
+#{welcomemenu id:&quot;signup&quot;/}
+
+&lt;div class=&quot;ui two column grid basic middle aligned segment&quot;&gt;
+    &lt;div class=&quot;column&quot;&gt;
+        &lt;form class=&quot;ui stacked segment form&quot; action=&quot;/register&quot; method=&quot;POST&quot;&gt;
+            &lt;h3 class=&quot;ui header&quot;&gt;Register&lt;/h3&gt;
+            &lt;div class=&quot;two fields&quot;&gt;
+                &lt;div class=&quot;field&quot;&gt;
+                    &lt;label&gt;First Name&lt;/label&gt;
+                    &lt;input placeholder=&quot;First Name&quot; type=&quot;text&quot; name=&quot;firstname&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;field&quot;&gt;
+                    &lt;label&gt;Last Name&lt;/label&gt;
+                    &lt;input placeholder=&quot;Last Name&quot; type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;field&quot;&gt;
+                &lt;label&gt;Email&lt;/label&gt;
+                &lt;input placeholder=&quot;Email&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;field&quot;&gt;
+                &lt;label&gt;Password&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+            &lt;/div&gt;
+            &lt;button class=&quot;ui blue submit button&quot;&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;column&quot;&gt;
+        &lt;img class=&quot;ui image&quot; src=&quot;/public/images/todo-1.png&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>views/login.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;login&#39; /}
+#{welcomemenu id:&quot;login&quot;/}
+
+&lt;div class=&quot;ui two column middle aligned grid basic segment&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;form class=&quot;ui stacked segment form&quot; action=&quot;/authenticate&quot; method=&quot;POST&quot;&gt;
+      &lt;h3 class=&quot;ui header&quot;&gt;Log-in&lt;/h3&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Email&lt;/label&gt; &lt;input placeholder=&quot;Email&quot; name=&quot;email&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Password&lt;/label&gt; &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;ui blue submit button&quot;&gt;Login&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img class=&quot;ui image&quot; src=&quot;/public/images/todo-2.jpg&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>It also has this partial - a menu to support signup + login options:</p>
+<h2>views/tags/welcomemenu.html</h2>
+<pre><code>&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;header class=&quot;ui header item&quot;&gt; &lt;a href=&quot;#&quot;&gt; Playlist 5 &lt;/a&gt;&lt;/header&gt;
+  &lt;div class=&quot;right menu&quot;&gt;
+    &lt;a id=&quot;signup&quot; class=&quot;item&quot; href=&quot;/signup&quot;&gt; Signup  &lt;/a&gt;
+    &lt;a id=&quot;login&quot; class=&quot;item&quot; href=&quot;/login&quot;&gt;  Login   &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;script&gt;
+  $(&quot;#${_id}&quot;).addClass(&quot;active item&quot;);
+&lt;/script&gt;</code></pre>
+<p>Bring this in now.</p>
+<p>The existing <code>menu.html</code> will need an additional option to support log out:</p>
+<h2>views/tags/menu.html</h2>
+<pre><code>&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;header class=&quot;ui header item&quot;&gt; &lt;a href=&quot;#&quot;&gt; Playlist 5 &lt;/a&gt;&lt;/header&gt;
+  &lt;div class=&quot;right menu&quot;&gt;
+    &lt;a id=&quot;dashboard&quot; class=&quot;item&quot; href=&quot;/dashboard&quot;&gt; Dashboard  &lt;/a&gt;
+    &lt;a id=&quot;about&quot; class=&quot;item&quot; href=&quot;/about&quot;&gt; About &lt;/a&gt;
+    &lt;a id=&quot;logout&quot; class=&quot;item&quot; href=&quot;/logout&quot;&gt; Logout &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;script&gt;
+  $(&quot;#${_id}&quot;).addClass(&quot;active item&quot;);
+&lt;/script&gt;</code></pre>
+<p>We should change the <code>start</code> view to include this menu instead of the main menu:</p>
+<h2>views/start.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Start&#39; /}
+
+#{welcomemenu id:&quot;start&quot;/}
+
+&lt;section class=&quot;ui center aligned middle aligned segment&quot;&gt;
+  &lt;h1 class=&quot;ui header&quot;&gt;
+    Welcome to Playlist 5
+  &lt;/h1&gt; 
+  &lt;p&gt;
+    A small app to let you compose playlists. This app will allow you to create, manage and share your playlists. Simple enter the playlist details one the dashboard.
+
+    Please Signup or Login using the menu above.
+  &lt;/p&gt;
+&lt;/section&gt;</code></pre>
+<p>The view folder of the project should now look like this:</p>
+<p><img src="img/07.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Routes</h1>
+<p>These forms require these additional routes:</p>
+<h2>conf/routes</h2>
+<pre><code>GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+POST   /register                                Accounts.register
+POST   /authenticate                            Accounts.authenticate
+GET    /logout                                  Accounts.logout</code></pre>
+<p>Make sure to place these additional route towards the top of the file:</p>
+<pre><code># Home page
+GET     /                                       Start.index
+
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+POST   /register                                Accounts.register
+POST   /authenticate                            Accounts.authenticate
+GET    /logout                                  Accounts.logout
+...</code></pre>
+<p>Run the application now - and sign up 2 users and log in as each user in turn. Experiment with the various forms.</p>
+<p>Do you notice the slightly odd behaviour? We seem to have a single playlist - regardless of who is logged in.</p>
+<p>Clearly this is not what we intended - each user should have their own playlist, separate from other users. We will tackle this in the next step.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Sessions - Dashboard</h1>
+<p>This is the current version of the Dashboard controller:</p>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Playlist;
+import models.Song;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Dashboard extends Controller
+{
+  public static void index() 
+  {
+    Logger.info(&quot;Rendering Admin&quot;);
+
+    List&lt;Playlist&gt; playlists = Playlist.findAll();
+    render (&quot;dashboard.html&quot;, playlists);
+  }
+
+  public static void deletePlaylist (Long id)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Removing&quot; + playlist.title);
+    playlist.delete();
+    redirect (&quot;/dashboard&quot;);
+  }
+
+  public static void addPlaylist (String title)
+  {
+    Playlist playlist = new Playlist (title, 0);
+    Logger.info (&quot;Adding a new playlist called &quot; + title);
+    playlist.save();
+    redirect (&quot;/dashboard&quot;);
+  }
+}</code></pre>
+<p>In the above, there is no reference to the currently logged in user - a single global collection of playlists is manipulated.</p>
+<p>Replace this controller with the following version:</p>
+<h2>Dashboard.java</h2>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Member;
+import models.Playlist;
+import models.Song;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Dashboard extends Controller
+{
+  public static void index() 
+  {
+    Logger.info(&quot;Rendering Dasboard&quot;);
+    Member member = Accounts.getLoggedInMember();
+    List&lt;Playlist&gt; playlists = member.playlists;
+    render (&quot;dashboard.html&quot;, playlists);
+  }
+
+  public static void deletePlaylist (Long id)
+  {
+    Logger.info(&quot;Deleting a Playlist&quot;);
+    Member member = Accounts.getLoggedInMember();
+    Playlist playlist = Playlist.findById(id);
+    member.playlists.remove(playlist);
+    member.save();
+    playlist.delete();
+    redirect (&quot;/dashboard&quot;);
+  }
+
+  public static void addPlaylist (String title)
+  {
+    Logger.info(&quot;Adding a Playlist&quot;);
+    Member member = Accounts.getLoggedInMember();
+    Playlist playlist = new Playlist (title, 0);
+    member.playlists.add(playlist);
+    member.save();
+    redirect (&quot;/dashboard&quot;);
+  }
+}</code></pre>
+<p>This is modelled on the equivalent controller in the Todolist-2 application. Each controller method always carries out the following:</p>
+<ul>
+<li>Log a suitable message</li>
+<li>Get the currently logged in member</li>
+<li>Manipulate that members playlists</li>
+</ul>
+<p>Run the application now again, and verify that you can create and delete playlists. Keep a note of the names of the playlists you create for a given user - and switch users a few times. Verify that you are only manipulating the playlists for the logged in user.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Sessions - PlaylistCtrl</h1>
+<p> This is the current version of PlaylistCtrl</p>
+<h2>PlaylistCtrl</h2>
+<pre><code>public class PlaylistCtrl extends Controller
+{
+  public static void index(Long id)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Playlist id = &quot; + id);
+    render(&quot;playlist.html&quot;, playlist);
+  }
+
+  public static void deletesong (Long id, Long songid)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Song song = Song.findById(songid);
+    Logger.info (&quot;Removing&quot; + song.title);
+    playlist.songs.remove(song);
+    playlist.save();
+    song.delete();
+    render(&quot;playlist.html&quot;, playlist);
+  }
+
+  public static void addSong(Long id, String title, String artist, int duration)
+  {
+    Song song = new Song(title, artist, duration);
+    Playlist playlist = Playlist.findById(id);
+    playlist.songs.add(song);
+    playlist.save();
+    redirect (&quot;/playlists/&quot; + id);
+  }
+}</code></pre>
+<p>Without making any changes to this class, log in as 2 different users, and populate a few playlists for each. Verify that when you switch users that the playlists are always appropriate to the logged in user.</p>
+<p>Consider the following questions:</p>
+<ul>
+<li>(1) Why do we not need a reference to the currently logged in user in this class?</li>
+<li>(2) Could we trigger a route leading to one of these methods without logging in at all?</li>
+<li>(3) If (2) is possible, how could we prevent this happening?</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="07">
+            <h1>Model Seeding I</h1>
+<p>This is our current <code>data.yml</code> file:</p>
+<pre><code>Song(s1):
+  title: Piano Sonata No. 3
+  artist: Beethoven
+  duration: 5
+Song(s2):
+  title: Piano Sonata No. 7
+  artist: Beethoven
+  duration: 6
+Song(s3):
+  title: Piano Sonata No. 10
+  artist: Beethoven
+  duration: 8  
+Song(s4):
+  title: Piano Concerto No. 27
+  artist: Beethoven
+  duration: 8
+Song(s5):
+  title: Piano Concertos No. 17
+  artist: Beethoven
+Song(s6):
+  title: Piano Concerto No. 10
+  artist: Beethoven
+  duration: 12    
+Song(s7):
+  title: Opus 34 Six variations on a theme in F major
+  artist: Beethoven
+Song(s8):
+  title: Opus 120 Thirty-three variations on a waltz by Diabelli in C major
+  artist: Beethoven
+
+Playlist(p1):
+  title: Bethoven Sonatas
+  duration: 19
+  songs:
+  - s1
+  - s2
+  - s3
+
+Playlist(p2):
+  title: Bethoven Concertos
+  duration: 23
+  songs:
+  - s4
+  - s5
+  - s6  
+
+Playlist(p3):
+  title: Beethoven Variations
+  duration: 26
+  songs:
+  - s7
+  - s8</code></pre>
+<p>The contents of this file are still quite valid, but we can extend it to include members as well.</p>
+<p>Append the following to the end of the file:</p>
+<pre><code>Member(m1):
+  firstname: homer
+  lastname: simpson
+  email: homer@simpson.com
+  password: secret
+
+Member(m2):
+  firstname: marge
+  lastname: simpson
+  email: marge@simpson.com
+  password: secret</code></pre>
+<p>Restart the app - and verify that you can log in these users without signing up.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="08">
+            <h1>Model Seeding II</h1>
+<p>Revise the homer entry in the yml file:</p>
+<pre><code>Member(m1):
+  firstname: homer
+  lastname: simpson
+  email: homer@simpson.com
+  password: secret
+  playlists:
+  - p1
+  - p2</code></pre>
+<p>Restart the app - and verify that when you log in homer has the contents of playlists p1 and p2</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Solution</h1>
+<p>Archive of the project so far:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.5.end">https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.5.end</a></li>
+</ul>
+<h2>Exercise 1:</h2>
+<p>In the yml file, add playlist <code>p3</code> to the marge user. Verify (by restarting) that this has worked.</p>
+<h2>Exercise 2:</h2>
+<p>Add some more songs, playlists and users to the yml file. Verify they are loaded (after an application restart)</p>
+<h2>Exercise 3:</h2>
+<p>If you look at the Signup or Login views in the app:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Notice there seems to be a missing image on the right. Try to ensure that some stock image appears here.</p>
+<p>HINTL: Review Todolist 2, which has a solution to this issue.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

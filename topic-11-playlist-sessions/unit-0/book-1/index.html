@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Play Review  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-11a Playlist Review">
+          Lab-11a Playlist Review
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-11a Playlist Review">
+            <h1>Objectives</h1>
+<p>Review the Playlist Application</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Setup</h1>
+<p>In Lab 09b, we extended the original playlist application to support the creation and deletion of playlists + songs.</p>
+<p>This is the version as we left it:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end">https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end</a></li>
+</ul>
+<p>Download this archive - unzip it, and make it available for Idea by entering:</p>
+<pre><code>play idealize</code></pre>
+<p>Inside the download folder. Open the project in Idea:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>You can run the application from inside IDE via the terminal (as shown above).</p>
+<p>Verify the basic operation of the app:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>All the buttons should work</p>
+<p><img src="img/03.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Review the Static Routes + Controllers</h1>
+<p>In order to refresh our understanding of how the application works, start by looking at the routes file:</p>
+<h2>conf/routes</h2>
+<pre><code class="lang-java">GET     /                                       Start.index
+GET     /dashboard                              Dashboard.index
+GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist
+POST    /dasghboard/addplaylist                 Dashboard.addPlaylist
+
+GET     /playlists/{id}                         PlaylistCtrl.index
+GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong
+POST    /playlists/{id}/addsong                 PlaylistCtrl.addSong
+
+GET     /about                                  About.index
+GET     /admin                                  Admin.index</code></pre>
+<p>Each of these represents a link that the application can serve. These links are in the various views our application presents.</p>
+<h2>Landing Page</h2>
+<p>This is the route for the entire application</p>
+<pre><code>GET     /                                       Start.index</code></pre>
+<p>it will render the start page:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>This is the controller method:</p>
+<h2>app/controllers/start.java</h2>
+<pre><code>  public static void index() {
+    Logger.info(&quot;Rendering Start&quot;);
+    render (&quot;start.html&quot;);
+  }</code></pre>
+<p>... and this is the start view:</p>
+<h2>views/start.html</h2>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Start&#39; /}
+
+#{menu id:&quot;start&quot;/}
+
+&lt;section class=&quot;ui center aligned middle aligned segment&quot;&gt;
+  &lt;h1 class=&quot;ui header&quot;&gt;
+    Welcome to Playlist 1
+  &lt;/h1&gt; 
+  &lt;p&gt;
+    A small app to let you compose playlists. This app will allow you to create, manage and share your playlists. Simple enter the playlist details one the dashboard.
+  &lt;/p&gt;
+&lt;/section&gt;</code></pre>
+<p>Rendering as :</p>
+<p><img src="img/04.png" alt=""></p>
+<h2>Exercise</h2>
+<p>Carry our the above inspection for the following routes:</p>
+<pre><code>GET     /dashboard                              Dashboard.index
+GET     /about                                  About.index
+GET     /admin                                  Admin.index</code></pre>
+<p>I.e. Examine the controller + the associated view. Perhaps put them into a single text file using sublime so you can look at each controller method + view to get familiar with the life cycle, response composition and rendered page.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Review the Dynamic Routes + Controllers</h1>
+<p>These routes here are a little different, in that they each contain at least one item in braces:</p>
+<pre><code>GET     /playlists/{id}                         PlaylistCtrl.index
+GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist
+GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong</code></pre>
+<p>Take this one for instance:</p>
+<pre><code>GET     /playlists/{id}                         PlaylistCtrl.index</code></pre>
+<p>This is the matching controller method:</p>
+<pre><code>  public static void index(Long id)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Playlist id = &quot; + id);
+    render(&quot;playlist.html&quot;, playlist);
+  }</code></pre>
+<p>and this is the view:</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Playlist&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    ${playlist.title}
+  &lt;/h2&gt;
+  #{listsongs playlist:playlist /}
+  #{addsong playlist:playlist /}
+&lt;/section&gt;</code></pre>
+<p>This renders as:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>The key aspect to note here is the <code>{id}</code> is replaced by an actual number (9 in the example). And this number is passed to index as <code>id</code>:</p>
+<pre><code>  public static void index(Long id)</code></pre>
+<p>.. and then used to locate the specific playlist in the model:</p>
+<pre><code>    Playlist playlist = Playlist.findById(id);</code></pre>
+<p>This fetched playlist is then passed to the view:</p>
+<pre><code>    render(&quot;playlist.html&quot;, playlist);</code></pre>
+<p>.. and is in turn passed by the view to the <code>listsongs</code> partial:</p>
+<pre><code>  #{listsongs playlist:playlist /}</code></pre>
+<p>Listsongs then iterates through the array, displaying each song in turn:</p>
+<pre><code>&lt;table class=&quot;ui fixed table&quot;&gt;
+  ...  
+    #{list items:_playlist.songs, as:&#39;song&#39;}
+      &lt;tr&gt;
+        &lt;td&gt;
+          ${song.title}
+        &lt;/td&gt;
+        &lt;td&gt;
+          ${song.artist}
+        &lt;/td&gt;
+        &lt;td&gt;        
+          ${song.duration}
+        &lt;/td&gt;      
+         &lt;td&gt;
+            &lt;a href=&quot;/playlists/${_playlist.id}/deletesong/${song.id}&quot; class=&quot;ui tiny red button&quot;&gt;Delete Song&lt;/a&gt;
+          &lt;/td&gt;         
+      &lt;/tr&gt;
+    #{/list}
+  ...
+&lt;/table&gt;</code></pre>
+<p>Sounds complicated! - However this is typical of the life cycle of requests/response in web applications.</p>
+<h2>Exercise</h2>
+<p>Try the above exercise - inspecting the life cycle of these routes:</p>
+<pre><code>GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist
+GET     /playlists/{id}/deletesong/{songid}     PlaylistCtrl.deleteSong</code></pre>
+<p>The last one is particularly interesting - notice there are 2 variables in braces: <code>{id}</code> and <code>{songid}</code>. Why are both needed?</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Review POST Routes</h1>
+<p>The final routes of interest are the POST routes:</p>
+<pre><code>POST    /dasghboard/addplaylist                 Dashboard.addPlaylist
+POST    /playlists/{id}/addsong                 PlaylistCtrl.addSong</code></pre>
+<p>POST is always used in the context of a from - and the above support forms for creating playlists or songs.</p>
+<p>Looking at this one in more detail:</p>
+<pre><code>POST    /dasghboard/addplaylist                 Dashboard.addPlaylist</code></pre>
+<p>This route is associated with this form:</p>
+<h2>views/tags/addplaylist.html</h2>
+<pre><code>&lt;form class=&quot;ui stacked segment form&quot; action=&quot;/dashboard/addplaylist&quot; method=&quot;POST&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
+    &lt;label&gt;Title&lt;/label&gt;
+    &lt;input placeholder=&quot;Title&quot; type=&quot;text&quot; name=&quot;title&quot;&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;ui blue submit button&quot;&gt;Add Playlist&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>.. and this controller method:</p>
+<pre><code>  public static void addPlaylist (String title)
+  {
+    Playlist playlist = new Playlist (title, 0);
+    Logger.info (&quot;Adding a new playlist called &quot; + title);
+    playlist.save();
+    redirect (&quot;/dashboard&quot;);
+  }</code></pre>
+<p>When the method completes, it just triggers the dashboard route again:</p>
+<pre><code>  public static void index() 
+  {
+    Logger.info(&quot;Rendering Admin&quot;);
+    List&lt;Playlist&gt; playlists = Playlist.findAll();
+    render (&quot;dashboard.html&quot;, playlists);
+  }</code></pre>
+<p>This will display the list of playlists - this time the database query will return one less.</p>
+<h2>Exercise</h2>
+<p>Inspect this route in detail:</p>
+<pre><code>POST    /playlists/{id}/addsong                 PlaylistCtrl.addSong</code></pre>
+<p>Locating:</p>
+<ul>
+<li>the view from which it is triggered</li>
+<li>the form that matched the route</li>
+<li>the controller method that is invoked</li>
+<li>the response that is generated</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1: Todolist 1</h2>
+<p>Consider carrying out the same exercise for the TodoList 1 application</p>
+<h2>Exercise 2: Todolist 2</h2>
+<p>Consider carrying out the same exercise for the TodoList 2 application - this is the same application but with the addition of Session support.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

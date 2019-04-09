@@ -1983,6 +1983,150 @@
     } 
    ]
 
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "topic",
+  "title" : "11: Sessions & Models ",
+  "img" : "topic.png",
+  "videoid" : "",
+  "objectives" : "<p>song · playlist · session · add · delete · login · signup</p>",
+  "folder" : "topic-11-playlist-sessions",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Play Review ",
+  "img" : "talk-e-cheat-sheet/cheat-sheet.png",
+  "videoid" : "",
+  "objectives" : "",
+  "folder" : "unit-0",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Play References + Cheat Sheet ",
+  "img" : "cheat-sheet.png",
+  "videoid" : "Ly5UZERqM1E",
+  "objectives" : "<p>Play books &amp; videos + Cheat Sheet</p>",
+  "folder" : "talk-e-cheat-sheet",
+  "link" : "cheat-sheet.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-11a Playlist Review",
+  "img" : "img/main.jpg",
+  "videoid" : "rurGzFfEfoM",
+  "objectives" : "<p>Review the Playlist Application</p>",
+  "folder" : "book-1",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Playlist Sessions ",
+  "img" : "talk-1-play-sessions/playlist-sessions.png",
+  "videoid" : "",
+  "objectives" : "<p>Playlist Sessions</p>",
+  "folder" : "unit-1",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Playlist Sessions ",
+  "img" : "playlist-sessions.png",
+  "videoid" : "qLeVRPBn05w",
+  "objectives" : "<p>Introduce session management into the Playlist 4 Application</p>",
+  "folder" : "talk-1-play-sessions",
+  "link" : "playlist-sessions.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Playlist Models ",
+  "img" : "playlist-models.png",
+  "videoid" : "CstAyqSWJAg",
+  "objectives" : "<p>Review the structure and manipulation of the Playlist Model</p>",
+  "folder" : "talk-2-play-models",
+  "link" : "playlist-models.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-11b Playlist 5",
+  "img" : "img/main.png",
+  "videoid" : "xUcWmTM7qt0",
+  "objectives" : "<p>Incorporate Sessions into the latest Playlist Application</p>",
+  "folder" : "book-2",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "panelvideo",
+  "title" : "11: Playlist Sessions ",
+  "img" : "",
+  "videoid" : "HVe-wdz_Qu4",
+  "objectives" : "<p>11: Playlist Sessions</p>",
+  "folder" : "panelvideo",
+  "link" : "HVe-wdz_Qu4",
+  "los": [
+   ]
+
+    } 
+   ]
+
   }
  ]
   }
