@@ -2114,11 +2114,75 @@
   
     "properties" : {},
   
+  "type" : "unit",
+  "title" : "UX for Application Development ",
+  "img" : "talk/designing-ux-2.png",
+  "videoid" : "",
+  "objectives" : "<p>UX for Application Development</p>",
+  "folder" : "unit-2",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Designing the User Experience ",
+  "img" : "designing-ux-2.png",
+  "videoid" : "none",
+  "objectives" : "<p>Evolving a design for a Web Application.</p>",
+  "folder" : "talk",
+  "link" : "designing-ux-2.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
   "type" : "panelvideo",
-  "title" : "11: Playlist Sessions ",
+  "title" : "11b: Designing the User Experience ",
+  "img" : "",
+  "videoid" : "l6u-8xMK7OE",
+  "objectives" : "<p>11b: Designing the User Experience</p>",
+  "folder" : "panelvideo",
+  "link" : "l6u-8xMK7OE",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "archive",
+  "title" : "UX Document Template ",
+  "img" : "design-document-for-ux-doc.png",
+  "videoid" : "",
+  "objectives" : "<p>A word document template for th UX report.</p>",
+  "folder" : "archive",
+  "link" : "design-document-for-ux-doc.zip",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "panelvideo",
+  "title" : "11a: Playlist Sessions ",
   "img" : "",
   "videoid" : "HVe-wdz_Qu4",
-  "objectives" : "<p>11: Playlist Sessions</p>",
+  "objectives" : "<p>11a: Playlist Sessions</p>",
   "folder" : "panelvideo",
   "link" : "HVe-wdz_Qu4",
   "los": [
