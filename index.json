@@ -2191,6 +2191,150 @@
     } 
    ]
 
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "topic",
+  "title" : "12: Deployment ",
+  "img" : "topic.jpg",
+  "videoid" : "",
+  "objectives" : "<p>heroku · cli · config  · database · dashboard · logs · startup · management · shutdown</p>",
+  "folder" : "topic-12-deployment-review",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Git ",
+  "img" : "talk/talk.png",
+  "videoid" : "",
+  "objectives" : "<p>Git</p>",
+  "folder" : "unit-0",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Git, Github & Sourcetree ",
+  "img" : "talk.png",
+  "videoid" : "afZecaW9AFM",
+  "objectives" : "<p>A high level tour of git &amp; Sourcetree</p>",
+  "folder" : "talk",
+  "link" : "talk.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-12a Git Setup",
+  "img" : "img/main.png",
+  "videoid" : "BjXM9VUNM58",
+  "objectives" : "<p>Install and Configure Git + the Sourcetree git GUI</p>",
+  "folder" : "book-b-sourcetree",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-12b Git Workflow",
+  "img" : "img/main.png",
+  "videoid" : "WU719ByATzM ",
+  "objectives" : "<p>Rebuild Todolist - this time committing to git version control as the app is composed using Sourcetree</p>",
+  "folder" : "book-c-git",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Deployment ",
+  "img" : "talk-b-deployment/deployment.png",
+  "videoid" : "",
+  "objectives" : "<p>Deployment</p>",
+  "folder" : "unit-1",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Deployment ",
+  "img" : "deployment.png",
+  "videoid" : "gvDpJi7aYLg",
+  "objectives" : "<p>Moving a Play web application from localhost to the cloud</p>",
+  "folder" : "talk-b-deployment",
+  "link" : "deployment.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
+  "title" : "Lab-12c Deploy",
+  "img" : "img/main.png",
+  "videoid" : "90OH_BB-l9g",
+  "objectives" : "<p>Deploy a Play Application to the cloud</p>",
+  "folder" : "book-a-deploy",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "panelvideo",
+  "title" : "12: Deployment ",
+  "img" : "",
+  "videoid" : "OfHtb44zd_8",
+  "objectives" : "<p>12: Deployment</p>",
+  "folder" : "panelvideo",
+  "link" : "OfHtb44zd_8",
+  "los": [
+   ]
+
+    } 
+   ]
+
   }
  ]
   }

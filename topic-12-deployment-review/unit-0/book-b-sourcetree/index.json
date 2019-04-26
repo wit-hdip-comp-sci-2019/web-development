@@ -9,7 +9,7 @@
   "type" : "lab",
   "title" : "Lab-12a Git Setup",
   "img" : "img/main.png",
-  "videoid" : "none",
+  "videoid" : "BjXM9VUNM58",
   "objectives" : "<p>Install and Configure Git + the Sourcetree git GUI</p>",
   "folder" : "book-b-sourcetree",
   "link" : "index.html",
@@ -43,9 +43,9 @@
     },
   
     {
-    "title": "bi# Create New Application",
+    "title": "# Create New Application",
     "shortTitle": "04",
-    "contentMd" : "bi# Create New Application\n\nWe now would like to start a new play application, which we will associate with the github repository we have just crested.\n\nFirst, create a new app by cloning a starter app:\n\n## Create New Project\n\nCreate a new play project using this command:\n\n~~~bash\ngit clone https://github.com/wit-hdip-comp-sci-2019/play-template-1\n~~~\n\nThe shell should show something like this:\n\n~~~\nCloning into 'play-template-1'...\nremote: Counting objects: 66, done.\nremote: Compressing objects: 100% (47/47), done.\nremote: Total 66 (delta 9), reused 66 (delta 9), pack-reused 0\nUnpacking objects: 100% (66/66), done.\n~~~\n\n## Rename Project\n\nThe default name of the project should be changed now. This will require the following procedure:\n\n- Rename the folder `play-template-1`. Call the folder `todolist-versioned` instead.\n- Use Sublime Text to edit this file: `playlist/conf/application.conf`. The first three lines contains the following:\n\n    ~~~\n    # This is the main configuration file for the application.\n    # ~~\n    application.name=play-template-1\n    ~~~\n\n- Change `play-template-1` above to `todolist-versioned`, and save the file:\n\n    ~~~\n    # This is the main configuration file for the application.\n    # ~~\n    application.name=todolist-versioned\n    ~~~\n\n## Unbind from github\n\nThis app has been cloned from github - and is still bound to the repository it was cloned from. We can break this link - and we will reestablish a link to a new github repository you will create in the next steps. \n\nTo break the existing link, simply completely delete the `.git` folder form the project:\n\n![](img/004.png)\n\n\n(you may need to reveal `hidden files` to see the folder)\n\n\n\n\n\n\n\n\n"
+    "contentMd" : "# Create New Application\n\nWe now would like to start a new play application, which we will associate with the github repository we have just crested.\n\nFirst, create a new app by cloning a starter app:\n\n## Create New Project\n\nCreate a new play project using this command:\n\n~~~bash\ngit clone https://github.com/wit-hdip-comp-sci-2019/play-template-1\n~~~\n\nThe shell should show something like this:\n\n~~~\nCloning into 'play-template-1'...\nremote: Counting objects: 66, done.\nremote: Compressing objects: 100% (47/47), done.\nremote: Total 66 (delta 9), reused 66 (delta 9), pack-reused 0\nUnpacking objects: 100% (66/66), done.\n~~~\n\n## Rename Project\n\nThe default name of the project should be changed now. This will require the following procedure:\n\n- Rename the folder `play-template-1`. Call the folder `todolist-versioned` instead.\n- Use Sublime Text to edit this file: `playlist/conf/application.conf`. The first three lines contains the following:\n\n    ~~~\n    # This is the main configuration file for the application.\n    # ~~\n    application.name=play-template-1\n    ~~~\n\n- Change `play-template-1` above to `todolist-versioned`, and save the file:\n\n    ~~~\n    # This is the main configuration file for the application.\n    # ~~\n    application.name=todolist-versioned\n    ~~~\n\n## Unbind from github\n\nThis app has been cloned from github - and is still bound to the repository it was cloned from. We can break this link - and we will reestablish a link to a new github repository you will create in the next steps. \n\nTo break the existing link, simply completely delete the `.git` folder form the project:\n\n![](img/004.png)\n\n\n(you may need to reveal `hidden files` to see the folder)\n\n\n\n\n\n\n\n\n"
     },
   
     {
