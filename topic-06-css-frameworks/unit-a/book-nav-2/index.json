@@ -10,6 +10,7 @@
   "title" : "Lab-06a Nav Params",
   "img" : "img/main.jpg",
   "videoid" : "none",
+  "objectivesMd" : "Introduce semantic elements. Define a parametrised navigation partial",
   "objectives" : "<p>Introduce semantic elements. Define a parametrised navigation partial</p>",
   "folder" : "book-nav-2",
   "link" : "index.html",

@@ -10,6 +10,7 @@
   "title" : "Lab-05a Harp & Surge",
   "img" : "img/main.png",
   "videoid" : "yerJdD3IQ44",
+  "objectivesMd" : "Install software tools to serve a web site locally and also to deploy the web site to a public web server.",
   "objectives" : "<p>Install software tools to serve a web site locally and also to deploy the web site to a public web server.</p>",
   "folder" : "book-01-deployment",
   "link" : "index.html",

@@ -10,6 +10,7 @@
   "title" : "Lab-03b Multicolumn",
   "img" : "img/main.png",
   "videoid" : "none",
+  "objectivesMd" : "header · maincontent · navigation · footer · primary · secondary",
   "objectives" : "<p>header · maincontent · navigation · footer · primary · secondary</p>",
   "folder" : "book-b",
   "link" : "index.html",

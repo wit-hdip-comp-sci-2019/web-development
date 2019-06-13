@@ -10,6 +10,7 @@
   "title" : "Lab-07b Playlist 1",
   "img" : "img/main.jpg",
   "videoid" : "1qXvIIhGN9g",
+  "objectivesMd" : "Import, rename and run a new starter project. Extend the project to include a Model. (Note: the video shows java + play revisions a little behind your current installation)",
   "objectives" : "<p>Import, rename and run a new starter project. Extend the project to include a Model. (Note: the video shows java + play revisions a little behind your current installation)</p>",
   "folder" : "book-c-playlist-1",
   "link" : "index.html",

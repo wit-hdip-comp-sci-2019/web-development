@@ -10,6 +10,7 @@
   "title" : "Lab-12b Git Workflow",
   "img" : "img/main.png",
   "videoid" : "WU719ByATzM ",
+  "objectivesMd" : "Rebuild Todolist - this time committing to git version control as the app is composed using Sourcetree",
   "objectives" : "<p>Rebuild Todolist - this time committing to git version control as the app is composed using Sourcetree</p>",
   "folder" : "book-c-git",
   "link" : "index.html",
