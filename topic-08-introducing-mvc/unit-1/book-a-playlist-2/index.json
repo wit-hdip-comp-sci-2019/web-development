@@ -10,7 +10,6 @@
   "title" : "Lab-08a Playlist-2",
   "img" : "img/main.png",
   "videoid" : "none",
-  "objectivesMd" : "Move the playlist model into the database. Prime the database from a YAML file.",
   "objectives" : "<p>Move the playlist model into the database. Prime the database from a YAML file.</p>",
   "folder" : "book-a-playlist-2",
   "link" : "index.html",

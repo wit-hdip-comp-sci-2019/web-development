@@ -1,0 +1,3334 @@
+
+
+
+
+
+
+
+
+
+
+
+  {
+  
+  
+  
+    "properties" : {"highlightstyle":"railscasts","slack":"https://wit-hdip-comp-sci-19.slack.com/messages/CEPDU3KQW","moodle":"https://moodle.wit.ie/course/view.php?id=132121","youtube":"https://www.youtube.com/playlist?list=PLEuhMaR29LyA16R5bJ7wBjO3oVSUpJUly","parent":"https://wit-hdip-comp-sci-2019.github.io/","courseurl":"http://wit-hdip-comp-sci-2019.github.io/web-development/","credits":"Eamonn de Leastar, Annetta Stack, WIT","license":"Unless otherwise stated, this work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.","faPanelicon":"far fa-newspaper","faColour":"#00bfa5","crest":"crestwit.jpg","cresturl":"https://www.wit.ie/courses/school/science/department_of_computing_maths_physics/hdipcomputerscience2yearparttime","ects":5,"basecourseurl":"wit-hdip-comp-sci-2019.github.io/web-development/"}
+  
+,
+  "type" : "course",
+  "title" : " Web Development ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development//",
+  
+  
+
+  "summary" : "html · css · layout · web apps · web frameworks · deployment",
+  "id": "web-development-2019",
+  
+    "route" : "#course/wit-hdip-comp-sci-2019.github.io/web-development/"
+  
+,
+  "los" : [  {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "00: Assignment Specifications ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/topic.png",
+  
+  
+
+  "summary" : "specifications · assignments · grading guidelines · schedule · submission ·",
+  "id": "topic---assignments",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Assignment 1 ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/talk-2-assignment-1/project-1.png",
+  
+  
+
+  "summary" : "",
+  "id": "unit-assign-1",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Project 1 Specification ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/talk-2-assignment-1/project-1.png",
+  
+  
+
+  "summary" : "Specification for Assignment 1",
+  "id": "talk-2-assignment-1",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/talk-2-assignment-1/project-1.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/talk-2-assignment-1/project-1.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "archive",
+  "title" : "Project Submission Template ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/archive/template.docx.png",
+  
+  
+
+  "summary" : "An archive of a word document to be submitted with assignment 1",
+  "id": "archive",
+  
+    "route" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/archive/template.docx.zip"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "web",
+  "title" : "Assignment 2 Submission ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-1/web/web.jpg",
+  
+  
+
+  "summary" : "Moodle assignment dropbox for Assignment 1",
+  "id": "web",
+  
+    "route" : "https://moodle.wit.ie/course/view.php?id=132121"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Assignment 2 ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/talk-3-assignment-2/assignment-2.jpg",
+  
+  
+
+  "summary" : "Assignment 2",
+  "id": "unit-assign-2",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Project 2 Specification ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/talk-3-assignment-2/assignment-2.jpg",
+  
+  
+
+  "summary" : "Specification for Assignment 2",
+  "id": "talk-3-assignment-2",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/talk-3-assignment-2/assignment-2.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/talk-3-assignment-2/assignment-2.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "Assignment 2 Briefing ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/ye9t_85fWzI",
+  
+
+  "summary" : "Assignment 2 Briefing",
+  "id": "panelvideo",
+  
+    "route" : "ye9t_85fWzI"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "archive",
+  "title" : "Project Submission Template ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/archive/template.docx.png",
+  
+  
+
+  "summary" : "An archive of a word document to be submitted with assignment 2",
+  "id": "archive",
+  
+    "route" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/archive/template.docx.zip"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "web",
+  "title" : "Assignment 2 Submission ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/web/web.jpg",
+  
+  
+
+  "summary" : "Moodle assignment dropbox for Assignment 2",
+  "id": "web",
+  
+    "route" : "https://moodle.wit.ie/course/view.php?id=132121"
+  
+
+      } 
+     ]
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "00: Module Overview ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/topic.jpg",
+  
+  
+
+  "summary" : "topics · schedules · calendar · assignments · first lab",
+  "id": "topic-00-overview",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Course Preview + Html Editing ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review/talk-1-overview/a-introduction.jpg",
+  
+  
+
+  "summary" : "Course Preview + Html Editing",
+  "id": "unit-a-course-review",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Module Overview ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review/talk-1-overview/a-introduction.jpg",
+  
+  
+
+  "summary" : "calendar · topics · assessments · schedule",
+  "id": "talk-1-overview",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review/talk-1-overview/a-introduction.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review/talk-1-overview/a-introduction.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-00 Editing HTML",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review/book-a/img/main.png",
+  
+  
+
+  "summary" : "Introduction to Editing and viewing a html page",
+  "id": "book-a",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-00-overview/unit-a-course-review/book-a"
+  
+
+      } 
+     ]
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : " 01: Introducing HTML ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/topic.png",
+  
+  
+
+  "summary" : "web · client/server · browser · html · documents · elements · attributes · links ·images · page structure · nesting · wireframing · block · inline",
+  "id": "topic-01-introducing-html",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "HTML Fundamentals ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-2-introduction/a-introduction.png",
+  
+  
+
+  "summary" : "HTML Fundamentals",
+  "id": "unit",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "The Nature of the Web ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-2-introduction/a-introduction.png",
+  
+  
+
+  "summary" : "code · html · http · standards · evolution · role of client · role of servers · learning resources",
+  "id": "talk-2-introduction",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-2-introduction/a-introduction.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-2-introduction/a-introduction.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "HTML Basics ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-3-html/b-html-page-structure.png",
+  
+  
+
+  "summary" : "elements  · attributes · paths · absolute · relative · nesting · block · inline · labs",
+  "id": "talk-3-html",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-3-html/b-html-page-structure.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/talk-3-html/b-html-page-structure.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-01 HTML Structure",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/book-b/img/main.png",
+  
+  
+
+  "summary" : "folders · head · title · link · image · references",
+  "id": "book-b",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/book-b"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "01: Introducing HTML ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/cQRSDIuYfIM",
+  
+
+  "summary" : "01: Introducing HTML",
+  "id": "panelvideo",
+  
+    "route" : "cQRSDIuYfIM"
+  
+
+      } 
+     ]
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "02: Introducing CSS ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/topic.jpg",
+  
+  
+
+  "summary" : "markup · style · function· stylesheet · rules · selectors · declarations· properties · values · classes · ids · inheritance",
+  "id": "topic-02-introducing-css",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "HTML & CSS ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-1-html-review/a-html-elements.jpg",
+  
+  
+
+  "summary" : "HTML & CSS",
+  "id": "unit-a",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "HTML Elements ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-1-html-review/a-html-elements.jpg",
+  
+  
+
+  "summary" : "structural elements ·  head elements · text elements · list elements · image elements · shared attributes",
+  "id": "talk-1-html-review",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-1-html-review/a-html-elements.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-1-html-review/a-html-elements.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "CSS Basics ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-2-introducing-css/b-introducing-css.jpg",
+  
+  
+
+  "summary" : "markup · presentation · style · rules · selectors · declarations · properties · values",
+  "id": "talk-2-introducing-css",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-2-introducing-css/b-introducing-css.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-a/talk-2-introducing-css/b-introducing-css.pdf"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "CSS Fundamentals ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-3-css-rules/c-css-rules.png",
+  
+  
+
+  "summary" : "CSS Fundamentals",
+  "id": "unit-b",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "CSS Rules ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-3-css-rules/c-css-rules.png",
+  
+  
+
+  "summary" : "rule structure · combining rules · combining selectors",
+  "id": "talk-3-css-rules",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-3-css-rules/c-css-rules.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-3-css-rules/c-css-rules.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Class, ID & DIV ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-4-class-id-div/class-id-div.png",
+  
+  
+
+  "summary" : "class · id · div",
+  "id": "talk-4-class-id-div",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-4-class-id-div/class-id-div.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/talk-4-class-id-div/class-id-div.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-02 CSS Intro",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/book/img/main.png",
+  
+  
+
+  "summary" : "inheritance · classes · fonts · colours · indentation · best practices",
+  "id": "book",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/unit-b/book"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "02: Introducing CSS ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/yyS7nCNLNOc",
+  
+
+  "summary" : "02: Introducing CSS",
+  "id": "panelvideo",
+  
+    "route" : "yyS7nCNLNOc"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "03: Box & Grid ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/topic.png",
+  
+  
+
+  "summary" : "padding · border · margin · width · grid · grid-template-columns · grid-column-start · span  · grid-gap",
+  "id": "topic-03-box-model",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Box Model ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-1-html-evolution/d-html_evolution.png",
+  
+  
+
+  "summary" : "Box Model",
+  "id": "unit-a",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Web Standards Evolution ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-1-html-evolution/d-html_evolution.png",
+  
+  
+
+  "summary" : "standards  · w3c · whatwg · sgml · xhtml · html5 ·",
+  "id": "talk-1-html-evolution",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-1-html-evolution/d-html_evolution.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-1-html-evolution/d-html_evolution.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Box Model Fundamentals ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-2-box-model/a-box-model-1.png",
+  
+  
+
+  "summary" : "content · padding · border · margin · variations · fonts · dimensions",
+  "id": "talk-2-box-model",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-2-box-model/a-box-model-1.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-2-box-model/a-box-model-1.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Box Model Example ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-3-box-example/a-box-model-example.png",
+  
+  
+
+  "summary" : "border-width · border-style · padding · width · margin-left · text-align · float",
+  "id": "talk-3-box-example",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-3-box-example/a-box-model-example.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/talk-3-box-example/a-box-model-example.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-03a Layout",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/book-a/img/main.png",
+  
+  
+
+  "summary" : "fonts · content · images · classes · folding editor · sidebar · float",
+  "id": "book-a",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-a/book-a"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Layout ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-2-box/box.png",
+  
+  
+
+  "summary" : "Layout",
+  "id": "unit-b",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Box Layout ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-2-box/box.png",
+  
+  
+
+  "summary" : "Some important characteristics of the box model layout rules.",
+  "id": "talk-2-box",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-2-box/box.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-2-box/box.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Grid ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-4-grid/grid.png",
+  
+  
+
+  "summary" : "The new Grid standard support a clean, simple way of defining multi-column layouts",
+  "id": "talk-4-grid",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-4-grid/grid.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/talk-4-grid/grid.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-03b Multicolumn",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/book-b/img/main.png",
+  
+  
+
+  "summary" : "header · maincontent · navigation · footer · primary · secondary",
+  "id": "book-b",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/unit-b/book-b"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "03: Box & Grid ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/3fSWeaBIIyg",
+  
+
+  "summary" : "",
+  "id": "panelvideo",
+  
+    "route" : "3fSWeaBIIyg"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "04: Navigation & Style ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/topic.jpeg",
+  
+  
+
+  "summary" : "indentation · encoding · doctype · validity · semantics · entities · type attributes · quotations · nav · tab · current · padding · border · menu · li · ul · header · main · nav · aside · article · footer · section · figure",
+  "id": "topic-04-navigation",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Navigation ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-1-css-selectors/d-css-selectors.png",
+  
+  
+
+  "summary" : "Navigation",
+  "id": "unit-a",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "CSS Cascade ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-1-css-selectors/d-css-selectors.png",
+  
+  
+
+  "summary" : "Example of selector rule evaluation with a worked example",
+  "id": "talk-1-css-selectors",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-1-css-selectors/d-css-selectors.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-1-css-selectors/d-css-selectors.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Navigation ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-2-navigation/css-navigation.jpeg",
+  
+  
+
+  "summary" : "nav · tab · current · padding · border · menu · li · ul",
+  "id": "talk-2-navigation",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-2-navigation/css-navigation.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/talk-2-navigation/css-navigation.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-04 Navigation",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/book/img/main.png",
+  
+  
+
+  "summary" : "Devise a simple navigation metaphor for a web site.",
+  "id": "book",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/book"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "04a: Navigation ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/PPMxjkDU4sY",
+  
+
+  "summary" : "",
+  "id": "panelvideo",
+  
+    "route" : "PPMxjkDU4sY"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Design I: Introduction ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/talk-1/design-guides.png",
+  
+  
+
+  "summary" : "Design I: Introduction",
+  "id": "unit-b",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Design Guides for the Web ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/talk-1/design-guides.png",
+  
+  
+
+  "summary" : "Introduction to web design principles",
+  "id": "talk-1",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/talk-1/design-guides.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/talk-1/design-guides.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "04b: Design Guides for the Web ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/w9HA7HuTTkw",
+  
+
+  "summary" : "",
+  "id": "panelvideo",
+  
+    "route" : "w9HA7HuTTkw"
+  
+
+      } 
+     ]
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "05: Deployment & Templating ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/topic.png",
+  
+  
+
+  "summary" : "clients · servers · hosting · domains · dns · paths · http · command prompt · node · harp · surge · server · compile · EJS · dry · wet · engine · partials · includes · layouts · paths · compile",
+  "id": "topic-05-templating",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Deployment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-1-deployment/deployment.png",
+  
+  
+
+  "summary" : "Deployment",
+  "id": "unit-a",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Deployment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-1-deployment/deployment.png",
+  
+  
+
+  "summary" : "clients · servers · hosting · domains · dns · paths · http · response codes",
+  "id": "talk-1-deployment",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-1-deployment/deployment.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-1-deployment/deployment.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Harp & Surge ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-2-harp-and-surge/harp.png",
+  
+  
+
+  "summary" : "command prompt · node · harp · surge · server · compile",
+  "id": "talk-2-harp-and-surge",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-2-harp-and-surge/harp.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/talk-2-harp-and-surge/harp.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-05a Harp & Surge",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/book-01-deployment/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/yerJdD3IQ44",
+  
+
+  "summary" : "Install software tools to serve a web site locally and also to deploy the web site to a public web server.",
+  "id": "book-01-deployment",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/book-01-deployment"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Templating ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b/talk-4-templates/templates.png",
+  
+  
+
+  "summary" : "Templating",
+  "id": "unit-b",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Templates ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b/talk-4-templates/templates.png",
+  
+  
+
+  "summary" : "EJS · dry · wet · engine · partials · includes · layouts · paths · compile",
+  "id": "talk-4-templates",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b/talk-4-templates/templates.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b/talk-4-templates/templates.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-05b Templates",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b/book-templates/img/main.png",
+  
+  
+
+  "summary" : "Refactor the bundle-store site to use EJS templates",
+  "id": "book-templates",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-b/book-templates"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Design II: Typography (+ html coding standards) ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-1-typograpahy/typography.png",
+  
+  
+
+  "summary" : "Design II: Typography (+ html coding standards)",
+  "id": "unit-c",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Typography ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-1-typograpahy/typography.png",
+  
+  
+
+  "summary" : "The fundamentals of fonts & typefaces in the context of web design.",
+  "id": "talk-1-typograpahy",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-1-typograpahy/typography.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-1-typograpahy/typography.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "HTML Style Guide ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-3-coding-standards-html/coding-standards-html.jpg",
+  
+  
+
+  "summary" : "indentation · encoding · doctype · validity ·  semantics · entities · type attributes · quotations",
+  "id": "talk-3-coding-standards-html",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-3-coding-standards-html/coding-standards-html.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-3-coding-standards-html/coding-standards-html.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Semantic HTML ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-3-semantic-html/semantic-html.png",
+  
+  
+
+  "summary" : "header · main · nav · aside · article · footer · section · figure",
+  "id": "talk-3-semantic-html",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-3-semantic-html/semantic-html.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/talk-3-semantic-html/semantic-html.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "05b: Typography ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/Z308Hm3Pa78",
+  
+
+  "summary" : "",
+  "id": "panelvideo",
+  
+    "route" : "Z308Hm3Pa78"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "05a: Templating ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/b4qsSshHKoA",
+  
+
+  "summary" : "",
+  "id": "panelvideo",
+  
+    "route" : "b4qsSshHKoA"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "06: Semantic + CSS Frameworks ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/topic.jpg",
+  
+  
+
+  "summary" : "review  · bootstrap · semantic ui · container · segment · grid · stackable · tables · icons · images  · row · col",
+  "id": "topic-06-css-frameworks",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "06a: Semantic HTML  ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-labs-review/lab-review.png",
+  
+  
+
+  "summary" : "06a: Semantic HTML",
+  "id": "unit-a",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : " Lab Review ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-labs-review/lab-review.png",
+  
+  
+
+  "summary" : "lab-1  · lab-2 ·lab-3 · lab-4 · lab-5 · lab-6",
+  "id": "talk-1-labs-review",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-labs-review/lab-review.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-labs-review/lab-review.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Semantic HTML ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-semantic-html/semantic-html.png",
+  
+  
+
+  "summary" : "header · main · nav · aside · article · footer · section · figure",
+  "id": "talk-1-semantic-html",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-semantic-html/semantic-html.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-1-semantic-html/semantic-html.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "CSS Style Guide ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-2-css-style-guide/css-guide.png",
+  
+  
+
+  "summary" : "validity · names · name style · selectors · shorthand · delimiters · order · stops · quotations",
+  "id": "talk-2-css-style-guide",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-2-css-style-guide/css-guide.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/talk-2-css-style-guide/css-guide.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-06a Nav Params",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/book-nav-2/img/main.jpg",
+  
+  
+
+  "summary" : "Introduce semantic elements. Define a parametrised navigation partial",
+  "id": "book-nav-2",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-a/book-nav-2"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "06b: CSS Frameworks & Semantic UI ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-1-css-frameworks/sematic-ui-part-1.png",
+  
+  
+
+  "summary" : "06b: CSS Frameworks & Semantic UI",
+  "id": "unit-b",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Semantic-UI I: Container & Segment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-1-css-frameworks/sematic-ui-part-1.png",
+  
+  
+
+  "summary" : "project structure · semantic ui archive · container · segment · raised · stacked",
+  "id": "talk-1-css-frameworks",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-1-css-frameworks/sematic-ui-part-1.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-1-css-frameworks/sematic-ui-part-1.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Semantic-UI II: Grids & Images ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-2-grids-and-images/sematic-ui-part-2.png",
+  
+  
+
+  "summary" : "row · column · aligned · center · top  · image · small · medium · large",
+  "id": "talk-2-grids-and-images",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-2-grids-and-images/sematic-ui-part-2.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-2-grids-and-images/sematic-ui-part-2.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Semantic-UI III: Tables ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-4-tables/sematic-ui-part-3.png",
+  
+  
+
+  "summary" : "table · celled · padded · single line · striped · inverted",
+  "id": "talk-4-tables",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-4-tables/sematic-ui-part-3.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/talk-4-tables/sematic-ui-part-3.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-06b Semantic-UI",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/book-semantic-ui/img/main.png",
+  
+  
+
+  "summary" : "Create a revised version of bundle-store using the Semantic UI CSS framework.",
+  "id": "book-semantic-ui",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-b/book-semantic-ui"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "06c: Colour ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/talk/colour.png",
+  
+  
+
+  "summary" : "06c: Colour",
+  "id": "unit-c",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Designing with Colour ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/talk/colour.png",
+  
+  
+
+  "summary" : "An introduction to Colour in the context of web site design.",
+  "id": "talk",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/talk/colour.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/talk/colour.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "Colour ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/JDKIYq42omM",
+  
+
+  "summary" : "Colour",
+  "id": "panelvideo",
+  
+    "route" : "JDKIYq42omM"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "06d: Web Project Repositories ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-d/github-01-bundle/github.jpg",
+  
+  
+
+  "summary" : "06d: Web Project Repositories",
+  "id": "unit-d",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-d"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "github",
+  "title" : "Bundle Store ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-d/github-01-bundle/github.jpg",
+  
+  
+
+  "summary" : "Web project source from Lab 01, 02, 03, & 05",
+  "id": "github-01-bundle",
+  
+    "route" : "https://github.com/wit-hdip-comp-sci-2019/bundle-store"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "github",
+  "title" : "Grid Layout ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-d/github-02-grid/github.jpg",
+  
+  
+
+  "summary" : "Web project source from Lab 03 & 04",
+  "id": "github-02-grid",
+  
+    "route" : "https://github.com/wit-hdip-comp-sci-2019/grid-layout"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "github",
+  "title" : "Bundle Store - Templates ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-d/github-03-bundle-ejs/github.jpg",
+  
+  
+
+  "summary" : "Web project source from Lab 06 & 06",
+  "id": "github-03-bundle-ejs",
+  
+    "route" : "https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "06a: Semantic + CSS Frameworks ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/ANCxR3YLoYU",
+  
+
+  "summary" : "06a: Semantic + CSS Frameworks",
+  "id": "panelvideo",
+  
+    "route" : "ANCxR3YLoYU"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "07: Applications ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/topic.png",
+  
+  
+
+  "summary" : "sites · apps · frameworks · command line · ide · java · request · response · front-end · back-end",
+  "id": "topic-07-starting-play",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Introducing Play Framework ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.png",
+  
+  
+
+  "summary" : "Introducing Play Framework",
+  "id": "unit-1",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Web Sites/Applications ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.png",
+  
+  
+
+  "summary" : "theme · content · navigation · structure · templates · style · interaction · business logic · context · static · dynamic",
+  "id": "talk-1-introducing-dynamic-web",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Starting to Play ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-2-starting-to-play/b-starting-to-play.png",
+  
+  
+
+  "summary" : "download · expand · path · verify · run · idealize · skeleton app",
+  "id": "talk-2-starting-to-play",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-2-starting-to-play/b-starting-to-play.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/talk-2-starting-to-play/b-starting-to-play.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-07a Play Setup",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/book-b-setup-play/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/W0MJdoN1bHE",
+  
+
+  "summary" : "Install and test Git + the Play Framework (Note: the video shows java + play revisions a little behind your current installation)",
+  "id": "book-b-setup-play",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/book-b-setup-play"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Play Project Structure ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-3-project-structure/web-app-intro.png",
+  
+  
+
+  "summary" : "",
+  "id": "unit-2",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Web App Introduction ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-3-project-structure/web-app-intro.png",
+  
+  
+
+  "summary" : "structure  · front-end · backend · router · model  ·  view  ·  controller",
+  "id": "talk-3-project-structure",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-3-project-structure/web-app-intro.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-3-project-structure/web-app-intro.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Front-end ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-4-front-end/front-end.jpg",
+  
+  
+
+  "summary" : "layout · partials · views · tags · about · dashboard · main · start",
+  "id": "talk-4-front-end",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-4-front-end/front-end.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-4-front-end/front-end.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Back-end ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-5-back-end/back-end.png",
+  
+  
+
+  "summary" : "request · router · controller · view · response",
+  "id": "talk-5-back-end",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-5-back-end/back-end.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/talk-5-back-end/back-end.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-07b Playlist 1",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/book-c-playlist-1/img/main.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/1qXvIIhGN9g",
+  
+
+  "summary" : "Import, rename and run a new starter project. Extend the project to include a Model. (Note: the video shows java + play revisions a little behind your current installation)",
+  "id": "book-c-playlist-1",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/book-c-playlist-1"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "07: Starting to Play ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/8filEanmKTw",
+  
+
+  "summary" : "07: Starting to Play",
+  "id": "panelvideo",
+  
+    "route" : "8filEanmKTw"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "08: Models & Views ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/topic.png",
+  
+  
+
+  "summary" : "Models · Views · Controllers  · conf  · Song · Playlist · ArrayList · OneToMany · Bootstrap",
+  "id": "topic-08-introducing-mvc",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Controllers + Views ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-0-mvc/mvc.png",
+  
+  
+
+  "summary" : "Controllers + Views",
+  "id": "unit-1",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Model View Controller ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-0-mvc/mvc.png",
+  
+  
+
+  "summary" : "request · router · controller · view · response",
+  "id": "talk-0-mvc",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-0-mvc/mvc.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-0-mvc/mvc.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Views ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-1-views/views.png",
+  
+  
+
+  "summary" : "extends · set · list · list · menu · listsongs`",
+  "id": "talk-1-views",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-1-views/views.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/talk-1-views/views.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-08a Playlist-2",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/book-a-playlist-2/img/main.png",
+  
+  
+
+  "summary" : "Move the playlist model into the database. Prime the database from a YAML file.",
+  "id": "book-a-playlist-2",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-1/book-a-playlist-2"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Models ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/talk-2-models/models.png",
+  
+  
+
+  "summary" : "Models",
+  "id": "unit-2",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Models ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/talk-2-models/models.png",
+  
+  
+
+  "summary" : "table  · row  · mem · yaml · Song · Playlist · ArrayList · OneToMany · OnApplicationStart",
+  "id": "talk-2-models",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/talk-2-models/models.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/talk-2-models/models.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-08b Playlist-3",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/book-b-playlist-3/img/main.png",
+  
+  
+
+  "summary" : "Move the playlists into their own view. Introduce routes for opening the playlist and also deleting individual songs.",
+  "id": "book-b-playlist-3",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/unit-2/book-b-playlist-3"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "08: Introducing MVC ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/938uuQ_P66Q",
+  
+
+  "summary" : "08: Introducing MVC",
+  "id": "panelvideo",
+  
+    "route" : "938uuQ_P66Q"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "09: Forms ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/topic.png",
+  
+  
+
+  "summary" : "routes · get · post · delete · template loops · submit · buttons · 404",
+  "id": "topic-09-forms",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Todo List Case Study ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-1/forms.jpg",
+  
+  
+
+  "summary" : "Todo List Case Study",
+  "id": "unit-1",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Todo ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-1/forms.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/AZIugqUyYG8",
+  
+
+  "summary" : "A Separate case study - a simple todo list application",
+  "id": "talk-b-todo-1",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-1/forms.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-1/forms.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Add Todo ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-2/todo-2.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/FDWAzZs_frU",
+  
+
+  "summary" : "add item to todolist - detailed walkthrough",
+  "id": "talk-b-todo-2",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-2/todo-2.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-2/todo-2.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-09a Todolist-1",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/book-a-todolist/img/main.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/LeDDzRpc2Ro",
+  
+
+  "summary" : "Develop a completely new application, using the techniques we have explored so far.",
+  "id": "book-a-todolist",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/book-a-todolist"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Creating a Playlist ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-playlist-mgmt/playlist-mgmt.png",
+  
+  
+
+  "summary" : "Creating a Playlist",
+  "id": "unit-2",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Playlist Management ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-playlist-mgmt/playlist-mgmt.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/ieWoRUBZY9o",
+  
+
+  "summary" : "List, add and delete playlists",
+  "id": "talk-c-playlist-mgmt",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-playlist-mgmt/playlist-mgmt.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-playlist-mgmt/playlist-mgmt.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Song Management ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-song-mgmt/song-mgmt.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/5MgEGu6xm_Q",
+  
+
+  "summary" : "List, add and delete Songs",
+  "id": "talk-c-song-mgmt",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-song-mgmt/song-mgmt.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-song-mgmt/song-mgmt.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-09b Playlist-4",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/book-b-playlist-4/img/main.jpeg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/7S-kuHH__K0",
+  
+
+  "summary" : "Introduce forms into a play application to enable the user to create playlists.",
+  "id": "book-b-playlist-4",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/book-b-playlist-4"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "User Experience Introduction (UX) ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3/talk/ux-intro.jpg",
+  
+  
+
+  "summary" : "User Experience Introduction (UX)",
+  "id": "unit-3",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Defining UX ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3/talk/ux-intro.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/sbeYdOmp6nY",
+  
+
+  "summary" : "The usability, accessibility & pleasure provided by the user interaction",
+  "id": "talk",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3/talk/ux-intro.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3/talk/ux-intro.pdf"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "09: Forms ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/GLQqvbhFGxw",
+  
+
+  "summary" : "09: Forms",
+  "id": "panelvideo",
+  
+    "route" : "GLQqvbhFGxw"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "10: Sessions ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/topic.png",
+  
+  
+
+  "summary" : "stateless · stateful · tracking · cookies · signup · login · logout · session object · clearing",
+  "id": "topic-10-sessions",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Sessions in Todo ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-a-todo-review/todo-review.jpg",
+  
+  
+
+  "summary" : "Sessions in Todo",
+  "id": "unit",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Todo Review ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-a-todo-review/todo-review.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/4qXOi_41QhA",
+  
+
+  "summary" : "A quick tour of the Todo app so far",
+  "id": "talk-a-todo-review",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-a-todo-review/todo-review.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-a-todo-review/todo-review.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Sessions ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-b-sessions-intro/c-sessions.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/pQLmcI5xQyo",
+  
+
+  "summary" : "Sessions, via hidden form fields, url rewriting and cookies.",
+  "id": "talk-b-sessions-intro",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-b-sessions-intro/c-sessions.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-b-sessions-intro/c-sessions.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Sessions in Todo ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-d-todo-sessions/todo-sessions.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/nDSc74DZQSU",
+  
+
+  "summary" : "Introduce session management into the Todo app",
+  "id": "talk-d-todo-sessions",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-d-todo-sessions/todo-sessions.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-d-todo-sessions/todo-sessions.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-10 Todolist-2",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/book-sessions/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/CQKwWzame3Q",
+  
+
+  "summary" : "Incorporate sessions tracking into the todo app",
+  "id": "book-sessions",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/book-sessions"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "10: Sessions ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/-NM2D1oV0tE",
+  
+
+  "summary" : "10: Sessions",
+  "id": "panelvideo",
+  
+    "route" : "-NM2D1oV0tE"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "11: Sessions & Models ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/topic.png",
+  
+  
+
+  "summary" : "song · playlist · session · add · delete · login · signup",
+  "id": "topic-11-playlist-sessions",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Play Review ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/talk-e-cheat-sheet/cheat-sheet.png",
+  
+  
+
+  "summary" : "",
+  "id": "unit-0",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Play References + Cheat Sheet ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/talk-e-cheat-sheet/cheat-sheet.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/Ly5UZERqM1E",
+  
+
+  "summary" : "Play books & videos + Cheat Sheet",
+  "id": "talk-e-cheat-sheet",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/talk-e-cheat-sheet/cheat-sheet.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/talk-e-cheat-sheet/cheat-sheet.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-11a Playlist Review",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/book-1/img/main.jpg",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/rurGzFfEfoM",
+  
+
+  "summary" : "Review the Playlist Application",
+  "id": "book-1",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/book-1"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Playlist Sessions ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-1-play-sessions/playlist-sessions.png",
+  
+  
+
+  "summary" : "Playlist Sessions",
+  "id": "unit-1",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Playlist Sessions ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-1-play-sessions/playlist-sessions.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/qLeVRPBn05w",
+  
+
+  "summary" : "Introduce session management into the Playlist 4 Application",
+  "id": "talk-1-play-sessions",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-1-play-sessions/playlist-sessions.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-1-play-sessions/playlist-sessions.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Playlist Models ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-2-play-models/playlist-models.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/CstAyqSWJAg",
+  
+
+  "summary" : "Review the structure and manipulation of the Playlist Model",
+  "id": "talk-2-play-models",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-2-play-models/playlist-models.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-2-play-models/playlist-models.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-11b Playlist 5",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/book-2/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/xUcWmTM7qt0",
+  
+
+  "summary" : "Incorporate Sessions into the latest Playlist Application",
+  "id": "book-2",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/book-2"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "UX for Application Development ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/talk/designing-ux-2.png",
+  
+  
+
+  "summary" : "UX for Application Development",
+  "id": "unit-2",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Designing the User Experience ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/talk/designing-ux-2.png",
+  
+  
+
+  "summary" : "Evolving a design for a Web Application.",
+  "id": "talk",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/talk/designing-ux-2.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/talk/designing-ux-2.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "11b: Designing the User Experience ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/l6u-8xMK7OE",
+  
+
+  "summary" : "11b: Designing the User Experience",
+  "id": "panelvideo",
+  
+    "route" : "l6u-8xMK7OE"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "archive",
+  "title" : "UX Document Template ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/archive/design-document-for-ux-doc.png",
+  
+  
+
+  "summary" : "A word document template for th UX report.",
+  "id": "archive",
+  
+    "route" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/archive/design-document-for-ux-doc.zip"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "11a: Playlist Sessions ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/HVe-wdz_Qu4",
+  
+
+  "summary" : "11a: Playlist Sessions",
+  "id": "panelvideo",
+  
+    "route" : "HVe-wdz_Qu4"
+  
+
+    
+  
+
+    } 
+   ]
+
+  },
+ {
+  
+  
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "topic",
+  "title" : "12: Deployment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/topic.jpg",
+  
+  
+
+  "summary" : "heroku · cli · config  · database · dashboard · logs · startup · management · shutdown",
+  "id": "topic-12-deployment-review",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review"
+  
+,
+  "los": [
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Git ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/talk/talk.png",
+  
+  
+
+  "summary" : "Git",
+  "id": "unit-0",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Git, Github & Sourcetree ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/talk/talk.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/afZecaW9AFM",
+  
+
+  "summary" : "A high level tour of git & Sourcetree",
+  "id": "talk",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/talk/talk.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/talk/talk.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-12a Git Setup",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-b-sourcetree/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/BjXM9VUNM58",
+  
+
+  "summary" : "Install and Configure Git + the Sourcetree git GUI",
+  "id": "book-b-sourcetree",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-b-sourcetree"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-12b Git Workflow",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-c-git/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/WU719ByATzM ",
+  
+
+  "summary" : "Rebuild Todolist - this time committing to git version control as the app is composed using Sourcetree",
+  "id": "book-c-git",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-c-git"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "unit",
+  "title" : "Deployment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/talk-b-deployment/deployment.png",
+  
+  
+
+  "summary" : "Deployment",
+  "id": "unit-1",
+  
+    "route" : "#topic/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1"
+  
+
+    
+  
+    ,"los" : [
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "talk",
+  "title" : "Deployment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/talk-b-deployment/deployment.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/gvDpJi7aYLg",
+  
+
+  "summary" : "Moving a Play web application from localhost to the cloud",
+  "id": "talk-b-deployment",
+  
+    "pdf" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/talk-b-deployment/deployment.pdf",
+    "route" : "#talk/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/talk-b-deployment/deployment.pdf"
+  
+
+      } ,
+     {
+      
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "lab",
+  "title" : "Lab-12c Deploy",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/book-a-deploy/img/main.png",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/90OH_BB-l9g",
+  
+
+  "summary" : "Deploy a Play Application to the cloud",
+  "id": "book-a-deploy",
+  
+    "route" : "#lab/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/book-a-deploy"
+  
+
+      } 
+     ]
+  
+
+    } ,
+   {
+    
+  
+  
+    "properties" : {}
+  
+,
+  "type" : "panelvideo",
+  "title" : "12: Deployment ",
+  "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/panelvideo/",
+  
+  
+
+    "video" : "https://www.youtube.com/embed/OfHtb44zd_8",
+  
+
+  "summary" : "12: Deployment",
+  "id": "panelvideo",
+  
+    "route" : "OfHtb44zd_8"
+  
+
+    
+  
+
+    } 
+   ]
+
+  }
+ ]
+  }
+
