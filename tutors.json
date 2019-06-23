@@ -191,14 +191,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/panelvideo/ye9t_85fWzI",
 
-    "video" : "https://www.youtube.com/embed/ye9t_85fWzI",
   
 
   "summary" : "Assignment 2 Briefing",
   "id": "panelvideo",
   
-    "route" : "ye9t_85fWzI"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic---assignments/unit-assign-2/panelvideo/ye9t_85fWzI"
   
 
       } ,
@@ -457,14 +457,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/panelvideo/cQRSDIuYfIM",
 
-    "video" : "https://www.youtube.com/embed/cQRSDIuYfIM",
   
 
   "summary" : "01: Introducing HTML",
   "id": "panelvideo",
   
-    "route" : "cQRSDIuYfIM"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-01-introducing-html/unit/panelvideo/cQRSDIuYfIM"
   
 
       } 
@@ -664,14 +664,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/panelvideo/yyS7nCNLNOc",
 
-    "video" : "https://www.youtube.com/embed/yyS7nCNLNOc",
   
 
   "summary" : "02: Introducing CSS",
   "id": "panelvideo",
   
-    "route" : "yyS7nCNLNOc"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-02-introducing-css/panelvideo/yyS7nCNLNOc"
   
 
     
@@ -911,14 +911,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/panelvideo/3fSWeaBIIyg",
 
-    "video" : "https://www.youtube.com/embed/3fSWeaBIIyg",
   
 
   "summary" : "",
   "id": "panelvideo",
   
-    "route" : "3fSWeaBIIyg"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-03-box-model/panelvideo/3fSWeaBIIyg"
   
 
     
@@ -1045,14 +1045,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/panelvideo/PPMxjkDU4sY",
 
-    "video" : "https://www.youtube.com/embed/PPMxjkDU4sY",
   
 
   "summary" : "",
   "id": "panelvideo",
   
-    "route" : "PPMxjkDU4sY"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-a/panelvideo/PPMxjkDU4sY"
   
 
       } 
@@ -1115,14 +1115,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/panelvideo/w9HA7HuTTkw",
 
-    "video" : "https://www.youtube.com/embed/w9HA7HuTTkw",
   
 
   "summary" : "",
   "id": "panelvideo",
   
-    "route" : "w9HA7HuTTkw"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-04-navigation/unit-b/panelvideo/w9HA7HuTTkw"
   
 
       } 
@@ -1230,8 +1230,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/book-01-deployment/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-a/book-01-deployment/yerJdD3IQ44",
 
-    "video" : "https://www.youtube.com/embed/yerJdD3IQ44",
   
 
   "summary" : "Install software tools to serve a web site locally and also to deploy the web site to a public web server.",
@@ -1409,14 +1409,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/panelvideo/Z308Hm3Pa78",
 
-    "video" : "https://www.youtube.com/embed/Z308Hm3Pa78",
   
 
   "summary" : "",
   "id": "panelvideo",
   
-    "route" : "Z308Hm3Pa78"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/unit-c/panelvideo/Z308Hm3Pa78"
   
 
       } 
@@ -1436,14 +1436,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/panelvideo/b4qsSshHKoA",
 
-    "video" : "https://www.youtube.com/embed/b4qsSshHKoA",
   
 
   "summary" : "",
   "id": "panelvideo",
   
-    "route" : "b4qsSshHKoA"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-05-templating/panelvideo/b4qsSshHKoA"
   
 
     
@@ -1747,14 +1747,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/panelvideo/JDKIYq42omM",
 
-    "video" : "https://www.youtube.com/embed/JDKIYq42omM",
   
 
   "summary" : "Colour",
   "id": "panelvideo",
   
-    "route" : "JDKIYq42omM"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/unit-c/panelvideo/JDKIYq42omM"
   
 
       } 
@@ -1860,14 +1860,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/panelvideo/ANCxR3YLoYU",
 
-    "video" : "https://www.youtube.com/embed/ANCxR3YLoYU",
   
 
   "summary" : "06a: Semantic + CSS Frameworks",
   "id": "panelvideo",
   
-    "route" : "ANCxR3YLoYU"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-06-css-frameworks/panelvideo/ANCxR3YLoYU"
   
 
     
@@ -1974,8 +1974,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/book-b-setup-play/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-1/book-b-setup-play/W0MJdoN1bHE",
 
-    "video" : "https://www.youtube.com/embed/W0MJdoN1bHE",
   
 
   "summary" : "Install and test Git + the Play Framework (Note: the video shows java + play revisions a little behind your current installation)",
@@ -2086,8 +2086,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/book-c-playlist-1/img/main.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/unit-2/book-c-playlist-1/1qXvIIhGN9g",
 
-    "video" : "https://www.youtube.com/embed/1qXvIIhGN9g",
   
 
   "summary" : "Import, rename and run a new starter project. Extend the project to include a Model. (Note: the video shows java + play revisions a little behind your current installation)",
@@ -2113,14 +2113,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/panelvideo/8filEanmKTw",
 
-    "video" : "https://www.youtube.com/embed/8filEanmKTw",
   
 
   "summary" : "07: Starting to Play",
   "id": "panelvideo",
   
-    "route" : "8filEanmKTw"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-07-starting-play/panelvideo/8filEanmKTw"
   
 
     
@@ -2318,14 +2318,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/panelvideo/938uuQ_P66Q",
 
-    "video" : "https://www.youtube.com/embed/938uuQ_P66Q",
   
 
   "summary" : "08: Introducing MVC",
   "id": "panelvideo",
   
-    "route" : "938uuQ_P66Q"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-08-introducing-mvc/panelvideo/938uuQ_P66Q"
   
 
     
@@ -2390,8 +2390,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-1/forms.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-1/AZIugqUyYG8",
 
-    "video" : "https://www.youtube.com/embed/AZIugqUyYG8",
   
 
   "summary" : "A Separate case study - a simple todo list application",
@@ -2414,8 +2414,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-2/todo-2.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/talk-b-todo-2/FDWAzZs_frU",
 
-    "video" : "https://www.youtube.com/embed/FDWAzZs_frU",
   
 
   "summary" : "add item to todolist - detailed walkthrough",
@@ -2438,8 +2438,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/book-a-todolist/img/main.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-1/book-a-todolist/LeDDzRpc2Ro",
 
-    "video" : "https://www.youtube.com/embed/LeDDzRpc2Ro",
   
 
   "summary" : "Develop a completely new application, using the techniques we have explored so far.",
@@ -2487,8 +2487,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-playlist-mgmt/playlist-mgmt.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-playlist-mgmt/ieWoRUBZY9o",
 
-    "video" : "https://www.youtube.com/embed/ieWoRUBZY9o",
   
 
   "summary" : "List, add and delete playlists",
@@ -2511,8 +2511,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-song-mgmt/song-mgmt.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/talk-c-song-mgmt/5MgEGu6xm_Q",
 
-    "video" : "https://www.youtube.com/embed/5MgEGu6xm_Q",
   
 
   "summary" : "List, add and delete Songs",
@@ -2535,8 +2535,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/book-b-playlist-4/img/main.jpeg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-2/book-b-playlist-4/7S-kuHH__K0",
 
-    "video" : "https://www.youtube.com/embed/7S-kuHH__K0",
   
 
   "summary" : "Introduce forms into a play application to enable the user to create playlists.",
@@ -2584,8 +2584,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3/talk/ux-intro.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/unit-3/talk/sbeYdOmp6nY",
 
-    "video" : "https://www.youtube.com/embed/sbeYdOmp6nY",
   
 
   "summary" : "The usability, accessibility & pleasure provided by the user interaction",
@@ -2612,14 +2612,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/panelvideo/GLQqvbhFGxw",
 
-    "video" : "https://www.youtube.com/embed/GLQqvbhFGxw",
   
 
   "summary" : "09: Forms",
   "id": "panelvideo",
   
-    "route" : "GLQqvbhFGxw"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-09-forms/panelvideo/GLQqvbhFGxw"
   
 
     
@@ -2684,8 +2684,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-a-todo-review/todo-review.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-a-todo-review/4qXOi_41QhA",
 
-    "video" : "https://www.youtube.com/embed/4qXOi_41QhA",
   
 
   "summary" : "A quick tour of the Todo app so far",
@@ -2708,8 +2708,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-b-sessions-intro/c-sessions.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-b-sessions-intro/pQLmcI5xQyo",
 
-    "video" : "https://www.youtube.com/embed/pQLmcI5xQyo",
   
 
   "summary" : "Sessions, via hidden form fields, url rewriting and cookies.",
@@ -2732,8 +2732,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-d-todo-sessions/todo-sessions.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/talk-d-todo-sessions/nDSc74DZQSU",
 
-    "video" : "https://www.youtube.com/embed/nDSc74DZQSU",
   
 
   "summary" : "Introduce session management into the Todo app",
@@ -2756,8 +2756,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/book-sessions/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/unit/book-sessions/CQKwWzame3Q",
 
-    "video" : "https://www.youtube.com/embed/CQKwWzame3Q",
   
 
   "summary" : "Incorporate sessions tracking into the todo app",
@@ -2783,14 +2783,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/panelvideo/-NM2D1oV0tE",
 
-    "video" : "https://www.youtube.com/embed/-NM2D1oV0tE",
   
 
   "summary" : "10: Sessions",
   "id": "panelvideo",
   
-    "route" : "-NM2D1oV0tE"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-10-sessions/panelvideo/-NM2D1oV0tE"
   
 
     
@@ -2855,8 +2855,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/talk-e-cheat-sheet/cheat-sheet.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/talk-e-cheat-sheet/Ly5UZERqM1E",
 
-    "video" : "https://www.youtube.com/embed/Ly5UZERqM1E",
   
 
   "summary" : "Play books & videos + Cheat Sheet",
@@ -2879,8 +2879,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/book-1/img/main.jpg",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-0/book-1/rurGzFfEfoM",
 
-    "video" : "https://www.youtube.com/embed/rurGzFfEfoM",
   
 
   "summary" : "Review the Playlist Application",
@@ -2928,8 +2928,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-1-play-sessions/playlist-sessions.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-1-play-sessions/qLeVRPBn05w",
 
-    "video" : "https://www.youtube.com/embed/qLeVRPBn05w",
   
 
   "summary" : "Introduce session management into the Playlist 4 Application",
@@ -2952,8 +2952,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-2-play-models/playlist-models.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/talk-2-play-models/CstAyqSWJAg",
 
-    "video" : "https://www.youtube.com/embed/CstAyqSWJAg",
   
 
   "summary" : "Review the structure and manipulation of the Playlist Model",
@@ -2976,8 +2976,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/book-2/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-1/book-2/xUcWmTM7qt0",
 
-    "video" : "https://www.youtube.com/embed/xUcWmTM7qt0",
   
 
   "summary" : "Incorporate Sessions into the latest Playlist Application",
@@ -3046,14 +3046,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/panelvideo/l6u-8xMK7OE",
 
-    "video" : "https://www.youtube.com/embed/l6u-8xMK7OE",
   
 
   "summary" : "11b: Designing the User Experience",
   "id": "panelvideo",
   
-    "route" : "l6u-8xMK7OE"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/unit-2/panelvideo/l6u-8xMK7OE"
   
 
       } ,
@@ -3093,14 +3093,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/panelvideo/HVe-wdz_Qu4",
 
-    "video" : "https://www.youtube.com/embed/HVe-wdz_Qu4",
   
 
   "summary" : "11a: Playlist Sessions",
   "id": "panelvideo",
   
-    "route" : "HVe-wdz_Qu4"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-11-playlist-sessions/panelvideo/HVe-wdz_Qu4"
   
 
     
@@ -3165,8 +3165,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/talk/talk.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/talk/afZecaW9AFM",
 
-    "video" : "https://www.youtube.com/embed/afZecaW9AFM",
   
 
   "summary" : "A high level tour of git & Sourcetree",
@@ -3189,8 +3189,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-b-sourcetree/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-b-sourcetree/BjXM9VUNM58",
 
-    "video" : "https://www.youtube.com/embed/BjXM9VUNM58",
   
 
   "summary" : "Install and Configure Git + the Sourcetree git GUI",
@@ -3212,8 +3212,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-c-git/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-0/book-c-git/WU719ByATzM ",
 
-    "video" : "https://www.youtube.com/embed/WU719ByATzM ",
   
 
   "summary" : "Rebuild Todolist - this time committing to git version control as the app is composed using Sourcetree",
@@ -3261,8 +3261,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/talk-b-deployment/deployment.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/talk-b-deployment/gvDpJi7aYLg",
 
-    "video" : "https://www.youtube.com/embed/gvDpJi7aYLg",
   
 
   "summary" : "Moving a Play web application from localhost to the cloud",
@@ -3285,8 +3285,8 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/book-a-deploy/img/main.png",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/unit-1/book-a-deploy/90OH_BB-l9g",
 
-    "video" : "https://www.youtube.com/embed/90OH_BB-l9g",
   
 
   "summary" : "Deploy a Play Application to the cloud",
@@ -3312,14 +3312,14 @@
   "img" : "https://wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/panelvideo/",
   
   
+    "video" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/panelvideo/OfHtb44zd_8",
 
-    "video" : "https://www.youtube.com/embed/OfHtb44zd_8",
   
 
   "summary" : "12: Deployment",
   "id": "panelvideo",
   
-    "route" : "OfHtb44zd_8"
+    "route" : "#video/wit-hdip-comp-sci-2019.github.io/web-development/topic-12-deployment-review/panelvideo/OfHtb44zd_8"
   
 
     
