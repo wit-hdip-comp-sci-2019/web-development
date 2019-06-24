@@ -1,21 +1,6 @@
 
-
-
   {
-  
-  
-    "properties" : {},
-  
   "type" : "lab",
-  "title" : "Lab-06a Nav Params",
-  "img" : "img/main.jpg",
-  "videoid" : "none",
-  "objectives" : "<p>Introduce semantic elements. Define a parametrised navigation partial</p>",
-  "folder" : "book-nav-2",
-  "link" : "index.html",
-  "los": [
-   ]
-,
   "chapters" : [
   
     {

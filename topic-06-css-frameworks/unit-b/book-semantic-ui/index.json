@@ -1,21 +1,6 @@
 
-
-
   {
-  
-  
-    "properties" : {},
-  
   "type" : "lab",
-  "title" : "Lab-06b Semantic-UI",
-  "img" : "img/main.png",
-  "videoid" : "none",
-  "objectives" : "<p>Create a revised version of bundle-store using the Semantic UI CSS framework.</p>",
-  "folder" : "book-semantic-ui",
-  "link" : "index.html",
-  "los": [
-   ]
-,
   "chapters" : [
   
     {

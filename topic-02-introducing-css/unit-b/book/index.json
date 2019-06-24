@@ -1,21 +1,6 @@
 
-
-
   {
-  
-  
-    "properties" : {},
-  
   "type" : "lab",
-  "title" : "Lab-02 CSS Intro",
-  "img" : "img/main.png",
-  "videoid" : "none",
-  "objectives" : "<p>inheritance · classes · fonts · colours · indentation · best practices</p>",
-  "folder" : "book",
-  "link" : "index.html",
-  "los": [
-   ]
-,
   "chapters" : [
   
     {

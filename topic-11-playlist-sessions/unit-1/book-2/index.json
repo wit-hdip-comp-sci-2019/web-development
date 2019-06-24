@@ -1,21 +1,6 @@
 
-
-
   {
-  
-  
-    "properties" : {},
-  
   "type" : "lab",
-  "title" : "Lab-11b Playlist 5",
-  "img" : "img/main.png",
-  "videoid" : "xUcWmTM7qt0",
-  "objectives" : "<p>Incorporate Sessions into the latest Playlist Application</p>",
-  "folder" : "book-2",
-  "link" : "index.html",
-  "los": [
-   ]
-,
   "chapters" : [
   
     {
