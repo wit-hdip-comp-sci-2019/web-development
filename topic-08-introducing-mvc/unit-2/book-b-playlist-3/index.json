@@ -1,6 +1,21 @@
 
+
+
   {
+  
+  
+    "properties" : {},
+  
   "type" : "lab",
+  "title" : "Lab-08b Playlist-3",
+  "img" : "img/main.png",
+  "videoid" : "none",
+  "objectives" : "<p>Move the playlists into their own view. Introduce routes for opening the playlist and also deleting individual songs.</p>",
+  "folder" : "book-b-playlist-3",
+  "link" : "index.html",
+  "los": [
+   ]
+,
   "chapters" : [
   
     {

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Creating a Playlist  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-09b Playlist-4">
+          Lab-09b Playlist-4
+        </a>
+      
+        <a class="item" data-tab="Exercise Solutions">
+          Exercise Solutions
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-b-sourcetree/index.html">Lab-12a Git Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-c-git/index.html">Lab-12b Git Workflow </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-1/book-a-deploy/index.html">Lab-12c Deploy </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-09b Playlist-4">
+            <h1>Objectives</h1>
+<p>Introduce forms into a play application to enable the user to create playlists.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercise Solutions">
+            <h1>Exercise Solutions</h1>
+<p>If you have completed the Playlist labs to date, then you can continue to work in the Playlist project you should have created.</p>
+<p>If you cannot locate this project, or it has become unusable - then you can start from the solution lab08b:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.3.end">https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.3.end</a></li>
+</ul>
+<p>Download the archive, unzip and run <code>play idealize</code> - and then open in Idea.</p>
+<h2>Exercise 2: UX Enhancements</h2>
+<p>Introduce a &#39;Delete Playlist&#39; button for each playlist, represented by a <code>trash</code> icon. E.g:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>In addition, the <code>view</code> link is replace by a <code>folder open</code> icon.</p>
+<p>Bind the <code>delete playlist</code> button to a new function to be implemented in the Dashboard controller, which should log the id of the playlist to be deleted.</p>
+<h2>Solution</h2>
+<p>First the new user interface:</p>
+<h3>app/views/dashboard.html</h3>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+#{list items:playlists, as:&#39;playlist&#39;}
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h2 class=&quot;ui header&quot;&gt;
+      ${playlist.title} 
+    &lt;/h2&gt;
+      &lt;p&gt; Total Duration: ${playlist.duration} &lt;/p&gt;
+      &lt;a href=&quot;/playlists/${playlist.id}&quot; class=&quot;ui icon button&quot;&gt;
+        &lt;i class=&quot;icon folder open&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;/dashboard/deleteplaylist/${playlist.id}&quot; class=&quot;ui icon button&quot;&gt;
+        &lt;i class=&quot;icon trash&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+  &lt;/section&gt;
+#{/list}</code></pre>
+<h2>Exercise 3: Delete Playlist Functionality</h2>
+<p>Now, make the button actually delete the denoted playlist.</p>
+<h2>Solution</h2>
+<h3>conf/routes</h3>
+<pre><code>GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist</code></pre>
+<h3>app/controllers/Dashboard.java</h3>
+<pre><code>...
+  public static void deletePlaylist (Long id)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Removing&quot; + playlist.title);
+    playlist.delete();
+    redirect (&quot;/dashboard&quot;);
+  }
+...</code></pre>
+<p>Try this now - and make sure a playlist is being deleted.</p>
+<p>Also - check to see if the songs in the playlist are also deleted?</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Add Song Form</h1>
+<p>Introduce a new partial to provide a simple form to add songs to a playlist:</p>
+<h2>app/views/tags/addsong.html</h2>
+<pre><code>&lt;form class=&quot;ui stacked segment form&quot; action=&quot;/playlists/${_playlist.id}/addsong&quot; method=&quot;POST&quot;&gt;
+  &lt;div class=&quot;two fields&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Title&lt;/label&gt;
+      &lt;input placeholder=&quot;Title&quot; type=&quot;text&quot; name=&quot;title&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Artist&lt;/label&gt;
+      &lt;input placeholder=&quot;Artist&quot; type=&quot;text&quot; name=&quot;artist&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Duration&lt;/label&gt;
+      &lt;input placeholder=&quot;Duration&quot; type=&quot;number&quot; name=&quot;duration&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;ui blue submit button&quot;&gt;Add Song&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>Now include this partial in the playlist view (at the end):</p>
+<h2>app/views/playlist.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Playlist&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    ${playlist.title}
+  &lt;/h2&gt;
+  #{listsongs playlist:playlist /}
+  #{addsong playlist:playlist /}
+&lt;/section&gt;</code></pre>
+<p>The playlists should now render like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>We have a new form and an <code>add song</code> button</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Add Song Route + Action</h1>
+<p>To implement the feature - we need a new route:</p>
+<h2>conf/routes</h2>
+<pre><code>...
+POST    /playlists/{id}/addsong                  PlaylistCtrl.addSong
+...</code></pre>
+<p>Put this below the existing playlist routes.</p>
+<p>Finally, the actual implementation of the add the song - a new method in the Playlist Controler:</p>
+<h2>app/controllers/PlaylistCtrl.java</h2>
+<pre><code>...
+  public static void addSong(Long id, String title, String artist, int duration)
+  {
+    Song song = new Song(title, artist, duration);
+    Playlist playlist = Playlist.findById(id);
+    playlist.songs.add(song);
+    playlist.save();
+    redirect (&quot;/playlists/&quot; + id);
+  }
+...</code></pre>
+<p>Restart the app now - and verify that you can add songs. Check in the database to verify that the new songs appear in the table.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Add Playlist Form</h1>
+<p>Create a new partial containig a form to support adding new playlists:</p>
+<h2>app/views/tags/addplaylist.html</h2>
+<pre><code>&lt;form class=&quot;ui stacked segment form&quot; action=&quot;/dashboard/addplaylist&quot; method=&quot;POST&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
+    &lt;label&gt;Title&lt;/label&gt;
+    &lt;input placeholder=&quot;Title&quot; type=&quot;text&quot; name=&quot;title&quot;&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;ui blue submit button&quot;&gt;Add Playlist&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>Include this partial at the end of the dashboard view:</p>
+<h2>app/views/dashboard.html</h2>
+<pre><code>...
+...
+#{addplaylist /}</code></pre>
+<p>The dashboard should look like this now:</p>
+<p><img src="img/02.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Add Playlist Route + Action</h1>
+<p>To implement the feature - we need a new route:</p>
+<h2>conf/routes</h2>
+<pre><code>...
+POST    /dasghboard/addplaylist                 Dashboard.addPlaylist
+...</code></pre>
+<p>Finally, the actual implementation of the add playlist logic:</p>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>...
+  public static void addPlaylist (String title)
+  {
+    Playlist playlist = new Playlist (title, 0);
+    Logger.info (&quot;Adding a new playlist called &quot; + title);
+    playlist.save();
+    redirect (&quot;/dashboard&quot;);
+  }
+...</code></pre>
+<p>Restart the app now - and verify that you can add playlists. Check in the database to verify that the new playlists appear in the table. Also add some songs to the playlist.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1 : Download, Rename and Run the Sample Solution</h2>
+<p>Even if you have successfully completed this lab - do not skip this step, as it is important to be able to run the sample solutions occasionally, and also retain them for reference purposes.</p>
+<p>A complete version of the app as it should be at the end of this lab:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end">https://github.com/wit-hdip-comp-sci-2019/playlist/releases/tag/playlist.4.end</a></li>
+</ul>
+<p>Download, unzip,<code>idealize</code> the project. Then run it. You should be comfortable doing this now. </p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

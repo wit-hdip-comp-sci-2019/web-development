@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Course Preview + Html Editing  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-00 Editing HTML">
+          Lab-00 Editing HTML
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-b-sourcetree/index.html">Lab-12a Git Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-c-git/index.html">Lab-12b Git Workflow </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-1/book-a-deploy/index.html">Lab-12c Deploy </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-00 Editing HTML">
+            <h1>Objectives</h1>
+<p>Introduction to Editing and viewing a html page</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Setup</h1>
+<p>Make sure you download and install Sublime Text 3 from</p>
+<ul>
+<li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
+</ul>
+<p>Select the appropriate download for your laptop (OS, Windows, Linux)</p>
+<p><img src="./img/01.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Tips and Hints</h1>
+<p>When working on windows - an important setting in the File Explorer tool is to always reveal the <code>file name extensions</code> of files when browsing the file system. </p>
+<h2>File Explorer Configuration</h2>
+<p>Open File Explorer now on Windows - locate and show the <code>ribbon</code> (the panel with buttons along the top)</p>
+<p><img src="./img/01x.png" alt=""></p>
+<p>Then, select the <code>file name extensions</code> item, and notice the subtle change on the way file1 and file2 are represented.</p>
+<p><img src="./img/02x.png" alt=""></p>
+<h2>Creating Folders</h2>
+<p>With this setting in place, now create the following folder structure on your workstation:</p>
+<p><img src="img/05x.png" alt=""></p>
+<p>That is, we have created</p>
+<ul>
+<li>a folder called <code>dev</code> on the C: drive, </li>
+<li>a folder <code>web</code> inside that</li>
+<li>another folder <code>lab-00</code> in <code>web</code>.</li>
+</ul>
+<p>You should be able to do all of this from within file File Explore itself.</p>
+<h2>Creating Files</h2>
+<p>Create some empty files in lab-00 - called <code>file-1.html</code> and <code>file-2.html</code></p>
+<p>One way of doing this is to create the files from inside the file explorer windows via a right mouse click:</p>
+<p><img src="img/04x.png" alt=""></p>
+<p>In the above, notice that we are selecting &quot;Text Document&quot; as the file type. Also notice that we rename the files we create to &#39;file-1.html&#39; and &#39;file-2.html&#39; form the default name windows suggests.</p>
+<p>See if you can replicate the above precisely.</p>
+<h2>Editing in Sublime</h2>
+<p>With this folder structure created, we an open Sublime</p>
+<p><img src="img/06x.png" alt=""></p>
+<p>Then we open the <code>web</code> folder so that the folder + subfolders and files are visible from a side bar in Sublime:</p>
+<p><img src="img/07x.png" alt=""></p>
+<p>There are a number of ways of enabling this view. One way is to <code>drag and drop</code> the web folder onto the sublime canvas. The sidebar may appear immediately - or you may need to specifically show it via the <code>view-&gt;sidebar</code> menu option.</p>
+<p>You should now be able to select and edit any file in the folders. Try it now and verify that you can enter some random text, save the files, close and reopen sublime to verify that the contents have been retained.</p>
+<p>It is important to regularly save your work. In sublime if you go to close your files it will prompt you to see if you want to save your work (if it has changed). However better practice to regularly save as you work.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Introduction Project</h1>
+<p>You will create a simple web page for it Starbuzz Coffee shop. The brief for the project has been sketched on a napkin!</p>
+<p><img src="./img/10.png" alt=""></p>
+<p>These are the steps you should carry out:</p>
+<ul>
+<li>Create a folder for the project called <code>starbuzz</code></li>
+<li>Inside the folder, create a file called <code>index.html</code></li>
+</ul>
+<p>Here is how Sublime might look if you do the above:</p>
+<p><img src="./img/09x.png" alt=""></p>
+<p>Now we enter the following contents into the (blank) index.html file:</p>
+<pre><code>Starbuzz Coffee Beverages
+
+House Blend, $1.49
+A smooth, mild blend of coffees from Mexico, Bolivia and Guatemala.
+
+Mocha Cafe Latte, $2.35
+Espresso, steamed mild and chocolate syrup.
+
+Cappuccino, $1.89
+A mixture of espresso, steamed milk and foam.
+
+Chai Tea, $1.85
+A spicy drink made with black tea, spices, milk and honey.</code></pre>
+<p>You can copy/paste the above text - no need to enter it manually. Your editor may look like this:</p>
+<p><img src="./img/10x.png" alt=""></p>
+<p>Now, we would like to view the file we have just saved using a web browser (Chrome in this case). This can normally be done just by double clicking on the file in Explorer:</p>
+<p><img src="./img/11x.png" alt=""></p>
+<p>This is a web rendering of the file we created. It doesnt look very pretty -  we will improve it in the next step...</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>First HTML Tags</h1>
+<p>HTML gives you a way to tell the browser about the structure of your page. What&#39;s structure? It is a way of marking up your text so that the browser knows what&#39;s a heading, what text is a paragraph, what text is a subheading and so on. Once the browser knows a little about the structure, it can display your page in a more meaningful and readable manner.</p>
+<p>You could imagine the tags as Fridge Magnets - we are going to use the decorate the page we created:</p>
+<p><img src="./img/18.png" alt=""></p>
+<p>The tags shown in the image above are used to place structure to the content we typed. So we want to identify which content is a heading, which is a subheading and which is a paragraph.</p>
+<p>If we first identify the heading, it is clearly the first line in our content : <code>Starbuzz Coffee Beverages</code>. Next a paragraph could be <code>A smooth, mild blend of coffees from Mexico, Bolivia and Guatemala.</code></p>
+<p><img src="./img/19.png" alt=""></p>
+<p>Using the tags we surround each piece of content as suggested above, This is what the page should look like in Sublime:</p>
+<p><img src="./img/xx1.png" alt=""></p>
+<p>Save your work, and now open/refresh our web page in the web browser:</p>
+<p><img src="./img/xx2.png" alt=""></p>
+<p>Compare this with the way the browser displayed the file in the last step:</p>
+<p><img src="./img/11x.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>More HTML</h1>
+<p>You now have an HTML file with markup - does that make a web page? Almost.  You will be introduced to the following tags in the lectures:</p>
+<ul>
+<li><code>&lt;html&gt;</code> </li>
+<li><code>&lt;head&gt;</code> </li>
+<li><code>&lt;title&gt;</code> </li>
+<li><code>&lt;body&gt;</code></li>
+</ul>
+<p>Here is a revised structure for the page:</p>
+<p><img src="./img/23.png" alt=""></p>
+<p>Modify your file to match the above structure and save it.</p>
+<p><img src="./img/xx3.png" alt=""></p>
+<p>Now refresh the Chrome browser to see the changes.</p>
+<p><img src="./img/xx5.png" alt=""></p>
+<p>There is no change in the &#39;canvas&#39; - however, notice that the window header now has &quot;Starbuzz Coffee&quot; instead of just &quot;index.html&quot;</p>
+<p>Congratulations you have now completed your first web page. </p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1: HTML Reference</h2>
+<p>Explore this reference site here:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/Web/HTML">https://developer.mozilla.org/en-US/Web/HTML</a></li>
+</ul>
+<p>In particular, locate the <code>&lt;tags</code>&gt; you have used in this lab in the Element Reference section:</p>
+<ul>
+<li>&lt;<a href="https://developer.mozilla.org/en-US/Web/HTML/Element">https://developer.mozilla.org/en-US/Web/HTML/Element</a></li>
+</ul>
+<p>For examples this is the <code>&lt;p</code>&gt; element:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/Web/HTML/Element/p">https://developer.mozilla.org/en-US/Web/HTML/Element/p</a></li>
+</ul>
+<p>The text is very technical - but some of it will start to make sense over the next few weeks.</p>
+<h2>Exercise 2: <code>&lt;hr&gt;</code> and <code>&lt;br&gt;</code></h2>
+<p>At the end of this page:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/Web/HTML/Element/p">https://developer.mozilla.org/en-US/Web/HTML/Element/p</a></li>
+</ul>
+<p>is a See Also section, which suggests two elements:</p>
+<ul>
+<li><code>&lt;hr</code>&gt;</li>
+<li><code>&lt;br</code>&gt;</li>
+</ul>
+<p>Look up these in the reference, and try them out on the page you have designed.</p>
+<h2>Exercise 3: <code>&lt;ui&gt;</code> <code>&lt;ol&gt;</code> &amp; <code>&lt;li&gt;</code></h2>
+<p>Have a quick look at these elements here:    </p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li</a></li>
+</ul>
+<p>Use this element to present the menu as a list. Try two variants:</p>
+<ul>
+<li>a version with simple bullet symbols</li>
+<li>a version with numbered items</li>
+</ul>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

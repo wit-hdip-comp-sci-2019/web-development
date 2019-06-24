@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Deployment  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-12c Deploy">
+          Lab-12c Deploy
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-b-sourcetree/index.html">Lab-12a Git Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-c-git/index.html">Lab-12b Git Workflow </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-1/book-a-deploy/index.html">Lab-12c Deploy </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-12c Deploy">
+            <h1>Objectives</h1>
+<p>Deploy a Play Application to the cloud</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Setup.</h1>
+<p>We need an account on a new service to get our Play Application live in the Cloud. Visit this site:</p>
+<ul>
+<li><a href="https://www.heroku.com">https://www.heroku.com</a></li>
+</ul>
+<p>And sign up for a new account.</p>
+<p>Once confirmed, log in and go you your Dashboard:</p>
+<ul>
+<li><a href="https://dashboard.heroku.com/apps">https://dashboard.heroku.com/apps</a></li>
+</ul>
+<p>This is a Platform as a Service provided (PaaS), you can read about PaaS here:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Platform_as_a_service">https://en.wikipedia.org/wiki/Platform_as_a_service</a></li>
+</ul>
+<p>We will be using this service to get our Play Applications Live.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Preparing the Play Application for Deployment</h1>
+<p>In order to deploy the application using the Heroku service, you will need to have a copy of the application in github. Labs 12a and 12b walk though the process of doing this. </p>
+<p>The rest of this lab assumes you have a complete repository pushed to github. There are a small number of changes we will make to the project (which we will also commit and push).</p>
+<p>These are the main (small) adjustment we need to make:</p>
+<ul>
+<li>JDK Version</li>
+<li>Play Version</li>
+<li>Database Settings</li>
+<li>Production Mode</li>
+</ul>
+<h2>(1)JDK Version</h2>
+<p>Create a new file in the project root:</p>
+<h3>system.properties</h3>
+<pre><code>java.runtime.version=8</code></pre>
+<p>This sets the JDK version our app will need when deployed. It might be simplest to use Sublime to create this file - alternatively, you will need to switch to &#39;Project Files&#39; mode to be able to create and save the file to the correct location.</p>
+<p><img src="img/001.png" alt=""></p>
+<h2>(2) Play Version</h2>
+<p>Locate this file:</p>
+<h2>conf/dependencies.yml</h2>
+<pre><code class="lang-bash"># Application dependencies
+
+require:
+    - play</code></pre>
+<p>Change it to the following:</p>
+<pre><code class="lang-bash"># Application dependencies
+
+require:
+    - play 1.5.2
+    - org.postgresql -&gt; postgresql 42.2.2:
+       force: true</code></pre>
+<p>This determines the precise version of Play + the database drivers it should use.</p>
+<h2>(3) Database Settings</h2>
+<p>We also need to set the database connection configuration to use when deployed. Open <code>application.conf</code> and locate the following line:</p>
+<h2>conf/application.conf</h2>
+<pre><code class="lang-bash">db.default=mem</code></pre>
+<p>Comment out this line by placing a <code>#</code> in the first line:</p>
+<pre><code># db.default=mem</code></pre>
+<p>Insert the following directly below:</p>
+<pre><code>db=${DATABASE_URL}
+jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+jpa.ddl=update</code></pre>
+<p>NB: This very last change will mean that YOUR APP WILL NO LONGER RUN LOCALLY! (apologies for the caps). So you will need to reverse the very last change if you want to run locally again.</p>
+<h2>(4) Production Mode</h2>
+<p>Also &#39;application.conf&#39; - at the top of the file we have this:</p>
+<pre><code># Application mode
+# 
+# Set to dev to enable instant reloading and other development help.
+# Otherwise set to prod.
+application.mode=dev
+%prod.application.mode=prod</code></pre>
+<p>This needs to be changed to this:</p>
+<pre><code># Application mode
+# 
+# Set to dev to enable instant reloading and other development help.
+# Otherwise set to prod.
+#application.mode=dev
+prod.application.mode=prod</code></pre>
+<p>We are enabling &#39;production mode&#39; for deployment.</p>
+<p>All of the above changes need to be committed, and the pushed to git.</p>
+<p><img src="img/002.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Creating &amp; Configure the Application on Heroku</h1>
+<p>Now we need to create and configure the application on Heroku:</p>
+<ul>
+<li>Create App</li>
+<li>Link to Github repo</li>
+<li>Configure Buildpack</li>
+</ul>
+<h2>(1) Create Application</h2>
+<p>Back in the Heroku </p>
+<ul>
+<li><a href="https://www.heroku.com">https://www.heroku.com</a></li>
+</ul>
+<p>Log in and you should see the main Dashboard:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Select &#39;New` and create a new application.</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Give the app a name - this will have to be unique, so perhaps consider using your initials or name in the application name:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>You might also locate the app in Europe. Press <code>Create App</code> and an application console will be displayed:</p>
+<p><img src="img/10.png" alt=""></p>
+<h2>(2) Link to Github</h2>
+<p>One of the options is <code>Github - Connect to github</code> ... press it and you will be asked to authorise to Github, and grant heroku access to your account.</p>
+<p>Proceed to do this and your dashboard should look something like this:</p>
+<p><img src="img/11.png" alt=""></p>
+<h2>(3) Configure Buildpack</h2>
+<p>We are now almost ready to deploy. We need to do one more step. Back in Heroku, switch to the <code>Settings</code> panel:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>Press the <code>Add Buildpack</code>:</p>
+<p><img src="img/15.png" alt=""></p>
+<p>In the above, we have added this url:</p>
+<pre><code class="lang-text">https://github.com/heroku/heroku-buildpack-play</code></pre>
+<p>Save changes and the buildpack should be installed:</p>
+<p><img src="img/16.png" alt=""></p>
+<p>The build pack is needed to inform Heroku how a play app is configured and managed.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Deploy the Application</h1>
+<p>Back in the <code>Deploy</code> panel - we can now press the <code>Deploy Branch</code> button.</p>
+<p><img src="img/003.png" alt=""></p>
+<p>This will take a minute or so - and pressing the &#39;show build logs&#39; button will let you see more details on its progress...</p>
+<p><img src="img/004.png" alt=""></p>
+<p>Switch to the &#39;Settings Panel&#39;  and under &#39;Domains &amp; Certificates&#39; you will see the url of the deployed application:</p>
+<p><img src="img/005.png" alt=""></p>
+<p>Try the app now -</p>
+<p><img src="img/19.png" alt=""></p>
+<p>Log in as <code>homer@simpson.com</code>, <code>secret</code></p>
+<p><img src="img/20.png" alt=""></p>
+<p><img src="img/21.png" alt=""></p>
+<p>You should be able to ad and remove todos. Log out, sign up a new user etc...</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h2>Logs</h2>
+<p>Back in the Heroku Console - select <code>more</code> on the top right:</p>
+<p><img src="img/22.png" alt=""></p>
+<p>Select <code>View logs</code>. </p>
+<p><img src="img/006.png" alt=""></p>
+<p>This is the equivalent of the console when you were running the app locally on your workstation. When testing the deployed application it is useful to always keep this view open. It enables you to monitor the application, identify potential errors and generally keep an eye on its operation.</p>
+<p>You now have 2 versions of the source of your application</p>
+<ul>
+<li>The version you are developing using IDEA</li>
+<li>A copy of the application on a synced to github.</li>
+</ul>
+<h2>Running Locally</h2>
+<p>This change you made to <code>conf/application.conf</code>:</p>
+<h2>conf/application.conf</h2>
+<pre><code># db.default=mem
+
+db=${DATABASE_URL}
+jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+jpa.ddl=update</code></pre>
+<p>Will prevent you from running the application locally. i.e. it will fail to launch when running via the <code>play run</code> command. Therefore, for the version of the application you are editing via IDEA, make suer to reverse the changes if you wish to run locally:</p>
+<pre><code>db.default=mem
+
+# db=${DATABASE_URL}
+# jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+# jpa.ddl=update</code></pre>
+<p>However, if you commit and push this version, then it will run successfully if you deploy from github again.</p>
+<p>You may also with to reverse this change</p>
+<pre><code># Application mode
+# 
+# Set to dev to enable instant reloading and other development help.
+# Otherwise set to prod.
+#application.mode=dev
+prod.application.mode=prod</code></pre>
+<p>So that it is in dev mode when running locally.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Database Dashboard</h1>
+<p>If you have been relying on this link:</p>
+<ul>
+<li><a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#104;&#116;&#116;&#112;&#58;&#x2f;&#47;&#x6c;&#x6f;&#99;&#97;&#116;&#104;&#111;&#x73;&#x74;&#57;&#x30;&#x30;&#48;&#47;&#64;&#x64;&#x62;">&#104;&#116;&#116;&#112;&#58;&#x2f;&#47;&#x6c;&#x6f;&#99;&#97;&#116;&#104;&#111;&#x73;&#x74;&#57;&#x30;&#x30;&#48;&#47;&#64;&#x64;&#x62;</a> </li>
+</ul>
+<p>...to view the browser when running locally - this will NOT work for the deployed version. </p>
+<p>However, Heroku supports an add-on called Adminium which called fulfils a similiar role. To install, locate the &#39;Find more add-ons&#39; button on the <code>Resources</code> dashboard screen:</p>
+<p><img src="img/007.png" alt=""></p>
+<p>Press this button and locate the plugin:</p>
+<p><img src="img/008.png" alt=""></p>
+<p>Install the plugin:</p>
+<p><img src="img/009.png" alt=""></p>
+<p>Select your app in the provision field:</p>
+<p><img src="img/010.png" alt=""></p>
+<p><img src="img/011.png" alt=""></p>
+<p>The plugin should be listed in your &#39;Resources&#39; panel.</p>
+<p>Pressing &#39;Adminium&#39; will take you to the this interface:</p>
+<p><img src="img/017.png" alt=""></p>
+<p>Once connected - you will eventually be able to browse its models like this:</p>
+<p><img src="img/29.png" alt=""></p>
+<p>You will even be able to edit the contents.</p>
+<p>You will also be able to add tables to a <code>Dashboard</code> :</p>
+<p><img src="img/31.png" alt=""></p>
+<p>The dashboard is available at this url:</p>
+<ul>
+<li><a href="https://www.adminium.io/dashboard">https://www.adminium.io/dashboard</a></li>
+</ul>
+<p><img src="img/32.png" alt=""></p>
+<p>There are additional Widgets you can experiment with here to monitor database activity over time.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<h2>Exercise 1: Deploy Playlist 5</h2>
+<p>Deploy the latest playlist application:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/playlist/releases/tag/playlist.5.end">https://github.com/edeleastar/playlist/releases/tag/playlist.5.end</a></li>
+</ul>
+<p>You will need to follow precisely steps 02, 03 and 04 from this lab.</p>
+<h2>Exercise 2: Workspace</h2>
+<p>See if you can arrange your workspace like this:</p>
+<p><img src="img/33.png" alt=""></p>
+<p>Here we are monitoring the deploy logs, the main application logs, the database console and the application itself (including the browser tools).</p>
+<p>Try some variation of this now and get familiar with the nature of the information in each of the windows. Proceed through a deploy cycle while doing this (make a cosmetic change to the app in dropbox to allow a deploy to be triggered)</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

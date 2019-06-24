@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> Git  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-12a Git Setup">
+          Lab-12a Git Setup
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-b-sourcetree/index.html">Lab-12a Git Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-c-git/index.html">Lab-12b Git Workflow </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-1/book-a-deploy/index.html">Lab-12c Deploy </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-12a Git Setup">
+            <h1>Objectives</h1>
+<p>Install and Configure Git + the Sourcetree git GUI</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Git,  Github &amp; Bitbucket</h1>
+<p>You should already have git installed on your workstation. If not, download and install from here:</p>
+<ul>
+<li><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+</ul>
+<p>Verify that is is by opening a shell (command prompt on Windows) and enter the following:</p>
+<pre><code>git --version</code></pre>
+<p>The system might respond with something like this:</p>
+<pre><code class="lang-bash">git version 2.20.1</code></pre>
+<h1>Github</h1>
+<p>Sign up for a github account:</p>
+<ul>
+<li><a href="https://github.com/">https://github.com/</a></li>
+</ul>
+<p>Be sure to verify your email.</p>
+<h1>Bitbucket</h1>
+<p>Sign up for a github account:</p>
+<ul>
+<li><a href="https://bitbucket.org/">https://bitbucket.org/</a></li>
+</ul>
+<p>Be sure to verify your email.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Install Sourcetree</h1>
+<p>Visit:</p>
+<ul>
+<li><a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></li>
+</ul>
+<p>And download and install the application for your platform.</p>
+<p>On the very first screen - you will be asked to log in to you Atlassian Bitbucket account. You should have created this in the last step. </p>
+<p>Select &#39;Bitbucket&#39; in the first screen:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Once your account is verified, you should see this:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>In the next screen, select advanced options and select the options below:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>Enter your full name and email address:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>You will be asked about ssh keys - you can skip this step for the moment:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>You will eventually get this start screen:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>The installation will be automatically linked to a bitbucket account. We should now also link it to your github account.</p>
+<p>Select Tools-&gt;Options-&gt;Authentication and follow the steps below:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Add a new github account</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Enter github account name and select &#39;refresh password&#39;</p>
+<p><img src="img/09.png" alt=""></p>
+<p><img src="img/001.png" alt=""></p>
+<p><img src="img/002.png" alt=""></p>
+<p><img src="img/003.png" alt=""></p>
+<p>Your github account should be verified - and you should now have 2 linked accounts:</p>
+<p><img src="img/004.png" alt=""></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Create new Repo on Github</h1>
+<p>Back on github:</p>
+<ul>
+<li><a href="https://github.com">https://github.com</a></li>
+</ul>
+<p>Create a new repository:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>This will create a new empty repo on github.</p>
+<p><img src="img/18.png" alt=""></p>
+<p>Note carefully the url of the repo - in the box above. Copy this to the clipboard now.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Create New Application</h1>
+<p>We now would like to start a new play application, which we will associate with the github repository we have just crested.</p>
+<p>First, create a new app by cloning a starter app:</p>
+<h2>Create New Project</h2>
+<p>Create a new play project using this command:</p>
+<pre><code class="lang-bash">git clone https://github.com/wit-hdip-comp-sci-2019/play-template-1</code></pre>
+<p>The shell should show something like this:</p>
+<pre><code>Cloning into &#39;play-template-1&#39;...
+remote: Counting objects: 66, done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 66 (delta 9), reused 66 (delta 9), pack-reused 0
+Unpacking objects: 100% (66/66), done.</code></pre>
+<h2>Rename Project</h2>
+<p>The default name of the project should be changed now. This will require the following procedure:</p>
+<ul>
+<li>Rename the folder <code>play-template-1</code>. Call the folder <code>todolist-versioned</code> instead.</li>
+<li><p>Use Sublime Text to edit this file: <code>playlist/conf/application.conf</code>. The first three lines contains the following:</p>
+<pre><code>  # This is the main configuration file for the application.
+  # ~~
+  application.name=play-template-1</code></pre>
+</li>
+<li><p>Change <code>play-template-1</code> above to <code>todolist-versioned</code>, and save the file:</p>
+<pre><code>  # This is the main configuration file for the application.
+  # ~~
+  application.name=todolist-versioned</code></pre>
+</li>
+</ul>
+<h2>Unbind from github</h2>
+<p>This app has been cloned from github - and is still bound to the repository it was cloned from. We can break this link - and we will reestablish a link to a new github repository you will create in the next steps. </p>
+<p>To break the existing link, simply completely delete the <code>.git</code> folder form the project:</p>
+<p><img src="img/004.png" alt=""></p>
+<p>(you may need to reveal <code>hidden files</code> to see the folder)</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Set Remote Repo</h1>
+<p>Your Sourcetree app currently looks like this:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>Select the Create button from the toolbar and locate the folder containing the project we have just created:</p>
+<p><img src="img/005.png" alt=""></p>
+<p>Press Create - and select Yes in the subsequent dialog:</p>
+<p><img src="img/006.png" alt=""></p>
+<p>Sourcetree will now be configured as shown:</p>
+<p><img src="img/007.png" alt=""></p>
+<p>We can now &#39;stage&#39; all of the sources in the project by pressing the &#39;Stage All&#39; button:</p>
+<p><img src="img/008.png" alt=""></p>
+<p>With the configuration as shown above, enter a short message &#39;template play project&#39; as shown:</p>
+<p><img src="img/009.png" alt=""></p>
+<p>Press &#39;Commit&#39; and the Source tree will be configured like this:</p>
+<p><img src="img/010.png" alt=""></p>
+<p>Finally, select &#39;master&#39; on the left:</p>
+<p><img src="img/017.png" alt=""></p>
+<p>This seems a complex, but the process is always the same:</p>
+<ul>
+<li>Stage: this is selecting which files to be added (or which changed files are to be added)</li>
+<li>Commit Message: a easily readable short message</li>
+<li>Commit : bind the changes + commit message and update the repository</li>
+</ul>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="06">
+            <h1>Bind the Local Repo to a Remote one</h1>
+<p>Is Sourcetree, select Repository-Repository Settings:</p>
+<p><img src="img/011.png" alt=""></p>
+<p>Press add, and enter the following:</p>
+<ul>
+<li>Remote Name: &#39;origin&#39;</li>
+<li>URL/Path : - enter the repository path that for the repository you created in Step 03 of this lab.</li>
+</ul>
+<p><img src="img/012.png" alt=""></p>
+<p>Press ok:</p>
+<p><img src="img/013.png" alt=""></p>
+<p>Back in the main Sourcetree window, press &#39;Push&#39;</p>
+<p><img src="img/014.png" alt=""></p>
+<p>In the subsequent dialog, tick the checkbox next to &#39;master&#39;, and then press push. This will transfer a copy of the local files in the repository to the copy on github.</p>
+<p>Eventually, Sourcetree will settle into this view:</p>
+<p><img src="img/015.png" alt=""></p>
+<p>.. and if you look at the github site and the repo you created in step 03, you should see a copy of the project:</p>
+<p><img src="img/018.png" alt=""></p>
+<p>The &#39;local&#39; and &#39;remote&#39; repositories are now linked - and changes we make locally we will need to explicitly push a &#39;commit&#39; of new additions as we make them.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
+<p>To get fluent with this procedure, try the following:</p>
+<h2>Exercise 1: Github Practice</h2>
+<p>Create another new app - called <code>demo-1</code> - using the procedure  specified on Step 03.</p>
+<p>Then, following steps 04, 05 and 06, attach the new project to the demo-1 github repo.</p>
+<h2>Exercise 2: Bitbucket Practice</h2>
+<p>The procedure we carried out to bind a local repo to github can also be carried out to bind a repo to a bitbucket hosted repository.</p>
+<p>Create (another!) new project <code>demo-2</code> - this time see if you can figure out how put it on bitbucket.</p>
+<p>The main difference between github and bitbucket is that github repos are always public, whereas bitbucket can be either, but default to private.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

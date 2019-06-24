@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../../index.html"> 06a: Semantic HTML   </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="Lab-06a Nav Params">
+          Lab-06a Nav Params
+        </a>
+      
+        <a class="item" data-tab="01">
+          01
+        </a>
+      
+        <a class="item" data-tab="02">
+          02
+        </a>
+      
+        <a class="item" data-tab="03">
+          03
+        </a>
+      
+        <a class="item" data-tab="04">
+          04
+        </a>
+      
+        <a class="item" data-tab="05">
+          05
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-00-overview/unit-a-course-review/book-a/index.html">Lab-00 Editing HTML </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-01-introducing-html/unit/book-b/index.html">Lab-01 HTML Structure </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-02-introducing-css/unit-b/book/index.html">Lab-02 CSS Intro </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-a/book-a/index.html">Lab-03a Layout </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-03-box-model/unit-b/book-b/index.html">Lab-03b Multicolumn </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-04-navigation/unit-a/book/index.html">Lab-04 Navigation </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-a/book-01-deployment/index.html">Lab-05a Harp & Surge </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-05-templating/unit-b/book-templates/index.html">Lab-05b Templates </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-a/book-nav-2/index.html">Lab-06a Nav Params </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-06-css-frameworks/unit-b/book-semantic-ui/index.html">Lab-06b Semantic-UI </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-1/book-b-setup-play/index.html">Lab-07a Play Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-07-starting-play/unit-2/book-c-playlist-1/index.html">Lab-07b Playlist 1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-1/book-a-playlist-2/index.html">Lab-08a Playlist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-08-introducing-mvc/unit-2/book-b-playlist-3/index.html">Lab-08b Playlist-3 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-1/book-a-todolist/index.html">Lab-09a Todolist-1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-09-forms/unit-2/book-b-playlist-4/index.html">Lab-09b Playlist-4 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-10-sessions/unit/book-sessions/index.html">Lab-10 Todolist-2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-0/book-1/index.html">Lab-11a Playlist Review </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-11-playlist-sessions/unit-1/book-2/index.html">Lab-11b Playlist 5 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-b-sourcetree/index.html">Lab-12a Git Setup </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-0/book-c-git/index.html">Lab-12b Git Workflow </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://wit-hdip-comp-sci-2019.github.io/web-development//topic-12-deployment-review/unit-1/book-a-deploy/index.html">Lab-12c Deploy </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-06a Nav Params">
+            <h1>Objectives</h1>
+<p>Introduce semantic elements. Define a parametrised navigation partial</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Setup</h1>
+<p>This assumes you have completed lab 05b:</p>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs/releases/tag/lab05.b.end">https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs/releases/tag/lab05.b.end</a></li>
+</ul>
+<p>You can use your solution, or download the version above.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Semantic Elements</h1>
+<p>This is the current version of the header and footer partials:</p>
+<h2><code>_header.ejs</code></h2>
+<pre><code>&lt;div id=&quot;header&quot;&gt;
+  &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<h2><code>_footer.ejs</code></h2>
+<pre><code>&lt;div id=&quot;footer&quot;&gt;
+  &lt;p&gt; Contact us at : bundle@store.com, or visit us: &lt;a href=&quot;directions.html&quot;&gt; directions &lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>These elements have a clear role - and the html specification provides elements for these:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer</a></li>
+</ul>
+<p>Here is a revised version of these partials using these element:</p>
+<h2><code>_header.ejs</code></h2>
+<pre><code>&lt;header id=&quot;header&quot;&gt;
+  &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+<h2><code>_footer.ejs</code></h2>
+<pre><code>&lt;footer id=&quot;footer&quot;&gt;
+  &lt;p&gt; Contact us at : bundle@store.com, or visit us: &lt;a href=&quot;directions.html&quot;&gt; directions &lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+<p>These changes to do effect the presentation in any way. They are intended to better reflect the html authors intent.</p>
+<p>Here are 3 more of these &#39;semantic&#39; elements:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav</a></li>
+</ul>
+<p>We can use them in our html pages as follows:</p>
+<h2>index.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id=&quot;maincontent&quot;&gt;
+  &lt;section id=&quot;primary&quot;&gt;
+    &lt;p&gt;
+      This store brings you &lt;em&gt; great app bundles &lt;/em&gt; week after week. We select the best power user apps from a
+      broad range of suppliers and combine them into great deals. These are the highest quality apps from the best
+      publishers, at great prices. &lt;/p&gt;
+    &lt;p&gt;
+      Whether you are interested in gaming or graphics design, software development or media production - we have the
+      bundle for you. Each &lt;a href=&quot;apps.html&quot;&gt;app bundle&lt;/a&gt; is designed to compliment the others, delivering you an
+      exciting take on a scene. &lt;/p&gt;
+    &lt;p class=&quot;guarantee&quot;&gt;
+      Our guarantee: at the store, we&#39;re committed to providing you, with an exceptional quality and reliability. Every
+      application is checked in detail for stability, usability and inter-interoperability. If you are unhappy with any
+      individual app in a bundle we will refund you the full amount for the complete suite, no questions asked. &lt;/p&gt;
+    &lt;h2&gt;Favourites&lt;/h2&gt;
+    &lt;p&gt; These are some of our favourites &lt;/p&gt;
+    &lt;ul class=&quot;highlight&quot;&gt;
+      &lt;li&gt;Hype by Tumult&lt;/li&gt;
+      &lt;li&gt;Webstorm by Idea&lt;/li&gt;
+      &lt;li&gt;Sublime, by sublimetext.com&lt;/li&gt;
+      &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Favourites&lt;/h2&gt;
+    &lt;p&gt; We will be reviewing these favourites in the coming weeks, so please check in again to find out why these are
+      our favourite apps.&lt;/p&gt;
+    &lt;p&gt; Why not come in and walk aroud the store? Directions are included below. &lt;/p&gt;
+  &lt;/section&gt;
+  &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
+&lt;/main&gt;</code></pre>
+<h2>apps.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id=&quot;maincontent&quot;&gt;
+  &lt;section id=&quot;primary&quot;&gt;
+    &lt;h1&gt;App Bundles&lt;/h1&gt;
+    &lt;h3&gt;Freebie&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;One Soft&quot; class=&quot;medium-right-img&quot;&gt; Stacksocial just published its so called
+      Free Ondesoft Mac Tool Bundle, which contains 5 apps from Onesoft. The bundle is worth $146 will be probably
+      available only a couple of days so you’d better hurry up to get it. &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+    &lt;p&gt;
+      Here comes the next bundle for march. This time its macware who publish a bundle. The so called macware Business
+      Bundle contains 6 apps at a price of only €29.99 instead of €199.94. So you can save around 84%. &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;Ultimate Bundle&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/ultimate.jpeg&quot; alt=&quot;One Soft&quot; class=&quot;medium-left-img&quot;&gt; This bundle is worth more than €400. So
+      for just a little bit more than $10, you can make your bargain if you want just one of these apps. of dollars. We
+      think, that the bundle will be online until the mid of October &lt;/p&gt;
+    &lt;hr&gt;
+  &lt;/section&gt;
+  &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
+&lt;/section&gt;</code></pre>
+<h2>directions.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id=&quot;maincontent&quot;&gt;
+  &lt;section id=&quot;primary&quot;&gt;
+    &lt;h1&gt;Directions&lt;/h1&gt;
+    &lt;h2&gt;Our store is located :&lt;/h2&gt;
+    &lt;p&gt;
+      Take the M9 / N9 towards Waterford. At the first roundabout on approach to Waterford, take the first exit
+      (signposted Waterford / Cork / Rosslare). At the next roundabout, take the third exit (signposted N25 / Cork /
+      Waterford South). Proceed through the toll bridge (toll is €1.90 per car). Take the exit directly after the toll
+      bridge (signposted Waterford South/R710). &lt;/p&gt;
+    &lt;p&gt;
+      At the top of the off-ramp, go left at the small roundabout, then straight through two larger roundabouts
+      (signposted R710/City Centre/Tramore). At the next roundabout ( retail park on your left), take the first exit
+      (signposted City Centre). Proceed down the Cork Road for approx 2km and the main entrance to WIT’s main campus is
+      on the left. The College Street Campus is a further 2km towards the city centre on the left. &lt;/p&gt;
+    &lt;hr&gt;
+  &lt;/section&gt;
+  &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
+&lt;/main&gt;</code></pre>
+<p>Look carefully at the above, noting the use of <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code> &amp; <code>&lt;section&gt;</code> elements.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>article and aside</h1>
+<p>These two elements are a bit more subtle:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside</a></li>
+</ul>
+<p>The sidebar partial represents an appropriate use of the <code>&lt;aisde&gt;</code> eiement:</p>
+<h2><code>_secondary.ejs</code></h2>
+<pre><code>&lt;aside id=&quot;secondary&quot;&gt;
+  &lt;h1&gt;Weekly Deals&lt;/h1&gt;
+  &lt;h2 class=&quot;special&quot;&gt;Business Bundle&lt;/h2&gt;
+  &lt;p&gt;
+    &lt;img src=&quot;images/business.png&quot; alt=&quot;Business Bundle&quot; class=&quot;medium-right-img&quot;&gt; Here comes the next bundle for march.
+    This time it&#39;s macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of
+    only €29.99 instead of €199.94. So you can save around 84%. &lt;/p&gt;
+  &lt;h2 class=&quot;special&quot;&gt;Insanity Deal&lt;/h2&gt;
+  &lt;p&gt;
+    &lt;img src=&quot;images/insanity.jpg&quot; alt=&quot;Insanity Deal&quot; class=&quot;medium-left-img&quot;&gt; With the new €5 Insanity Deals from
+    Bundlehunt you receive every day a highly reduced app for €5 only with savings up to 75%. Not a real bundle but, as
+    there are multiple apps for only €5 each, one new per day, for the days to come. &lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+<p>We can revisit the main pages, replacing the <code>&lt;section&gt;</code> with the <code>&lt;article&gt;</code> element:</p>
+<h2>index.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id=&quot;maincontent&quot;&gt;
+  &lt;article id=&quot;primary&quot;&gt;
+    &lt;p&gt;
+      This store brings you &lt;em&gt; great app bundles &lt;/em&gt; week after week. We select the best power user apps from a
+      broad range of suppliers and combine them into great deals. These are the highest quality apps from the best
+      publishers, at great prices. &lt;/p&gt;
+    &lt;p&gt;
+      Whether you are interested in gaming or graphics design, software development or media production - we have the
+      bundle for you. Each &lt;a href=&quot;apps.html&quot;&gt;app bundle&lt;/a&gt; is designed to compliment the others, delivering you an
+      exciting take on a scene. &lt;/p&gt;
+    &lt;p class=&quot;guarantee&quot;&gt;
+      Our guarantee: at the store, we&#39;re committed to providing you, with an exceptional quality and reliability. Every
+      application is checked in detail for stability, usability and inter-interoperability. If you are unhappy with any
+      individual app in a bundle we will refund you the full amount for the complete suite, no questions asked. &lt;/p&gt;
+    &lt;h2&gt;Favourites&lt;/h2&gt;
+    &lt;p&gt; These are some of our favourites &lt;/p&gt;
+    &lt;ul class=&quot;highlight&quot;&gt;
+      &lt;li&gt;Hype by Tumult&lt;/li&gt;
+      &lt;li&gt;Webstorm by Idea&lt;/li&gt;
+      &lt;li&gt;Sublime, by sublimetext.com&lt;/li&gt;
+      &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Favourites&lt;/h2&gt;
+    &lt;p&gt; We will be reviewing these favourites in the coming weeks, so please check in again to find out why these are
+      our favourite apps.&lt;/p&gt;
+    &lt;p&gt; Why not come in and walk aroud the store? Directions are included below. &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
+&lt;/main&gt;</code></pre>
+<h2>apps.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id=&quot;maincontent&quot;&gt;
+  &lt;article id=&quot;primary&quot;&gt;
+    &lt;h1&gt;App Bundles&lt;/h1&gt;
+    &lt;h3&gt;Freebie&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;One Soft&quot; class=&quot;medium-right-img&quot;&gt; Stacksocial just published its so called
+      Free Ondesoft Mac Tool Bundle, which contains 5 apps from Onesoft. The bundle is worth $146 will be probably
+      available only a couple of days so you’d better hurry up to get it. &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+    &lt;p&gt;
+      Here comes the next bundle for march. This time its macware who publish a bundle. The so called macware Business
+      Bundle contains 6 apps at a price of only €29.99 instead of €199.94. So you can save around 84%. &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;Ultimate Bundle&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/ultimate.jpeg&quot; alt=&quot;One Soft&quot; class=&quot;medium-left-img&quot;&gt; This bundle is worth more than €400. So
+      for just a little bit more than $10, you can make your bargain if you want just one of these apps. of dollars. We
+      think, that the bundle will be online until the mid of October &lt;/p&gt;
+    &lt;hr&gt;
+  &lt;/article&gt;
+  &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
+&lt;/section&gt;</code></pre>
+<h2>directions.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id=&quot;maincontent&quot;&gt;
+  &lt;article id=&quot;primary&quot;&gt;
+    &lt;h1&gt;Directions&lt;/h1&gt;
+    &lt;h2&gt;Our store is located :&lt;/h2&gt;
+    &lt;p&gt;
+      Take the M9 / N9 towards Waterford. At the first roundabout on approach to Waterford, take the first exit
+      (signposted Waterford / Cork / Rosslare). At the next roundabout, take the third exit (signposted N25 / Cork /
+      Waterford South). Proceed through the toll bridge (toll is €1.90 per car). Take the exit directly after the toll
+      bridge (signposted Waterford South/R710). &lt;/p&gt;
+    &lt;p&gt;
+      At the top of the off-ramp, go left at the small roundabout, then straight through two larger roundabouts
+      (signposted R710/City Centre/Tramore). At the next roundabout ( retail park on your left), take the first exit
+      (signposted City Centre). Proceed down the Cork Road for approx 2km and the main entrance to WIT’s main campus is
+      on the left. The College Street Campus is a further 2km towards the city centre on the left. &lt;/p&gt;
+    &lt;hr&gt;
+  &lt;/article&gt;
+  &lt;%- include(&#39;./partials/_secondary.ejs&#39;); %&gt;
+&lt;/main&gt;</code></pre>
+<p>Again, look carefully at each of the above and note the differences.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Navigation</h1>
+<p>The <code>&lt;nav&gt;</code> section in our page is currently duplicated on each of the main pages:</p>
+<h2>index.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...
+...</code></pre>
+<h2>apps.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...
+...</code></pre>
+<h2>directions.ejs</h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...
+...</code></pre>
+<p>Notice, however, each version has a small difference, the <code>class=active</code> is specific to each page.</p>
+<p>We would like to find a way of supporting a single nav partial, that can somehow be &#39;paramaterised&#39; with the correct active element.</p>
+<p>The first step, is to create a new <code>_nav.ejs</code> partial the partials folder:</p>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li id=&quot;home&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;apps&quot;&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;directions&quot;&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+<p>Notice that this version has a significant change - each <code>&lt;li&gt;</code> has an id:</p>
+<pre><code>    &lt;li id=&quot;home&quot;&gt; ...
+    &lt;li id=&quot;apps&quot;&gt; ...
+    &lt;li id=&quot;directions&quot;&gt; ...</code></pre>
+<p>This is a significant change - and will allow us to dynamically select between these elements.</p>
+<p>Replace the <code>&lt;nav&gt;</code> element on all pages now with an include of this partial:</p>
+<h2>index.ejs</h2>
+<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;); %&gt;</code></pre>
+<h2>apps.ejs</h2>
+<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;); %&gt;</code></pre>
+<h2>directions.ejs</h2>
+<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;); %&gt;</code></pre>
+<p>Make these changes now. The navigation mechanism should still work, but the current page will NOT be highlighted.</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Revised <code>_nav.ejs</code></h1>
+<p>This is an extended version of the <code>_nav.ejs</code> partial:</p>
+<h2><code>_nav.ejs</code></h2>
+<pre><code>&lt;nav id=&quot;navigation&quot;&gt;
+  &lt;ul id=&quot;menu&quot;&gt;
+    &lt;li id=&quot;home&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;apps&quot;&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;directions&quot;&gt;&lt;a href=&quot;directions.html&quot;&gt;Directions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;script&gt;
+  document.querySelector(&quot;#&lt;%= id %&gt;&quot;).classList.add(&quot;active&quot;)
+&lt;/script&gt;</code></pre>
+<p>The section itself is the same, but an additional <code>&lt;script&gt;</code> element has been added. We have not covered javascript and its role in any detail yet, so this extension is a little mysterious. It is doing 2 things:</p>
+<ul>
+<li>locating an element in the DOM that matches a specific ID</li>
+<li>set the class of this element to &#39;active&#39;</li>
+</ul>
+<p>The id to set will need to be passed to the partial as a parameter from each of the pages that includes it.</p>
+<p>Here is the revised includes:</p>
+<h2>index.ejs</h2>
+<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;, {id : &quot;home&quot;}); %&gt;</code></pre>
+<h2>apps.ejs</h2>
+<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;, {id : &quot;apps&quot;}); %&gt;</code></pre>
+<h2>directions.ejs</h2>
+<pre><code>&lt;%- include(&#39;./partials/_nav.ejs&#39;, {id : &quot;directions&quot;}); %&gt;</code></pre>
+<p>Notice how we are passing a different id in each case.</p>
+<p>Try this now, and verify that the navigation mechanism is highlighted the current page again.</p>
+<p>Don&#39;t worry about how the <code>&lt;script&gt;</code> tag is working - this is something to be considered in a future module!</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Solution</h1>
+<ul>
+<li><a href="https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs/releases/tag/lab.06a.end">https://github.com/wit-hdip-comp-sci-2019/bundle-store-ejs/releases/tag/lab.06a.end</a></li>
+</ul>
+<h2>Exercises</h2>
+<p>You might like to incorporate the nav technique introduce here into your assignment.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
